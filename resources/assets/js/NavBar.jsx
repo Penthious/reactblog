@@ -62,10 +62,13 @@ class NavBar extends Component {
                         Home
                     </a>
                     <a className="nav-item" href="#">
-                        Documentation
+                       Projects
                     </a>
                     <a className="nav-item" href="#">
-                        Blog
+                        Resume
+                    </a>
+                    <a className="nav-item" href="#">
+                        Contact
                     </a>
                     <span className="nav-item">
                         <a className="button">

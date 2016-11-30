@@ -12494,12 +12494,17 @@ var NavBar = function (_Component) {
                     _react2.default.createElement(
                         'a',
                         { className: 'nav-item', href: '#' },
-                        'Documentation'
+                        'Projects'
                     ),
                     _react2.default.createElement(
                         'a',
                         { className: 'nav-item', href: '#' },
-                        'Blog'
+                        'Resume'
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'nav-item', href: '#' },
+                        'Contact'
                     ),
                     _react2.default.createElement(
                         'span',
