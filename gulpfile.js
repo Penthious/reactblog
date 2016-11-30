@@ -21,7 +21,7 @@ const node = 'node_modules/';
 const assets = 'public/assets/';
 const js = `${assets}js/`;
 const css = `${assets}css/`;
-const fonts = 'public/fonts/';
+const fonts = `${assets}/css/fonts/`;
 
 elixir(function (mix) {
     // jquery

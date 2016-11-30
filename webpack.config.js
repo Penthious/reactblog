@@ -1,4 +1,7 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const combineLoaders = require('webpack-combine-loaders');
+
 
 module.exports = {
     devtool: 'source-map',
@@ -6,11 +9,15 @@ module.exports = {
     output: {
         filename: './public/js/main.js',
     },
+    plugins: [
+        new ExtractTextPlugin('styles-[hash].css'),
+    ],
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
     },
     module: {
         loaders: [
+            // js loader
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
@@ -20,10 +27,11 @@ module.exports = {
                     // plugins: ['es7.classProperties'],
                 },
             },
-            //{
+            // css loader
+            // {
             //    test: /\.json$/,
             //    loader: 'json-loader',
-            //},
+            // },
         ],
     },
 };

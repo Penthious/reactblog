@@ -1,10 +1,17 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 const Layout = props => (
-    <div>
+    <div className="siteLayout">
         <NavBar />
-        {props.children}
+
+        <div className="section">
+            <div className="container">
+                {props.children}
+            </div>
+        </div>
+        <Footer />
     </div>
 );
 
