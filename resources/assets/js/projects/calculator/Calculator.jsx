@@ -6,6 +6,7 @@ import Display from './Display';
 import Buttons from './Buttons';
 
 // css
+import './calculator.sass';
 
 class Calculator extends Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class Calculator extends Component {
 
     // tells what value to pass to this.setOutput
     handleOutput = () => {
-        const firstNumber  = Number(this.state.firstInput);
+        const firstNumber = Number(this.state.firstInput);
         const secondNumber = Number(this.state.thirdInput);
         switch (this.state.secondInput) {
             case '+':
@@ -56,7 +57,7 @@ class Calculator extends Component {
                 this.setOutput(firstNumber % secondNumber);
                 break;
             case '^':
-                this.setOutput(firstNumber ** secondNumber);
+                this.setOutput(firstNumber**secondNumber);
                 break;
             default:
                 break;
@@ -164,9 +165,17 @@ class Calculator extends Component {
 
     render() {
         return (
-            <div className="container">
-                <Display{...this.state} />
-                <Buttons {...this.state} handleInputChange={this.handleInputChange} />
+            <div>
+                <div className="columns">
+                    <div className="column is-offset-3 is-6">
+                        <Display{...this.state} />
+                    </div>
+                </div>
+                <div className="columns">
+                    <div className="column is-offset-3 is-6">
+                        <Buttons {...this.state} handleInputChange={this.handleInputChange} />
+                    </div>
+                </div>
             </div>
         );
     }

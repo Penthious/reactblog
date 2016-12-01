@@ -16,21 +16,36 @@ class Buttons extends Component {
         const set4 = ['AC', '0', 'DEL', '/'];
         const set5 = ['=', '.', '^', '%'];
         return (
-            <div className="button-box">
-                <div>
-                    {set1.map(val => <button className="set1" key={`${val}hashed`} onClick={() => this.handleOnClick(val)}>{val}</button>)}
+            <div>
+                <div className="columns">
+                    <div className="column is-offset-3 is-9 button-box--style">
+                        {set1.map(val => <button className="button-size" key={`${val}hashed`}
+                                                 onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                    </div>
                 </div>
-                <div>
-                    {set2.map(val => <button className="set2" key={`${val}hashed`} onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                <div className="columns">
+                    <div className="column is-offset-3 is-9 button-box--style">
+                        {set2.map(val => <button className="button-size" key={`${val}hashed`}
+                                                 onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                    </div>
                 </div>
-                <div>
-                    {set3.map(val => <button className="set3" key={`${val}hashed`} onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                <div className="columns">
+                    <div className="column is-offset-3 is-9 button-box--style">
+                        {set3.map(val => <button className="button-size" key={`${val}hashed`}
+                                                 onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                    </div>
                 </div>
-                <div>
-                    {set4.map(val => <button className="set4" key={`${val}hashed`} onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                <div className="columns">
+                    <div className="column is-offset-3 is-9 button-box--style">
+                        {set4.map(val => <button className="button-size" key={`${val}hashed`}
+                                                 onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                    </div>
                 </div>
-                <div>
-                    {set5.map(val => <button className="set5" key={`${val}hashed`} onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                <div className="columns">
+                    <div className="column is-offset-3 is-9 button-box--style">
+                        {set5.map(val => <button className="button-size" key={`${val}hashed`}
+                                                 onClick={() => this.handleOnClick(val)}>{val}</button>)}
+                    </div>
                 </div>
             </div>
         );

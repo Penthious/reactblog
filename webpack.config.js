@@ -5,7 +5,7 @@ const combineLoaders = require('webpack-combine-loaders');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './resources/assets/js/Main.jsx',
+    entry: './resources/assets/js/components/Main.jsx',
     output: {
         filename: './public/js/main.js',
     },
@@ -27,11 +27,15 @@ module.exports = {
                     // plugins: ['es7.classProperties'],
                 },
             },
-            // css loader
-            // {
-            //    test: /\.json$/,
-            //    loader: 'json-loader',
-            // },
+            {
+                test: /(\.css|\.scss|\.sass)$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader?sourceMap',
+                    'postcss-loader',
+                    'sass-loader?sourceMap',
+                ],
+            },
         ],
     },
 };

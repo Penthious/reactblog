@@ -63,7 +63,7 @@ class NavBar extends Component {
                         Home
                     </a>
                     <a className="nav-item">
-                        <Link to='calculator'>
+                        <Link to="projects">
                        Projects
                               </Link>
                     </a>
