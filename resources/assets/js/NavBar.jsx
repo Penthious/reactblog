@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import classNames from 'classnames';
 
 class NavBar extends Component {
@@ -58,11 +59,13 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    <a className="nav-item" href="#">
+                    <a className="nav-item" href="/">
                         Home
                     </a>
-                    <a className="nav-item" href="#">
+                    <a className="nav-item">
+                        <Link to='calculator'>
                        Projects
+                              </Link>
                     </a>
                     <a className="nav-item" href="#">
                         Resume
