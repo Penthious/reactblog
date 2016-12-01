@@ -8,16 +8,16 @@ const Display = props => (
             <div className="column is-offset-1 is-3 is-offset-4-mobile is-8-mobile">
                 <input type="text" value={props.firstInput} disabled />
             </div>
-            <div className="column is-3 is-offset-4-mobile is-6-mobile">
+            <div className="column is-3 is-offset-4-mobile is-8-mobile">
                 <input type="text" value={props.secondInput} disabled />
             </div>
-            <div className="column is-3 is-offset-4-mobile is-6-mobile">
+            <div className="column is-3 is-offset-4-mobile is-8-mobile">
                 <input type="text" value={props.thirdInput} disabled />
             </div>
         </div>
 
         <div className="columns">
-            <div className="column is-offset-4 is-3 is-offset-4-mobile is-6-mobile">
+            <div className="column is-offset-4 is-3 is-offset-4-mobile is-8-mobile">
                 <input className="is-centered" disabled value={props.output} />
             </div>
         </div>
