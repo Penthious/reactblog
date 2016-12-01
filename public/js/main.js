@@ -12174,93 +12174,9 @@ exports.default = Layout;
 
 /***/ },
 /* 111 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-"use strict";
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(42);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Projects = function (_Component) {
-    _inherits(Projects, _Component);
-
-    function Projects() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, Projects);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Projects.__proto__ || Object.getPrototypeOf(Projects)).call.apply(_ref, [this].concat(args))), _this), _this.allProjects = function () {
-            return [{
-                name: 'Calculator',
-                created_at: 'Wednesday, November 30',
-                description: 'A simple calculator built out of react',
-                github: 'https://github.com/Penthious/reactCalculator',
-                image: '',
-                link: 'calculator'
-            }, {
-                name: 'Simple Simon',
-                created_at: 'Wednesday, November 30',
-                description: 'The game we all know and love Simple simon.',
-                github: 'https://github.com/Penthious/react-simpleSimon',
-                image: '',
-                link: 'simpleSimon'
-            }];
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(Projects, [{
-        key: 'render',
-        value: function render() {
-            var html = '';
-            for (var i = 0; i < this.allProjects().length; i++) {
-                var project = this.allProjects()[i];
-                console.log(project);
-                if ((i + 1) % 3 === 1) {
-                    html += '<div className="columns">';
-                }
-                html += ' <div className="column">\n                       <div className="card">\n                           <div className="card-image">\n                               <figure className="image is-4by3">\n                                   <img src="http://placehold.it/300x225" alt="" />\n                               </figure>\n                           </div>\n                           <div className="card-content">\n                               <div className="media">\n                                   <div className="media-left">\n                                       <figure className="image is-32x32">\n                                           <Link to={project.link}>\n                                               <img src="http://placehold.it/64x64" alt="Image" />\n                                           </Link>\n                                       </figure>\n                                   </div>\n                                   <div className="media-content">\n                                       <p className="subtitle is-6"><a href=' + project.github + '\n                                                                       rel="noopener noreferrer"\n                                                                       target="_blank">\n                                           Code for ' + project.name + '</a></p>\n                                   </div>\n                               </div>\n\n                               <div className="content">\n                                   <p>' + project.description + '</p>\n                                   <br />\n                                   <small>' + project.created_at + '</small>\n                               </div>\n                           </div>\n                       </div>';
-                if ((i + 1) % 3 === 0) {
-                    html += '</div>';
-                }
-            }
-            return _react2.default.createElement(
-                'div',
-                null,
-                html
-            );
-        }
-    }]);
-
-    return Projects;
-}(_react.Component);
-
-Projects.propTypes = {};
-
-exports.default = Projects;
+throw new Error("Module build failed: SyntaxError: Unexpected token (69:26)\n\n\u001b[0m \u001b[90m 67 | \u001b[39m                       \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 68 | \u001b[39m            \u001b[36mif\u001b[39m ((i \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m) \u001b[33m%\u001b[39m \u001b[35m3\u001b[39m \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 | \u001b[39m                html \u001b[33m+=\u001b[39m (\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 | \u001b[39m            }\n \u001b[90m 71 | \u001b[39m        }\n \u001b[90m 72 | \u001b[39m        \u001b[36mreturn\u001b[39m (\u001b[0m\n");
 
 /***/ },
 /* 112 */
@@ -13044,7 +12960,7 @@ var Display = function Display(props) {
             { className: "columns" },
             _react2.default.createElement(
                 "div",
-                { className: "column is-offset-1 is-3 is-offset-4-mobile is-6-mobile" },
+                { className: "column is-offset-1 is-3 is-offset-4-mobile is-8-mobile" },
                 _react2.default.createElement("input", { type: "text", value: props.firstInput, disabled: true })
             ),
             _react2.default.createElement(

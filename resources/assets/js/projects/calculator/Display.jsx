@@ -5,7 +5,7 @@ import React, {
 const Display = props => (
     <div>
         <div className="columns">
-            <div className="column is-offset-1 is-3 is-offset-4-mobile is-6-mobile">
+            <div className="column is-offset-1 is-3 is-offset-4-mobile is-8-mobile">
                 <input type="text" value={props.firstInput} disabled />
             </div>
             <div className="column is-3 is-offset-4-mobile is-6-mobile">
