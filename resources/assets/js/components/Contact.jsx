@@ -26,7 +26,7 @@ class Contact extends Component {
                             <option value="">Other</option>
                         </select>
                         <textarea className="textarea" placeholder="Message me anything"></textarea>
-                        <button className="button is-primary">Send</button>
+                        <button className="button is-primary contact--button">Send</button>
                     </div>
                 </div>
             </div>
