@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'HomeController@index',
+    'as' => 'home',
+]);
+Route::post('/sendMail', [
+    'uses' => 'HomeController@sendMail',
+    'as' => 'mail',
+]);
