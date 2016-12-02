@@ -1,15 +1,15 @@
-import React, {
-    Component,
-    PropTypes,
-} from 'react';
-
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-class Project extends Component {
-    constructor(props){
-        super(props);
-        console.log(props);
-    }
+import  Project from './Project';
+import Personal from './Personal';
+import projectsData from '../projectsData.js';
+
+class Projects extends Component {
+
+    allProjects = () => projectsData;
+
+
     render() {
         return (
             <div>
@@ -26,7 +26,7 @@ class Project extends Component {
                             <div className="media">
                                 <div className="media-left">
                                     <figure className="image is-32x32">
-                                            <img src="http://placehold.it/64x64" alt="Image" />
+                                        <img src="http://placehold.it/64x64" alt="Image" />
                                     </figure>
                                 </div>
                                 <div className="media-content">
@@ -53,7 +53,7 @@ class Project extends Component {
     }
 }
 
-Project.propTypes    = {};
-Project.defaultProps = {};
 
-export default Project;
+Projects.propTypes = {};
+
+export default Projects;

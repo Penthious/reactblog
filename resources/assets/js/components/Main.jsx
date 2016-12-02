@@ -8,13 +8,15 @@ import Resume from './Resume';
 import Contact from './Contact';
 import Projects from './Projects';
 import Calculator from '../projects/calculator/Calculator';
+import Timer from '../projects/stopwatch/Timer';
 
 const App = () => (
     <Router history={hashHistory}>
         <Route path="/" component={Layout}>
-            <IndexRoute component={About} string="this is a test string" />
+            <IndexRoute component={About} />
             <Route path="projects" component={Projects} />
             <Route path="calculator" component={Calculator} />
+            <Route path="stopwatch" component={Timer} />
             <Route path="resume" component={Resume} />
             <Route path="contact" component={Contact} />
         </Route>
