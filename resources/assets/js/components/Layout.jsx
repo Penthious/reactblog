@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
@@ -17,4 +17,7 @@ const Layout = props => (
     </div>
 );
 
+Layout.propTypes = {
+    children: PropTypes.object,
+};
 export default Layout;

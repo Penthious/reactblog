@@ -12592,6 +12592,9 @@ var Layout = function Layout(props) {
     );
 };
 
+Layout.propTypes = {
+    children: _react.PropTypes.object
+};
 exports.default = Layout;
 
 /***/ },
@@ -12653,6 +12656,11 @@ var Projects = function (_Component) {
     }
 
     _createClass(Projects, [{
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log('UNMOUNTED');
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -12732,8 +12740,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
@@ -12742,199 +12748,191 @@ __webpack_require__(254);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Resume = function (_Component) {
-    _inherits(Resume, _Component);
-
-    function Resume() {
-        _classCallCheck(this, Resume);
-
-        return _possibleConstructorReturn(this, (Resume.__proto__ || Object.getPrototypeOf(Resume)).apply(this, arguments));
-    }
-
-    _createClass(Resume, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
+var Resume = function Resume() {
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'div',
+            { className: 'columns' },
+            _react2.default.createElement(
                 'div',
-                null,
+                { className: 'column is-offset-1 is-6' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'resume--text resume--header' },
+                    'Tomas Leffew'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'resume--text' },
+                    'Salt Lake City, Utah'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'resume--text' },
+                    'Site: penthious.com'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'resume--text' },
+                    'Phone: 210-290-4890'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'resume--text' },
+                    'Email: tleffew1994@gmail.com'
+                ),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'resume--text' },
+                    _react2.default.createElement(
+                        'a',
+                        { href: 'https://github.com/Penthious' },
+                        'https://github.com/Penthious'
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'column is-offset-1 is-3 is-offset-1-mobile' },
+                _react2.default.createElement('img', { className: 'resume--image', src: '/images/tomas.jpg', alt: '' })
+            )
+        ),
+        _react2.default.createElement('hr', null),
+        _react2.default.createElement(
+            'div',
+            { className: 'columns' },
+            _react2.default.createElement(
+                'div',
+                { className: 'column is-offset-1 is-8' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'columns' },
+                    { className: 'resume--header' },
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'About me'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'resume--text' },
+                        'I am 21 years old, currently living in Utah. I have taken to web development like wildfire. I started learning how to code in November of 2015. After 2 months of struggling to find good resources that kept my attention I decided to attend a coding bootcamp. It was a 4 month course and when I was done I was able to build a fully functional site.Not long after I landed my first job in Salt Lake City.'
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'resume--text' },
+                        'At this job I focused on mainly the backend but I also took on the task\'s of front end work. After 6 months working for this company things went down hill. Sadly the company hit a hard time and had to lay me off. It was a hard time but I kept my head up and decided to make the best of it. Now I am freelancing and learning react as I think its a awesome framework.'
+                    ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-1 is-6' },
-                        _react2.default.createElement(
-                            'h1',
-                            { className: 'resume--text resume--header' },
-                            'Tomas Leffew'
-                        ),
+                        { className: 'resume--header' },
                         _react2.default.createElement(
                             'p',
-                            { className: 'resume--text' },
-                            'Salt Lake City, Utah'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'resume--text' },
-                            'Site: penthious.com'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'resume--text' },
-                            'Phone: 210-290-4890'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'resume--text' },
-                            'Email: tleffew1994@gmail.com'
-                        ),
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'resume--text' },
-                            _react2.default.createElement(
-                                'a',
-                                { href: 'https://github.com/Penthious' },
-                                'https://github.com/Penthious'
-                            )
+                            null,
+                            'Skills'
                         )
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-1 is-3 is-offset-3-mobile' },
-                        _react2.default.createElement('img', { className: 'resume--image', src: '/images/tomas.jpg', alt: '' })
-                    )
-                ),
-                _react2.default.createElement('hr', null),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'columns' },
+                        null,
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--text' },
+                            'Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim'
+                        )
+                    ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-1 is-8' },
+                        { className: 'resume--header' },
                         _react2.default.createElement(
-                            'div',
-                            { className: 'resume--header' },
-                            _react2.default.createElement(
-                                'p',
-                                null,
-                                'About me'
-                            )
+                            'p',
+                            null,
+                            'Work experience'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--text' },
+                            'Full Stack Developer, SLC Devshop - June 2016 - November 2016'
                         ),
                         _react2.default.createElement(
-                            'div',
+                            'p',
+                            { className: 'resume--bullet' },
+                            'Build and maintained current projects with a main focus on Laravel, jquery and bootstap'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--bullet' },
+                            'Over see work that was being handled by our over seas developers'
+                        ),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--text' },
+                            'Satellite Technician, Direct TV 2015 - 2016'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--bullet' },
+                            'Installed DirectTv unites and tutored customers on basic usage'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--bullet' },
+                            'Self-managed time and workload on a daily basis'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'resume--header' },
+                        _react2.default.createElement(
+                            'p',
                             null,
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'resume--text' },
-                                'I am 21 years old, currently living in Utah. I have taken to web development like wild fire. I started learning how to code in November of 2015. After 2 months of struggling to find good resources that kept my attention I decided to attend a coding bootcamp. It was a 4 month course and when I was done I was able to build a fully functional site. Not long after I landed my first job in Salt Lake City.'
-                            ),
-                            _react2.default.createElement('br', null),
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'resume--text' },
-                                'At this job I focused on mainly the backend but I also took on the task\'s of front end work. After 6 months working for this company things went down hill. Sadly the company hit a hard time and had to lay me off. It was a hard time but I kept my head up and decided to make the best of it. Now I am freelancing and learning react as I think its a awesome framework.'
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'resume--header' },
-                                _react2.default.createElement(
-                                    'p',
-                                    null,
-                                    'Skills'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--text' },
-                                    'Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'resume--header' },
-                                _react2.default.createElement(
-                                    'p',
-                                    null,
-                                    'Work experience'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--text' },
-                                    'Full Stack Developer, SLC Devshop - June 2016 - November 2016'
-                                ),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--bullet' },
-                                    'Build and maintained current projects with a main focus on Laravel, jquery and bootstap'
-                                ),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--bullet' },
-                                    'Over see work that was being handled by our over seas developers'
-                                ),
-                                _react2.default.createElement('br', null),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--text' },
-                                    'Satellite Technician, Direct TV 2015 - 2016'
-                                ),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--bullet' },
-                                    'Installed DirectTv unites and tutored customers on basic usage'
-                                ),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--bullet' },
-                                    'Self-managed time and workload on a daily basis'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'resume--header' },
-                                _react2.default.createElement(
-                                    'p',
-                                    null,
-                                    'Education'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--text' },
-                                    'Codeup - Januray 2016 - May 2016'
-                                ),
-                                _react2.default.createElement('br', null),
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'resume--text' },
-                                    'North West Vista College 2012-2014'
-                                )
-                            )
+                            'Education'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--text' },
+                            'Codeup - Januray 2016 - May 2016'
+                        ),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'resume--text' },
+                            'North West Vista College 2012-2014'
                         )
                     )
                 )
-            );
-        }
-    }]);
-
-    return Resume;
-}(_react.Component);
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'columns' },
+            _react2.default.createElement(
+                'div',
+                { className: 'column is-offset-3-tablet is-5 is-offset-1-mobile is-6-mobile' },
+                _react2.default.createElement(
+                    'button',
+                    { className: 'button' },
+                    'Download Resume'
+                )
+            )
+        )
+    );
+};
 
 Resume.propTypes = {};
 Resume.defaultProps = {};
@@ -13328,7 +13326,7 @@ var NavBar = function (_Component) {
                     { className: 'nav-left' },
                     _react2.default.createElement(
                         'a',
-                        { className: 'nav-item is-brand', href: '#' },
+                        { className: 'nav-item is-brand', href: '/' },
                         _react2.default.createElement(
                             'h1',
                             { className: 'title is-1' },
@@ -13406,13 +13404,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Project = function (_Component) {
     _inherits(Project, _Component);
 
-    function Project(props) {
+    function Project() {
         _classCallCheck(this, Project);
 
-        var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
-
-        console.log(props);
-        return _this;
+        return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).apply(this, arguments));
     }
 
     _createClass(Project, [{
@@ -13463,9 +13458,11 @@ var Project = function (_Component) {
                                         { className: 'subtitle is-6' },
                                         _react2.default.createElement(
                                             'a',
-                                            { href: this.props.github,
+                                            {
+                                                href: this.props.github,
                                                 rel: 'noopener noreferrer',
-                                                target: '_blank' },
+                                                target: '_blank'
+                                            },
                                             'Code for ',
                                             this.props.name
                                         )
@@ -28558,13 +28555,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(28);
-
 __webpack_require__(258);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = function About(props) {
+var About = function About() {
     return _react2.default.createElement(
         'div',
         null,
@@ -28638,7 +28633,7 @@ var About = function About(props) {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-6' },
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio dolor ea facilis fugit illum labore molestiae mollitia, nam nihil odio, porro quaerat reprehenderit similique sunt.'
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio dolor ea facilis fugit illum labore molestiae mollitia , nam nihil odio, porro quaerat reprehenderit similique sunt.'
             ),
             _react2.default.createElement(
                 'div',
@@ -28742,14 +28737,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(28);
 
-var _Project = __webpack_require__(121);
-
-var _Project2 = _interopRequireDefault(_Project);
-
-var _Personal = __webpack_require__(259);
-
-var _Personal2 = _interopRequireDefault(_Personal);
-
 var _projectsData = __webpack_require__(124);
 
 var _projectsData2 = _interopRequireDefault(_projectsData);
@@ -28829,9 +28816,11 @@ var Projects = function (_Component) {
                                         { className: 'subtitle is-6' },
                                         _react2.default.createElement(
                                             'a',
-                                            { href: this.props.github,
+                                            {
+                                                href: this.props.github,
                                                 rel: 'noopener noreferrer',
-                                                target: '_blank' },
+                                                target: '_blank'
+                                            },
                                             'Code for ',
                                             this.props.name
                                         )

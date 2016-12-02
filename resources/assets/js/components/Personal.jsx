@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import  Project from './Project';
-import Personal from './Personal';
-import projectsData from '../projectsData.js';
+import projectsData from '../projectsData';
 
 class Projects extends Component {
 
@@ -31,9 +29,11 @@ class Projects extends Component {
                                 </div>
                                 <div className="media-content">
                                     <p className="subtitle is-6">
-                                        <a href={this.props.github}
-                                           rel="noopener noreferrer"
-                                           target="_blank">
+                                        <a
+                                            href={this.props.github}
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                        >
                                             Code for {this.props.name}
                                         </a>
                                     </p>

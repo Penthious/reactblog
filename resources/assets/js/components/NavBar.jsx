@@ -10,6 +10,7 @@ class NavBar extends Component {
         };
     }
 
+
     handleOnClick = () => {
         this.setState({
             active: !this.state.active,
@@ -34,25 +35,25 @@ class NavBar extends Component {
         return (
             <nav className="nav">
                 <div className="nav-left">
-                    <a className="nav-item is-brand" href="#">
+                    <a className="nav-item is-brand" href="/">
                         <h1 className="title is-1">Penthious</h1>
                     </a>
                 </div>
 
 
                 <span className={this.hamburgerClassNames()} onClick={this.handleOnClick}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span />
+                    <span />
+                    <span />
                 </span>
 
                 <div className={this.navClassNames()}>
                     <Link to="/" className="nav-item">
                         Home
                     </Link>
-                        <Link className="nav-item" to="projects">
-                           Projects
-                        </Link>
+                    <Link className="nav-item" to="projects">
+                        Projects
+                    </Link>
                     <Link to="resume" className="nav-item" >
                         Resume
                     </Link>
@@ -61,7 +62,6 @@ class NavBar extends Component {
                     </Link>
                 </div>
             </nav>
-
         );
     }
 }

@@ -6,6 +6,9 @@ import Personal from './Personal';
 import projectsData from '../projectsData.js';
 
 class Projects extends Component {
+    componentWillUnmount() {
+        console.log('UNMOUNTED');
+    }
 
     allProjects = () => projectsData;
 

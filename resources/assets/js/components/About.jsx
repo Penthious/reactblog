@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 import '../../sass/about.sass';
 
-const About = (props) => (
+const About = () => (
     <div>
         <div className="columns is-multiline is-mobile">
             <column className="column is-2 is-1-desktop is-2-tablet is-2-mobile boxtest">1oeueou</column>
@@ -21,8 +20,10 @@ const About = (props) => (
         </div>
         <div className="columns">
             <div className="column is-offset-1 is-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio
-                dolor ea facilis fugit illum labore molestiae mollitia, nam nihil odio, porro quaerat reprehenderit
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. A, at beatae corporis dignissimos distinctio
+                dolor ea facilis fugit illum labore molestiae mollitia
+                , nam nihil odio, porro quaerat reprehenderit
                 similique sunt.
             </div>
             <div className="column is-offset-1 is-5">
@@ -34,15 +35,21 @@ const About = (props) => (
                 <img className="about--rotate about--order2" src="/images/tomas.jpg" alt="" />
             </div>
             <div className="column is-offset-1 is-6 about--order1">
-                <p className="about--order1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur deserunt fugit incidunt
-                    inventore maiores praesentium quisquam voluptates! Adipisci cupiditate dignissimos eius et ex hic id
-                    impedit laborum laudantium, molestias.</p>
+                <p className="about--order1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+                    consectetur deserunt fugit incidunt
+                    inventore maiores praesentium quisquam voluptates!
+                    Adipisci cupiditate dignissimos eius et ex hic id
+                    impedit laborum laudantium, molestias.
+                </p>
             </div>
         </div>
         <div className="columns">
             <div className="column is-offset-1 is-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio
-                dolor ea facilis fugit illum labore molestiae mollitia, nam nihil odio, porro quaerat reprehenderit
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. A, at beatae corporis dignissimos distinctio
+                dolor ea facilis fugit illum labore molestiae mollitia,
+                nam nihil odio, porro quaerat reprehenderit
                 similique sunt.
             </div>
             <div className="column is-offset-1 is-5">
