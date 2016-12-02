@@ -59,34 +59,18 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    <a className="nav-item" href="/">
+                    <Link to="/" className="nav-item">
                         Home
-                    </a>
-                    <a className="nav-item">
-                        <Link to="projects">
-                       Projects
-                              </Link>
-                    </a>
-                    <a className="nav-item" href="#">
+                    </Link>
+                        <Link className="nav-item" to="projects">
+                           Projects
+                        </Link>
+                    <Link to="resume" className="nav-item" >
                         Resume
-                    </a>
-                    <a className="nav-item" href="#">
+                    </Link>
+                    <Link to="contact" className="nav-item">
                         Contact
-                    </a>
-                    <span className="nav-item">
-                        <a className="button">
-                            <span className="icon">
-                                <i className="fa fa-twitter" />
-                            </span>
-                            <span>Tweet</span>
-                        </a>
-                        <a className="button is-primary" href="#">
-                            <span className="icon">
-                                <i className="fa fa-download" />
-                            </span>
-                            <span>Download</span>
-                        </a>
-                    </span>
+                    </Link>
                 </div>
             </nav>
 

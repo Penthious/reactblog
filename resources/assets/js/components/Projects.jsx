@@ -15,7 +15,7 @@ class Projects extends Component {
     render() {
         console.log(this.allProjects().map(project => <button>test</button>));
         return (
-            <div>
+            <div className="container">
 
                 <div className="columns project--card">
                     {this.allProjects().map(function (project, index) {

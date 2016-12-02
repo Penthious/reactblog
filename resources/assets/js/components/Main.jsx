@@ -4,6 +4,8 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 import Layout from './Layout';
 import Test from './Test';
+import Resume from './Resume';
+import Contact from './Contact';
 import Projects from './Projects';
 import Calculator from '../projects/calculator/Calculator';
 
@@ -13,6 +15,8 @@ const App = () => (
             <IndexRoute component={Test} string="this is a test string" />
             <Route path="projects" component={Projects} />
             <Route path="calculator" component={Calculator} />
+            <Route path="resume" component={Resume} />
+            <Route path="contact" component={Contact} />
         </Route>
     </Router>
 );

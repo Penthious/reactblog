@@ -12160,7 +12160,7 @@ var Layout = function Layout(props) {
         { className: 'siteLayout' },
         _react2.default.createElement(_NavBar2.default, null),
         _react2.default.createElement(
-            'div',
+            'main',
             { className: 'section' },
             _react2.default.createElement(
                 'div',
@@ -12240,7 +12240,7 @@ var Projects = function (_Component) {
             }));
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'container' },
                 _react2.default.createElement(
                     'div',
                     { className: 'columns project--card' },
@@ -12827,60 +12827,24 @@ var NavBar = function (_Component) {
                     'div',
                     { className: this.navClassNames() },
                     _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item', href: '/' },
+                        _reactRouter.Link,
+                        { to: '/', className: 'nav-item' },
                         'Home'
                     ),
                     _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item' },
-                        _react2.default.createElement(
-                            _reactRouter.Link,
-                            { to: 'projects' },
-                            'Projects'
-                        )
+                        _reactRouter.Link,
+                        { className: 'nav-item', to: 'projects' },
+                        'Projects'
                     ),
                     _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item', href: '#' },
+                        _reactRouter.Link,
+                        { to: 'resume', className: 'nav-item' },
                         'Resume'
                     ),
                     _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item', href: '#' },
+                        _reactRouter.Link,
+                        { to: 'contact', className: 'nav-item' },
                         'Contact'
-                    ),
-                    _react2.default.createElement(
-                        'span',
-                        { className: 'nav-item' },
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'button' },
-                            _react2.default.createElement(
-                                'span',
-                                { className: 'icon' },
-                                _react2.default.createElement('i', { className: 'fa fa-twitter' })
-                            ),
-                            _react2.default.createElement(
-                                'span',
-                                null,
-                                'Tweet'
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'button is-primary', href: '#' },
-                            _react2.default.createElement(
-                                'span',
-                                { className: 'icon' },
-                                _react2.default.createElement('i', { className: 'fa fa-download' })
-                            ),
-                            _react2.default.createElement(
-                                'span',
-                                null,
-                                'Download'
-                            )
-                        )
                     )
                 )
             );
@@ -28010,6 +27974,14 @@ var _Test = __webpack_require__(112);
 
 var _Test2 = _interopRequireDefault(_Test);
 
+var _Resume = __webpack_require__(290);
+
+var _Resume2 = _interopRequireDefault(_Resume);
+
+var _Contact = __webpack_require__(289);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
 var _Projects = __webpack_require__(111);
 
 var _Projects2 = _interopRequireDefault(_Projects);
@@ -28029,7 +28001,9 @@ var App = function App() {
             { path: '/', component: _Layout2.default },
             _react2.default.createElement(_reactRouter.IndexRoute, { component: _Test2.default, string: 'this is a test string' }),
             _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _Projects2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'calculator', component: _Calculator2.default })
+            _react2.default.createElement(_reactRouter.Route, { path: 'calculator', component: _Calculator2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _Resume2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default })
         )
     );
 };
@@ -28266,7 +28240,7 @@ exports = module.exports = __webpack_require__(121)();
 
 
 // module
-exports.push([module.i, "html, body {\n  height: 100%; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 85vh;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAG;;AAElB;EACE,4BAA4B,EAAG;;AAEjC;EAEE,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAGtB;EACE,4BAA4B,EAAG;;AAEjC;EACE,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAEvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["html, body {\n  height: 100%; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  //max-width: 1800px\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 85vh;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "body {\n  height: 100%; }\n\n.resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media (max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n  .resume--text {\n    padding-right: 8px; } }\n\n.resume--text {\n  padding-left: 20px; }\n\n.siteLayout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  min-height: 95vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAG;;AAElB;EACE,0BAAiB;EACjB,aAAa;EACb,cAAc,EAAG;;AAEnB;EACE,iBAAiB;EACjB,oBAAoB;EACpB,eAAe;EACf,2BAA2B,EAAG;;AAEhC;EACE,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE;IACE,mBAAmB,EAAG;EAExB;IACE,mBAAmB,EAAG,EAAA;;AAG1B;EACE,mBAAmB,EAAG;;AAExB;EACE,kBAAkB;EAClB,cAAc;EACd,uBAAuB,EAAG;;AAE5B;EACE,4BAA4B,EAAG;;AAEjC;EAEE,QAAQ;EACR,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAGtB;EACE,4BAA4B,EAAG;;AAEjC;EACE,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAEvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["body {\n  height: 100%; }\n\n.resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media(max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n\n  .resume--text {\n    padding-right: 8px; } }\n\n\n.resume--text {\n  padding-left: 20px; }\n\n.siteLayout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  //max-width: 1800px\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  min-height: 95vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -28296,6 +28270,273 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contact = function (_Component) {
+    _inherits(Contact, _Component);
+
+    function Contact() {
+        _classCallCheck(this, Contact);
+
+        return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+    }
+
+    _createClass(Contact, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', null);
+        }
+    }]);
+
+    return Contact;
+}(_react.Component);
+
+Contact.propTypes = {};
+Contact.defaultProps = {};
+
+exports.default = Contact;
+
+/***/ },
+/* 290 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Resume = function (_Component) {
+    _inherits(Resume, _Component);
+
+    function Resume() {
+        _classCallCheck(this, Resume);
+
+        return _possibleConstructorReturn(this, (Resume.__proto__ || Object.getPrototypeOf(Resume)).apply(this, arguments));
+    }
+
+    _createClass(Resume, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "div",
+                    { className: "columns" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "column is-offset-1 is-6" },
+                        _react2.default.createElement(
+                            "h1",
+                            { className: "resume--text resume--header" },
+                            "Tomas Leffew"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "resume--text" },
+                            "Salt Lake City, Utah"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "resume--text" },
+                            "Site: penthious.com"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "resume--text" },
+                            "Phone: 210-290-4890"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "resume--text" },
+                            "Email: tleffew1994@gmail.com"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "resume--text" },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "https://github.com/Penthious" },
+                                "https://github.com/Penthious"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "column is-offset-1 is-3 is-offset-3-mobile" },
+                        _react2.default.createElement("img", { className: "resume--image", src: "/images/tomas.jpg", alt: "" })
+                    )
+                ),
+                _react2.default.createElement("hr", null),
+                _react2.default.createElement(
+                    "div",
+                    { className: "columns" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "column is-offset-1 is-8" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "resume--header" },
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                "About me"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            null,
+                            _react2.default.createElement(
+                                "p",
+                                { className: "resume--text" },
+                                "I am 21 years old, currently living in Utah. I have taken to web development like wild fire. I started learning how to code in November of 2015. After 2 months of struggling to find good resources that kept my attention I decided to attend a coding bootcamp. It was a 4 month course and when I was done I was able to build a fully functional site. Not long after I landed my first job in Salt Lake City."
+                            ),
+                            _react2.default.createElement("br", null),
+                            _react2.default.createElement(
+                                "p",
+                                { className: "resume--text" },
+                                "At this job I focused on mainly the backend but I also took on the task's of front end work. After 6 months working for this company things went down hill. Sadly the company hit a hard time and had to lay me off. It was a hard time but I kept my head up and decided to make the best of it. Now I am freelancing and learning react as I think its a awesome framework."
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "resume--header" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Skills"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                null,
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--text" },
+                                    "Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "resume--header" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Work experience"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                null,
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--text" },
+                                    "Full Stack Developer, SLC Devshop - June 2016 - November 2016"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--bullet" },
+                                    "Build and maintained current projects with a main focus on Laravel, jquery and bootstap"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--bullet" },
+                                    "Over see work that was being handled by our over seas developers"
+                                ),
+                                _react2.default.createElement("br", null),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--text" },
+                                    "Satellite Technician, Direct TV 2015 - 2016"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--bullet" },
+                                    "Installed DirectTv unites and tutored customers on basic usage"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--bullet" },
+                                    "Self-managed time and workload on a daily basis"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "resume--header" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Education"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                null,
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--text" },
+                                    "Codeup - Januray 2016 - May 2016"
+                                ),
+                                _react2.default.createElement("br", null),
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "resume--text" },
+                                    "North West Vista College 2012-2014"
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Resume;
+}(_react.Component);
+
+Resume.propTypes = {};
+Resume.defaultProps = {};
+
+exports.default = Resume;
 
 /***/ }
 /******/ ]);
