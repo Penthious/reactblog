@@ -5,11 +5,11 @@ import Footer from './Footer';
 import '../../sass/app.sass';
 
 const Layout = props => (
-    <div className="siteLayout">
+    <div className="site--layout">
         <NavBar />
 
         <main className="section">
-            <div className="container test">
+            <div className="container site--container">
                 {props.children}
             </div>
         </main>

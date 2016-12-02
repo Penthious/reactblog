@@ -3,6 +3,8 @@ import React, {
     PropTypes,
 } from 'react';
 
+import '../../sass/resume.sass';
+
 class Resume extends Component {
     render() {
         return (

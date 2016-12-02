@@ -35,22 +35,10 @@ class NavBar extends Component {
             <nav className="nav">
                 <div className="nav-left">
                     <a className="nav-item is-brand" href="#">
-                        <h1><strong>Tomas's Blog</strong></h1>
+                        <h1 className="title is-1">Penthious</h1>
                     </a>
                 </div>
 
-                <div className="nav-center">
-                    <a className="nav-item" href="#">
-                        <span className="icon">
-                          <i className="fa fa-github" />
-                        </span>
-                    </a>
-                    <a className="nav-item" href="#">
-                        <span className="icon">
-                            <i className="fa fa-twitter" />
-                        </span>
-                    </a>
-                </div>
 
                 <span className={this.hamburgerClassNames()} onClick={this.handleOnClick}>
                     <span></span>

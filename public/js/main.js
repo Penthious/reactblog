@@ -12157,14 +12157,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Layout = function Layout(props) {
     return _react2.default.createElement(
         'div',
-        { className: 'siteLayout' },
+        { className: 'site--layout' },
         _react2.default.createElement(_NavBar2.default, null),
         _react2.default.createElement(
             'main',
             { className: 'section' },
             _react2.default.createElement(
                 'div',
-                { className: 'container test' },
+                { className: 'container site--container' },
                 props.children
             )
         ),
@@ -12785,34 +12785,8 @@ var NavBar = function (_Component) {
                         { className: 'nav-item is-brand', href: '#' },
                         _react2.default.createElement(
                             'h1',
-                            null,
-                            _react2.default.createElement(
-                                'strong',
-                                null,
-                                'Tomas\'s Blog'
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'nav-center' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item', href: '#' },
-                        _react2.default.createElement(
-                            'span',
-                            { className: 'icon' },
-                            _react2.default.createElement('i', { className: 'fa fa-github' })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'nav-item', href: '#' },
-                        _react2.default.createElement(
-                            'span',
-                            { className: 'icon' },
-                            _react2.default.createElement('i', { className: 'fa fa-twitter' })
+                            { className: 'title is-1' },
+                            'Penthious'
                         )
                     )
                 ),
@@ -28240,7 +28214,7 @@ exports = module.exports = __webpack_require__(121)();
 
 
 // module
-exports.push([module.i, "body {\n  height: 100%; }\n\n.resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media (max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n  .resume--text {\n    padding-right: 8px; } }\n\n.resume--text {\n  padding-left: 20px; }\n\n.siteLayout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  min-height: 95vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAG;;AAElB;EACE,0BAAiB;EACjB,aAAa;EACb,cAAc,EAAG;;AAEnB;EACE,iBAAiB;EACjB,oBAAoB;EACpB,eAAe;EACf,2BAA2B,EAAG;;AAEhC;EACE,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE;IACE,mBAAmB,EAAG;EAExB;IACE,mBAAmB,EAAG,EAAA;;AAG1B;EACE,mBAAmB,EAAG;;AAExB;EACE,kBAAkB;EAClB,cAAc;EACd,uBAAuB,EAAG;;AAE5B;EACE,4BAA4B,EAAG;;AAEjC;EAEE,QAAQ;EACR,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAGtB;EACE,4BAA4B,EAAG;;AAEjC;EACE,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAEvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["body {\n  height: 100%; }\n\n.resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media(max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n\n  .resume--text {\n    padding-right: 8px; } }\n\n\n.resume--text {\n  padding-left: 20px; }\n\n.siteLayout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  //max-width: 1800px\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n\n.nav {\n  background-color: lightblue; }\n\n.test {\n  min-height: 95vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "body {\n  height: 100%; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAG;;AAElB;EACE,kBAAkB;EAClB,cAAc;EACd,uBAAuB,EAAG;;AAE5B;EACE,4BAA4B,EAAG;;AAEjC;EACE,QAAQ;EACR,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAEtB;EACE,4BAA4B,EAAG;;AAEjC;EACE,aAAa;EACb,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAKvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["body {\n  height: 100%; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n\n\n\n.project--card {\n  justify-content: center; }\n\n\n\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -28288,6 +28262,8 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
+__webpack_require__(294);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28308,7 +28284,68 @@ var Contact = function (_Component) {
     _createClass(Contact, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', null);
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'columns' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'column' },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'contact--title' },
+                            'Get in Touch!'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'columns' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'column is-offset-3 is-6 is-offset-1-mobile is-9-mobile' },
+                        _react2.default.createElement('input', { type: 'text', className: 'input', placeholder: 'Name:' }),
+                        _react2.default.createElement('input', { type: 'text', className: 'input', placeholder: 'Email:' }),
+                        _react2.default.createElement(
+                            'select',
+                            { name: '', className: 'select' },
+                            _react2.default.createElement(
+                                'option',
+                                { value: '', disabled: true, selected: 'selected' },
+                                'Select Reason:'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                'Feedback'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                'Say Hello'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                'Hire'
+                            ),
+                            _react2.default.createElement(
+                                'option',
+                                { value: '' },
+                                'Other'
+                            )
+                        ),
+                        _react2.default.createElement('textarea', { className: 'textarea', placeholder: 'Message me anything' }),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'button is-primary' },
+                            'Send'
+                        )
+                    )
+                )
+            );
         }
     }]);
 
@@ -28325,7 +28362,7 @@ exports.default = Contact;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -28336,6 +28373,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(292);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28355,172 +28394,172 @@ var Resume = function (_Component) {
     }
 
     _createClass(Resume, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                "div",
+                'div',
                 null,
                 _react2.default.createElement(
-                    "div",
-                    { className: "columns" },
+                    'div',
+                    { className: 'columns' },
                     _react2.default.createElement(
-                        "div",
-                        { className: "column is-offset-1 is-6" },
+                        'div',
+                        { className: 'column is-offset-1 is-6' },
                         _react2.default.createElement(
-                            "h1",
-                            { className: "resume--text resume--header" },
-                            "Tomas Leffew"
+                            'h1',
+                            { className: 'resume--text resume--header' },
+                            'Tomas Leffew'
                         ),
                         _react2.default.createElement(
-                            "p",
-                            { className: "resume--text" },
-                            "Salt Lake City, Utah"
+                            'p',
+                            { className: 'resume--text' },
+                            'Salt Lake City, Utah'
                         ),
                         _react2.default.createElement(
-                            "p",
-                            { className: "resume--text" },
-                            "Site: penthious.com"
+                            'p',
+                            { className: 'resume--text' },
+                            'Site: penthious.com'
                         ),
                         _react2.default.createElement(
-                            "p",
-                            { className: "resume--text" },
-                            "Phone: 210-290-4890"
+                            'p',
+                            { className: 'resume--text' },
+                            'Phone: 210-290-4890'
                         ),
                         _react2.default.createElement(
-                            "p",
-                            { className: "resume--text" },
-                            "Email: tleffew1994@gmail.com"
+                            'p',
+                            { className: 'resume--text' },
+                            'Email: tleffew1994@gmail.com'
                         ),
                         _react2.default.createElement(
-                            "p",
-                            { className: "resume--text" },
+                            'p',
+                            { className: 'resume--text' },
                             _react2.default.createElement(
-                                "a",
-                                { href: "https://github.com/Penthious" },
-                                "https://github.com/Penthious"
+                                'a',
+                                { href: 'https://github.com/Penthious' },
+                                'https://github.com/Penthious'
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "column is-offset-1 is-3 is-offset-3-mobile" },
-                        _react2.default.createElement("img", { className: "resume--image", src: "/images/tomas.jpg", alt: "" })
+                        'div',
+                        { className: 'column is-offset-1 is-3 is-offset-3-mobile' },
+                        _react2.default.createElement('img', { className: 'resume--image', src: '/images/tomas.jpg', alt: '' })
                     )
                 ),
-                _react2.default.createElement("hr", null),
+                _react2.default.createElement('hr', null),
                 _react2.default.createElement(
-                    "div",
-                    { className: "columns" },
+                    'div',
+                    { className: 'columns' },
                     _react2.default.createElement(
-                        "div",
-                        { className: "column is-offset-1 is-8" },
+                        'div',
+                        { className: 'column is-offset-1 is-8' },
                         _react2.default.createElement(
-                            "div",
-                            { className: "resume--header" },
+                            'div',
+                            { className: 'resume--header' },
                             _react2.default.createElement(
-                                "p",
+                                'p',
                                 null,
-                                "About me"
+                                'About me'
                             )
                         ),
                         _react2.default.createElement(
-                            "div",
+                            'div',
                             null,
                             _react2.default.createElement(
-                                "p",
-                                { className: "resume--text" },
-                                "I am 21 years old, currently living in Utah. I have taken to web development like wild fire. I started learning how to code in November of 2015. After 2 months of struggling to find good resources that kept my attention I decided to attend a coding bootcamp. It was a 4 month course and when I was done I was able to build a fully functional site. Not long after I landed my first job in Salt Lake City."
+                                'p',
+                                { className: 'resume--text' },
+                                'I am 21 years old, currently living in Utah. I have taken to web development like wild fire. I started learning how to code in November of 2015. After 2 months of struggling to find good resources that kept my attention I decided to attend a coding bootcamp. It was a 4 month course and when I was done I was able to build a fully functional site. Not long after I landed my first job in Salt Lake City.'
                             ),
-                            _react2.default.createElement("br", null),
+                            _react2.default.createElement('br', null),
                             _react2.default.createElement(
-                                "p",
-                                { className: "resume--text" },
-                                "At this job I focused on mainly the backend but I also took on the task's of front end work. After 6 months working for this company things went down hill. Sadly the company hit a hard time and had to lay me off. It was a hard time but I kept my head up and decided to make the best of it. Now I am freelancing and learning react as I think its a awesome framework."
+                                'p',
+                                { className: 'resume--text' },
+                                'At this job I focused on mainly the backend but I also took on the task\'s of front end work. After 6 months working for this company things went down hill. Sadly the company hit a hard time and had to lay me off. It was a hard time but I kept my head up and decided to make the best of it. Now I am freelancing and learning react as I think its a awesome framework.'
                             ),
                             _react2.default.createElement(
-                                "div",
-                                { className: "resume--header" },
+                                'div',
+                                { className: 'resume--header' },
                                 _react2.default.createElement(
-                                    "p",
+                                    'p',
                                     null,
-                                    "Skills"
+                                    'Skills'
                                 )
                             ),
                             _react2.default.createElement(
-                                "div",
+                                'div',
                                 null,
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--text" },
-                                    "Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim"
+                                    'p',
+                                    { className: 'resume--text' },
+                                    'Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim'
                                 )
                             ),
                             _react2.default.createElement(
-                                "div",
-                                { className: "resume--header" },
+                                'div',
+                                { className: 'resume--header' },
                                 _react2.default.createElement(
-                                    "p",
+                                    'p',
                                     null,
-                                    "Work experience"
+                                    'Work experience'
                                 )
                             ),
                             _react2.default.createElement(
-                                "div",
+                                'div',
                                 null,
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--text" },
-                                    "Full Stack Developer, SLC Devshop - June 2016 - November 2016"
+                                    'p',
+                                    { className: 'resume--text' },
+                                    'Full Stack Developer, SLC Devshop - June 2016 - November 2016'
                                 ),
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--bullet" },
-                                    "Build and maintained current projects with a main focus on Laravel, jquery and bootstap"
+                                    'p',
+                                    { className: 'resume--bullet' },
+                                    'Build and maintained current projects with a main focus on Laravel, jquery and bootstap'
                                 ),
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--bullet" },
-                                    "Over see work that was being handled by our over seas developers"
+                                    'p',
+                                    { className: 'resume--bullet' },
+                                    'Over see work that was being handled by our over seas developers'
                                 ),
-                                _react2.default.createElement("br", null),
+                                _react2.default.createElement('br', null),
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--text" },
-                                    "Satellite Technician, Direct TV 2015 - 2016"
-                                ),
-                                _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--bullet" },
-                                    "Installed DirectTv unites and tutored customers on basic usage"
+                                    'p',
+                                    { className: 'resume--text' },
+                                    'Satellite Technician, Direct TV 2015 - 2016'
                                 ),
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--bullet" },
-                                    "Self-managed time and workload on a daily basis"
+                                    'p',
+                                    { className: 'resume--bullet' },
+                                    'Installed DirectTv unites and tutored customers on basic usage'
+                                ),
+                                _react2.default.createElement(
+                                    'p',
+                                    { className: 'resume--bullet' },
+                                    'Self-managed time and workload on a daily basis'
                                 )
                             ),
                             _react2.default.createElement(
-                                "div",
-                                { className: "resume--header" },
+                                'div',
+                                { className: 'resume--header' },
                                 _react2.default.createElement(
-                                    "p",
+                                    'p',
                                     null,
-                                    "Education"
+                                    'Education'
                                 )
                             ),
                             _react2.default.createElement(
-                                "div",
+                                'div',
                                 null,
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--text" },
-                                    "Codeup - Januray 2016 - May 2016"
+                                    'p',
+                                    { className: 'resume--text' },
+                                    'Codeup - Januray 2016 - May 2016'
                                 ),
-                                _react2.default.createElement("br", null),
+                                _react2.default.createElement('br', null),
                                 _react2.default.createElement(
-                                    "p",
-                                    { className: "resume--text" },
-                                    "North West Vista College 2012-2014"
+                                    'p',
+                                    { className: 'resume--text' },
+                                    'North West Vista College 2012-2014'
                                 )
                             )
                         )
@@ -28537,6 +28576,86 @@ Resume.propTypes = {};
 Resume.defaultProps = {};
 
 exports.default = Resume;
+
+/***/ },
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(121)();
+// imports
+
+
+// module
+exports.push([module.i, ".resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media (max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n  .resume--text {\n    padding-right: 8px; } }\n\n.resume--text {\n  padding-left: 20px; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/resume.sass"],"names":[],"mappings":"AAAA;EACE,0BAAiB;EACjB,aAAa;EACb,cAAc,EAAG;;AAEnB;EACE,iBAAiB;EACjB,oBAAoB;EACpB,eAAe;EACf,2BAA2B,EAAG;;AAEhC;EACE,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE;IACE,mBAAmB,EAAG;EAExB;IACE,mBAAmB,EAAG,EAAA;;AAE1B;EACE,mBAAmB,EAAG","file":"resume.sass","sourcesContent":[".resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 197px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n@media(max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n\n  .resume--text {\n    padding-right: 8px; } }\n\n.resume--text {\n  padding-left: 20px; }\n\n"],"sourceRoot":"webpack://"}]);
+
+// exports
+
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(291);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(243)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./resume.sass", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./resume.sass");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ },
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(121)();
+// imports
+
+
+// module
+exports.push([module.i, ".contact--title {\n  text-align: center;\n  font-size: 3em;\n  margin-bottom: 60px; }\n\n.input {\n  margin-bottom: 15px;\n  text-align: start; }\n\n.select {\n  width: 100%;\n  height: 30px;\n  margin-bottom: 15px; }\n\n.button {\n  text-align: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/contact.sass"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,oBAAoB;EACpB,kBAAkB,EAAG;;AAEvB;EACE,YAAY;EACZ,aAAa;EACb,oBAAoB,EAAG;;AAEzB;EACE,mBAAmB,EAAG","file":"contact.sass","sourcesContent":[".contact--title {\n  text-align: center;\n  font-size: 3em;\n  margin-bottom: 60px; }\n\n.input {\n  margin-bottom: 15px;\n  text-align: start; }\n\n.select {\n  width: 100%;\n  height: 30px;\n  margin-bottom: 15px; }\n\n.button {\n  text-align: center; }\n\n"],"sourceRoot":"webpack://"}]);
+
+// exports
+
+
+/***/ },
+/* 294 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(293);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(243)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./contact.sass", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./contact.sass");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }
 /******/ ]);

@@ -1,33 +1,7 @@
 body
   height: 100%
 
-.resume--image
-  transform: rotate(180deg)
-  width: 270px
-  height: 197px
-
-.resume--header
-  margin-top: 10px
-  margin-bottom: 10px
-  font-size: 2em
-  text-decoration: underline
-
-.resume--bullet
-  display: list-item
-  margin-left: 40px
-
-@media(max-width: 768px)
-  .resume--header, .resume--text
-    padding-left: 10px
-
-  .resume--text
-    padding-right: 8px
-
-
-.resume--text
-  padding-left: 20px
-
-.siteLayout
+.site--layout
   min-height: 100vh
   display: flex
   flex-direction: column
@@ -36,7 +10,6 @@ body
   background-color: lightblue
 
 .section
-  //max-width: 1800px
   flex: 1
   background-color: gainsboro
   align-content: center
@@ -45,16 +18,25 @@ body
   padding-bottom: 0px
   padding-top: 0px
 
-
 .nav
   background-color: lightblue
+  
+.nav-item a, a.nav-item
+  color: black
+  margin-right: 20px
+  margin-left: 20px
 
-.test
-  min-height: 95vh
+.site--container
+  min-height: 84vh
   height: 100%
   background-color: white
   padding-top: 40px
 
+
+
+
 .project--card
   justify-content: center
+
+
 
