@@ -55,7 +55,8 @@ const About = () => (
             <div className="column is-offset-1 is-6 about--order1">
                 <p className="about--order1">
                     A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating
-                    all day long before and after school. Lately I don't skate much as im constantly studying and writing
+                    all day long before and after school. Lately I don't skate much as im constantly studying and
+                    writing
                     new things. I also love to play video games, I am a RPG type of person but I will play some call of
                     duty or battlefield from time to time. I usually am online first thing in the morning for about a
                     hour as it helps me wake up and get ready for the day.
