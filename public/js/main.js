@@ -14077,16 +14077,33 @@ var Contact = function (_Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'column is-offset-3 is-6 is-offset-1-mobile is-9-mobile' },
-                        _react2.default.createElement('input', { type: 'text', className: 'input', name: 'name', placeholder: 'Name:', value: this.state.name,
-                            onChange: this.handleName }),
-                        _react2.default.createElement('input', { type: 'text', className: 'input', name: 'email', placeholder: 'Email:', value: this.state.email,
-                            onChange: this.handleEmail }),
+                        _react2.default.createElement('input', {
+                            type: 'text',
+                            className: 'input',
+                            name: 'name',
+                            placeholder: 'Name:',
+                            value: this.state.name,
+                            onChange: this.handleName
+                        }),
+                        _react2.default.createElement('input', {
+                            type: 'text',
+                            className: 'input',
+                            name: 'email',
+                            placeholder: 'Email:',
+                            value: this.state.email,
+                            onChange: this.handleEmail
+                        }),
                         _react2.default.createElement(
                             'select',
-                            { name: 'reason', className: 'select', value: this.state.reason, onChange: this.handleReason },
+                            {
+                                name: 'reason',
+                                className: 'select',
+                                value: this.state.reason,
+                                onChange: this.handleReason
+                            },
                             _react2.default.createElement(
                                 'option',
-                                { value: '', disabled: true, selected: 'selected' },
+                                { value: '', disabled: true },
                                 'Select Reason:'
                             ),
                             _react2.default.createElement(
@@ -14106,16 +14123,29 @@ var Contact = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'option',
+                                { value: 'code' },
+                                'View Code'
+                            ),
+                            _react2.default.createElement(
+                                'option',
                                 { value: 'other' },
                                 'Other'
                             )
                         ),
-                        _react2.default.createElement('textarea', { className: 'textarea', name: 'message', placeholder: 'Message me anything',
-                            value: this.state.message, onChange: this.handleMessage }),
+                        _react2.default.createElement('textarea', {
+                            className: 'textarea',
+                            name: 'message',
+                            placeholder: 'Message me anything',
+                            value: this.state.message,
+                            onChange: this.handleMessage
+                        }),
                         _react2.default.createElement(
                             'button',
-                            { className: 'button is-primary contact--button', disabled: disabled,
-                                onClick: this.handleOnClick },
+                            {
+                                className: 'button is-primary contact--button',
+                                disabled: disabled,
+                                onClick: this.handleOnClick
+                            },
                             'Send'
                         )
                     )
@@ -14193,6 +14223,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(3);
@@ -14241,11 +14273,6 @@ var Projects = function (_Component) {
     }
 
     _createClass(Projects, [{
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            console.log('UNMOUNTED');
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -14257,7 +14284,7 @@ var Projects = function (_Component) {
                     this.allProjects().map(function (project, index) {
                         if (index === 0 || index === 1) {
 
-                            return _react2.default.createElement(_Project2.default, project);
+                            return _react2.default.createElement(_Project2.default, _extends({ key: '' + project.name + index }, project));
                         }
                     })
                 ),
@@ -14266,8 +14293,7 @@ var Projects = function (_Component) {
                     { className: 'columns project--card' },
                     this.allProjects().map(function (project, index) {
                         if (index === 2 || index === 3) {
-
-                            return _react2.default.createElement(_Project2.default, project);
+                            return _react2.default.createElement(_Project2.default, _extends({ key: '' + project.name + index }, project));
                         }
                     })
                 ),
@@ -14287,10 +14313,23 @@ var Projects = function (_Component) {
                 ),
                 _react2.default.createElement(
                     'div',
+                    { className: 'columns' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'column is-offset-4 is-3 is-offset-3-mobile is-4-mobile' },
+                        _react2.default.createElement(
+                            _reactRouter.Link,
+                            { to: 'contact', className: 'is-primary button' },
+                            'Contact'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
                     { className: 'columns project--card' },
                     this.allProjects().map(function (project, index) {
                         if (index === 4 || index === 5) {
-                            return _react2.default.createElement(_Personal2.default, project);
+                            return _react2.default.createElement(_Personal2.default, _extends({ key: '' + project.name + index }, project));
                         }
                     })
                 ),
@@ -14299,7 +14338,7 @@ var Projects = function (_Component) {
                     { className: 'columns project--card' },
                     this.allProjects().map(function (project, index) {
                         if (index === 6 || index === 7) {
-                            return _react2.default.createElement(_Personal2.default, project);
+                            return _react2.default.createElement(_Personal2.default, _extends({ key: '' + project.name + index }, project));
                         }
                     })
                 )
@@ -14977,7 +15016,7 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var middleware = (0, _redux.applyMiddleware)((0, _reduxPromiseMiddleware2.default)(), _reduxThunk2.default, (0, _reduxLogger2.default)());
+var middleware = (0, _redux.applyMiddleware)((0, _reduxPromiseMiddleware2.default)(), _reduxThunk2.default);
 
 exports.default = (0, _redux.createStore)(_index2.default, middleware);
 
@@ -16117,47 +16156,12 @@ var Projects = function (_Component) {
                             _react2.default.createElement(
                                 'figure',
                                 { className: 'image is-4by3' },
-                                _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: this.props.link },
-                                    _react2.default.createElement('img', { src: this.props.image, alt: '' })
-                                )
+                                _react2.default.createElement('img', { src: this.props.image, alt: '' })
                             )
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'card-content' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'media' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'media-left' },
-                                    _react2.default.createElement(
-                                        'figure',
-                                        { className: 'image is-32x32' },
-                                        _react2.default.createElement('img', { src: 'http://placehold.it/64x64', alt: 'Image' })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'media-content' },
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'subtitle is-6' },
-                                        _react2.default.createElement(
-                                            'a',
-                                            {
-                                                href: this.props.github,
-                                                rel: 'noopener noreferrer',
-                                                target: '_blank'
-                                            },
-                                            'Code for ',
-                                            this.props.name
-                                        )
-                                    )
-                                )
-                            ),
                             _react2.default.createElement(
                                 'div',
                                 { className: 'content' },

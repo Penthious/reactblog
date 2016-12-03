@@ -6,10 +6,6 @@ import Personal from './Personal';
 import projectsData from '../projectsData.js';
 
 class Projects extends Component {
-    componentWillUnmount() {
-        console.log('UNMOUNTED');
-    }
-
     allProjects = () => projectsData;
 
 
@@ -18,18 +14,17 @@ class Projects extends Component {
             <div className="container">
 
                 <div className="columns project--card">
-                    {this.allProjects().map(function (project, index) {
+                    {this.allProjects().map((project, index) => {
                         if (index === 0 || index === 1) {
 
-                            return <Project {...project} />;
+                            return <Project key={`${project.name}${index}`} {...project} />;
                         }
                     })}
                 </div>
                 <div className="columns project--card">
-                    {this.allProjects().map(function (project, index) {
+                    {this.allProjects().map((project, index) => {
                         if (index === 2 || index === 3) {
-
-                            return <Project {...project} />;
+                            return <Project key={`${project.name}${index}`} {...project} />;
                         }
                     })}
                 </div>
@@ -40,17 +35,22 @@ class Projects extends Component {
                             with you to show you the code</p>
                     </div>
                 </div>
+                <div className="columns">
+                    <div className="column is-offset-4 is-3 is-offset-3-mobile is-4-mobile">
+                        <Link to="contact" className="is-primary button">Contact</Link>
+                    </div>
+                </div>
                 <div className="columns project--card">
-                    {this.allProjects().map(function (project, index) {
+                    {this.allProjects().map((project, index) => {
                         if (index === 4 || index === 5) {
-                            return <Personal {...project} />;
+                            return <Personal key={`${project.name}${index}`} {...project} />;
                         }
                     })}
                 </div>
                 <div className="columns project--card">
-                    {this.allProjects().map(function (project, index) {
+                    {this.allProjects().map((project, index) => {
                         if (index === 6 || index === 7) {
-                            return <Personal {...project} />;
+                            return <Personal key={`${project.name}${index}`} {...project} />;
                         }
                     })}
                 </div>
