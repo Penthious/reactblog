@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import classNames from 'classnames';
+import { connect } from 'react-redux';
 
+@connect((store) => {
+    return {
+        open: store.navbar,
+    };
+})
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -32,6 +38,7 @@ class NavBar extends Component {
 
 
     render() {
+        console.log(this.props.open);
         return (
             <nav className="nav">
                 <div className="nav-left">

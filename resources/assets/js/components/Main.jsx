@@ -1,7 +1,9 @@
 import ReactDom from 'react-dom';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
+import store from '../store/store';
 import Layout from './Layout';
 import About from './About';
 import Resume from './Resume';
@@ -23,4 +25,8 @@ const App = () => (
     </Router>
 );
 
-ReactDom.render(<App />, document.getElementById('app'));
+ReactDom.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app'));
