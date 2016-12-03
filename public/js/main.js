@@ -12530,66 +12530,51 @@ var About = function About() {
         null,
         _react2.default.createElement(
             'div',
-            { className: 'columns is-multiline is-mobile' },
+            { className: 'columns' },
             _react2.default.createElement(
-                'column',
-                { className: 'column is-2 is-1-desktop is-2-tablet is-2-mobile boxtest' },
-                '1oeueou'
+                'div',
+                { className: 'column is-offset-4 is-offset-1-mobile' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'title is-1 about--underline' },
+                    'Tomas Leffew'
+                )
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'columns' },
+            _react2.default.createElement(
+                'div',
+                { className: 'column is-offset-1 is-6 is-offset-1-mobile is-10-mobile' },
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Hello My name is Tomas, if you want to know a little about me please feel free to read on. Now to start I am at the time of writing this (December 2, 2016) 21 years old. I started to program last year about this time and I have leaned a lot. From backend architecture to front end responsiveness, I still have so much learning to do but i\'m taking it one day at a time.'
+                )
             ),
             _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '2ueueu'
+                'div',
+                { className: 'column is-offset-1 is-5 is-offset-1-mobile' },
+                _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: 'columns is-mobile' },
+            _react2.default.createElement(
+                'div',
+                { className: 'column is-offset-1 is-5 about--order2' },
+                _react2.default.createElement('img', { className: 'about--order2', src: '/images/family.jpg', alt: '' })
             ),
             _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '3eueu'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '4eueue'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '5eueu'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '6eueu'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '7eueu'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '8'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '9'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '10'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '11'
-            ),
-            _react2.default.createElement(
-                'column',
-                { className: 'column is-1-desktop is-1-tablet is-1-mobile boxtest' },
-                '12'
+                'div',
+                { className: 'column is-6 about--order1' },
+                _react2.default.createElement(
+                    'p',
+                    { className: 'about--order1' },
+                    'I have two children and am married, my oldest is 3 years old and my youngest is 2. My kids and wife are what drives me to keep on improving. I want to be able to show my children that yes anyone can move up in the world if you put enough time and effort into it.'
+                )
             )
         ),
         _react2.default.createElement(
@@ -12598,12 +12583,16 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-6' },
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio dolor ea facilis fugit illum labore molestiae mollitia , nam nihil odio, porro quaerat reprehenderit similique sunt.'
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'This is my workstation, this is where I spend the majority of my day at! I built my own split keyboard for ergonomic reasons and plus I really enjoy tinkering with technology. I built my own computer so I could add the exact parts I wanted to it. The chair was first just to match my color scheme but I\'v grown to like it haha. Lastly my desk is a stand up desk, it has helped greatly in back pain from sitting all day.'
+                )
             ),
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-5' },
-                _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
+                _react2.default.createElement('img', { className: 'is-1by1', src: '/images/desk.jpg', alt: '' })
             )
         ),
         _react2.default.createElement(
@@ -12620,22 +12609,8 @@ var About = function About() {
                 _react2.default.createElement(
                     'p',
                     { className: 'about--order1' },
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur deserunt fugit incidunt inventore maiores praesentium quisquam voluptates! Adipisci cupiditate dignissimos eius et ex hic id impedit laborum laudantium, molestias.'
+                    'A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating all day long before and after school. Lately I don\'t skate much as im constantly studying and writing new things. I also love to play video games, I am a RPG type of person but I will play some call of duty or battlefield from time to time. I usually am online first thing in the morning for about a hour as it helps me wake up and get ready for the day.'
                 )
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            { className: 'columns' },
-            _react2.default.createElement(
-                'div',
-                { className: 'column is-offset-1 is-6' },
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at beatae corporis dignissimos distinctio dolor ea facilis fugit illum labore molestiae mollitia, nam nihil odio, porro quaerat reprehenderit similique sunt.'
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'column is-offset-1 is-5' },
-                _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
             )
         )
     );
@@ -13797,7 +13772,7 @@ var NavBar = function (_Component) {
                         { to: '/', className: 'nav-item is-brand' },
                         _react2.default.createElement(
                             'h1',
-                            { className: 'title is-1' },
+                            { className: 'title is-1 navbar--brand' },
                             'Penthious'
                         )
                     )
@@ -14611,7 +14586,7 @@ exports = module.exports = __webpack_require__(22)();
 
 
 // module
-exports.push([module.i, "img {\n  width: 60%; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,WAAW,EAAG;;AAEhB;EACE,0BAAiB,EAAW;;AAE9B;EACE,wBAAwB;EACxB,wBAAwB;EACxB,aAAa,EAAG;;AAClB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 60%; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "img {\n  width: 60%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,WAAW,EAAG;;AAChB;EACE,2BAA2B,EAAG;;AAEhC;EACE,0BAAiB,EAAW;;AAE9B;EACE,wBAAwB;EACxB,wBAAwB;EACxB,aAAa,EAAG;;AAClB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 60%; }\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -14625,7 +14600,7 @@ exports = module.exports = __webpack_require__(22)();
 
 
 // module
-exports.push([module.i, "body {\n  height: 100%; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAG;;AAElB;EACE,kBAAkB;EAClB,cAAc;EACd,uBAAuB,EAAG;;AAE5B;EACE,4BAA4B,EAAG;;AAEjC;EACE,QAAQ;EACR,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAEtB;EACE,4BAA4B,EAAG;;AAEjC;EACE,aAAa;EACb,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAKvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["body {\n  height: 100%; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n\n\n\n.project--card {\n  justify-content: center; }\n\n\n\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "body {\n  height: 100%;\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 19px; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.navbar--brand {\n  font-family: 'Jura', sans-serif; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/app.sass"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,qCAAqC;EACrC,gBAAgB,EAAG;;AAErB;EACE,kBAAkB;EAClB,cAAc;EACd,uBAAuB,EAAG;;AAE5B;EACE,4BAA4B,EAAG;;AAEjC;EACE,QAAQ;EACR,4BAA4B;EAC5B,sBAAsB;EACtB,wBAAwB;EACxB,aAAa;EACb,oBAAoB;EACpB,iBAAiB,EAAG;;AAEtB;EACE,gCAAgC,EAAG;;AAErC;EACE,4BAA4B,EAAG;;AAEjC;EACE,aAAa;EACb,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE,iBAAiB;EACjB,aAAa;EACb,wBAAwB;EACxB,kBAAkB,EAAG;;AAEvB;EACE,wBAAwB,EAAG","file":"app.sass","sourcesContent":["body {\n  height: 100%;\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 19px; }\n\n.site--layout {\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column; }\n\n.footer {\n  background-color: lightblue; }\n\n.section {\n  flex: 1;\n  background-color: gainsboro;\n  align-content: center;\n  justify-content: center;\n  height: 100%;\n  padding-bottom: 0px;\n  padding-top: 0px; }\n\n.navbar--brand {\n  font-family: 'Jura', sans-serif; }\n\n.nav {\n  background-color: lightblue; }\n\n.nav-item a, a.nav-item {\n  color: black;\n  margin-right: 20px;\n  margin-left: 20px; }\n\n.site--container {\n  min-height: 84vh;\n  height: 100%;\n  background-color: white;\n  padding-top: 40px; }\n\n.project--card {\n  justify-content: center; }\n\n\n\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 

@@ -36,7 +36,7 @@ class NavBar extends Component {
             <nav className="nav">
                 <div className="nav-left">
                     <Link to="/" className="nav-item is-brand">
-                        <h1 className="title is-1">Penthious</h1>
+                        <h1 className="title is-1 navbar--brand">Penthious</h1>
                     </Link>
                 </div>
 
