@@ -5,8 +5,8 @@ class Project extends Component {
     render() {
         return (
             <div>
-                <div className="column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile contact--height">
-                    <div className="card contact--height">
+                <div className="column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height">
+                    <div className="card project--height">
                         <div className="card-image">
                             <figure className="image is-4by3">
                                 <Link to={this.props.link}>

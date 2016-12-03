@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 
 import  Project from './Project';
 import Personal from './Personal';
-import projectsData from '../projectsData.js';
+import projectsData from '../projectsData';
+import '../../sass/projects.sass';
 
 class Projects extends Component {
     allProjects = () => projectsData;
@@ -31,7 +32,7 @@ class Projects extends Component {
                 <hr />
                 <div className="columns">
                     <div className="column is-offset-2 is-8 is-offset-1-mobile is-10-mobile">
-                        <p className="contact--title">All code under here is on a private github but feel free to message me and I can team view
+                        <p className="project--title">All code under here is on a private github but feel free to message me and I can team view
                             with you to show you the code</p>
                     </div>
                 </div>

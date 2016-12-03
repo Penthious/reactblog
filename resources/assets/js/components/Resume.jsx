@@ -15,7 +15,7 @@ const Resume = () => (
                 </p>
             </div>
             <div className="column is-offset-1 is-3 is-offset-1-mobile">
-                <img className="resume--image" src="/images/tomas.jpg" alt="" />
+                <img src="/images/tomas.jpg" alt="" />
             </div>
         </div>
         <hr />
