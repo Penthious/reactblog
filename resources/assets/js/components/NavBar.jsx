@@ -13,9 +13,9 @@ import { closeNav, toggleNav } from '../actions/navbarActions';
 class NavBar extends Component {
 
     componentDidMount() {
-        if (this.props.open) {
-            window.addEventListener('click', this.props.dispatch(closeNav()));
-        }
+        document.body.addEventListener('click', () => {
+            this.props.dispatch(closeNav());
+        });
     }
 
     handleOnClick = () => {
