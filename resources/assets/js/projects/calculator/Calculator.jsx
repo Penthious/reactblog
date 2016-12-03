@@ -172,7 +172,7 @@ class Calculator extends Component {
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-6">
+                    <div className="column is-offset-3 is-6 is-10-mobile">
                         <Buttons {...this.state} handleInputChange={this.handleInputChange} />
                     </div>
                 </div>

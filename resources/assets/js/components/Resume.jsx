@@ -45,11 +45,10 @@ const Resume = () => (
                         <p>Skills</p>
                     </div>
                     <div>
-                        <p className="resume--text">Bash | Blade | Bulma | CSS | Flexbox | Git |
-                            HTML | JSON |
-                            JavaScript | jQuery | Laravel | MySQL |
-                            PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap |
-                            Vim</p>
+                        <p className="resume--text">Ajax | Bash | Blade | Bulma | CSS | Flexbox |
+                            Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP |
+                            PHP Storm | React | Sass |Sequel Pro app | Twitter Bootstrap | Vim
+                        </p>
                     </div>
 
                     <div className="resume--header">
@@ -57,19 +56,23 @@ const Resume = () => (
                     </div>
                     <div>
                         <p className="resume--text resume--title">TandC</p>
-                        <p className="resume--bullet">Site built out of jquery, laravel and bulma</p>
-                        <p className="resume--bullet">A resource site that is intended to help out new comers step into
+                        <p className="resume--bullet">Site built out of jquery, laravel and
+                            bulma</p>
+                        <p className="resume--bullet">A resource site that is intended to help out
+                            new comers step into
                             the world of programming</p>
                         <br />
                         <p className="resume--text resume--title">penthious.com</p>
                         <p className="resume--bullet">Site built out of react, laravel and bulma</p>
-                        <p className="resume--bullet">A site that displays who I am and what I know.</p>
+                        <p className="resume--bullet">A site that displays who I am and what I
+                            know.</p>
                     </div>
                     <div className="resume--header">
                         <p>Work experience</p>
                     </div>
                     <div>
-                        <p className="resume--text resume--title">Full Stack Developer, SLC Devshop - June 2016 -
+                        <p className="resume--text resume--title">Full Stack Developer, SLC Devshop
+                            - June 2016 -
                             November 2016</p>
                         <p className="resume--bullet">Build and maintained current projects with a
                             main focus on
@@ -78,7 +81,8 @@ const Resume = () => (
                             over seas
                             developers</p>
                         <br />
-                        <p className="resume--text resume--title">Satellite Technician, Direct TV 2015 - 2016</p>
+                        <p className="resume--text resume--title">Satellite Technician, Direct TV
+                            2015 - 2016</p>
                         <p className="resume--bullet">Installed DirectTv unites and tutored
                             customers on basic usage</p>
                         <p className="resume--bullet">Self-managed time and workload on a daily
@@ -97,7 +101,8 @@ const Resume = () => (
         </div>
         <div className="columns">
             <div className="column is-offset-3-tablet is-5 is-offset-1-mobile is-6-mobile">
-                <a className="button is-primary resume--margin" href="/downloads/resume.pdf">Download Resume</a>
+                <a className="button is-primary resume--margin" href="/downloads/resume.pdf">Download
+                    Resume</a>
             </div>
         </div>
     </div>

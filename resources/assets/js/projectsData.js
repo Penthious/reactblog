@@ -11,7 +11,7 @@ const projectsData =
               {
                   name: 'Simple Simon',
                   created_at: 'Wednesday, November 30',
-                  description: 'The game we all know oaeuaoeueauoeoua oeuaoeueoaue oauaouaouaoe and love Simple simon.',
+                  description: 'The game we all know and love Simple simon.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '',
                   link: 'simpleSimon',
@@ -35,7 +35,7 @@ const projectsData =
               {
                   name: 'TandC',
                   created_at: 'Wednesday, November 30',
-                  description: 'Blue line is a drug screening service',
+                  description: 'TandC is a resource site meant to help out new comers.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/tandc.png',
                   link: 'simpleSimon',
@@ -43,7 +43,7 @@ const projectsData =
               {
                   name: 'Blue Line',
                   created_at: 'Wednesday, November 30',
-                  description: 'Blue line is a drug screening service',
+                  description: 'Blue line is a SASS that handles drug screenings.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/bl.png',
                   link: 'simpleSimon',
@@ -51,7 +51,7 @@ const projectsData =
               {
                   name: 'Volunteer Verify',
                   created_at: 'Wednesday, November 30',
-                  description: 'The game we all know and love Simple simon.',
+                  description: 'Volunteer Verify is a background tester for businesses',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/vv.png',
                   link: 'simpleSimon',
@@ -59,7 +59,7 @@ const projectsData =
               {
                   name: 'Paramount Tax',
                   created_at: 'Wednesday, November 30',
-                  description: 'The game we all know and love Simple simon.',
+                  description: 'Paramount tax helps the users keep track of the work they did.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/pt.png',
                   link: 'simpleSimon',

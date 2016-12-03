@@ -16,11 +16,6 @@ class Project extends Component {
                         </div>
                         <div className="card-content">
                             <div className="media">
-                                <div className="media-left">
-                                    <figure className="image is-32x32">
-                                        <img src="http://placehold.it/64x64" alt="Image" />
-                                    </figure>
-                                </div>
                                 <div className="media-content">
                                     <p className="subtitle is-6">
                                         <a
@@ -39,6 +34,7 @@ class Project extends Component {
                                 <br />
                                 <small>{this.props.created_at}</small>
                             </div>
+                            <Link to={this.props.link} className="button is-primary">View</Link>
                         </div>
                     </div>
                 </div>

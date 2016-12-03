@@ -9482,7 +9482,7 @@ var projectsData = [{
 }, {
     name: 'Simple Simon',
     created_at: 'Wednesday, November 30',
-    description: 'The game we all know oaeuaoeueauoeoua oeuaoeueoaue oauaouaouaoe and love Simple simon.',
+    description: 'The game we all know and love Simple simon.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '',
     link: 'simpleSimon'
@@ -9503,28 +9503,28 @@ var projectsData = [{
 }, {
     name: 'TandC',
     created_at: 'Wednesday, November 30',
-    description: 'Blue line is a drug screening service',
+    description: 'TandC is a resource site meant to help out new comers.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/tandc.png',
     link: 'simpleSimon'
 }, {
     name: 'Blue Line',
     created_at: 'Wednesday, November 30',
-    description: 'Blue line is a drug screening service',
+    description: 'Blue line is a SASS that handles drug screenings.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/bl.png',
     link: 'simpleSimon'
 }, {
     name: 'Volunteer Verify',
     created_at: 'Wednesday, November 30',
-    description: 'The game we all know and love Simple simon.',
+    description: 'Volunteer Verify is a background tester for businesses',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/vv.png',
     link: 'simpleSimon'
 }, {
     name: 'Paramount Tax',
     created_at: 'Wednesday, November 30',
-    description: 'The game we all know and love Simple simon.',
+    description: 'Paramount tax helps the users keep track of the work they did.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/pt.png',
     link: 'simpleSimon'
@@ -13845,7 +13845,7 @@ var About = function About() {
             { className: 'columns' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-4 is-offset-1-mobile' },
+                { className: 'column is-offset-4 is-offset-2-mobile' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'title is-1 about--underline' },
@@ -13867,24 +13867,24 @@ var About = function About() {
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5 is-offset-1-mobile' },
+                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
                 _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
             )
         ),
         _react2.default.createElement(
             'div',
-            { className: 'columns is-mobile' },
+            { className: 'columns' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5 about--order2' },
+                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
                 _react2.default.createElement('img', { className: 'about--order2', src: '/images/family.jpg', alt: '' })
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-6 about--order1' },
+                { className: 'column is-5 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    { className: 'about--order1' },
+                    null,
                     'I have two children and am married, my oldest is 3 years old and my youngest is 2. My kids and wife are what drives me to keep on improving. I want to be able to show my children that yes anyone can move up in the world if you put enough time and effort into it.'
                 )
             )
@@ -13894,7 +13894,7 @@ var About = function About() {
             { className: 'columns' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-6' },
+                { className: 'column is-offset-1 is-6 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
                     null,
@@ -13903,25 +13903,25 @@ var About = function About() {
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5' },
+                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
                 _react2.default.createElement('img', { className: 'is-1by1', src: '/images/desk.jpg', alt: '' })
             )
         ),
         _react2.default.createElement(
             'div',
-            { className: 'columns is-mobile' },
+            { className: 'columns ' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-4 about--order2' },
-                _react2.default.createElement('img', { className: 'about--rotate about--order2', src: '/images/tomas.jpg', alt: '' })
+                { className: 'column is-offset-1 is-4 is-offset-3-mobile' },
+                _react2.default.createElement('img', { className: 'about--rotate about--order2', src: '/images/piano.jpg', alt: '' })
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-6 about--order1' },
+                { className: 'column is-offset-1 is-5 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
                     { className: 'about--order1' },
-                    'A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating all day long before and after school. Lately I don\'t skate much as im constantly studying and writing new things. I also love to play video games, I am a RPG type of person but I will play some call of duty or battlefield from time to time. I usually am online first thing in the morning for about a hour as it helps me wake up and get ready for the day.'
+                    'A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating all day long before and after school. Lately I don\'t skate much as im constantly studying and writing new things. I also love to play video games, I am a RPG type of person but I will play some call of duty or battlefield from time to time. I usually am online first thing in the morning for about a hour as it helps me wake up and get ready for the day. Also I have started learning piano as its such a beautiful instrument, also is great for your mind!'
                 )
             )
         )
@@ -14429,7 +14429,7 @@ var Resume = function Resume() {
                         _react2.default.createElement(
                             'p',
                             { className: 'resume--text' },
-                            'Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass | Sequel Pro app | Twitter Bootstrap | Vim'
+                            'Ajax | Bash | Blade | Bulma | CSS | Flexbox | Git | HTML | JSON | JavaScript | jQuery | Laravel | MySQL | PHP | PHP Storm | React | Sass |Sequel Pro app | Twitter Bootstrap | Vim'
                         )
                     ),
                     _react2.default.createElement(
@@ -14806,7 +14806,7 @@ var Calculator = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-6' },
+                        { className: 'column is-offset-3 is-6 is-10-mobile' },
                         _react2.default.createElement(_Buttons2.default, _extends({}, this.state, { handleInputChange: this.handleInputChange }))
                     )
                 )
@@ -15985,6 +15985,13 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
     }
 
     _createClass(NavBar, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (this.props.open) {
+                window.addEventListener('click', this.props.dispatch((0, _navbarActions.closeNav)()));
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -16249,15 +16256,6 @@ var Project = function (_Component) {
                                 { className: 'media' },
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'media-left' },
-                                    _react2.default.createElement(
-                                        'figure',
-                                        { className: 'image is-32x32' },
-                                        _react2.default.createElement('img', { src: 'http://placehold.it/64x64', alt: 'Image' })
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
                                     { className: 'media-content' },
                                     _react2.default.createElement(
                                         'p',
@@ -16289,6 +16287,11 @@ var Project = function (_Component) {
                                     null,
                                     this.props.created_at
                                 )
+                            ),
+                            _react2.default.createElement(
+                                _reactRouter.Link,
+                                { to: this.props.link, className: 'button is-primary' },
+                                'View'
                             )
                         )
                     )
@@ -16367,7 +16370,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-offset-2-mobile is-8-mobile button-box--style' },
                         set1.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
