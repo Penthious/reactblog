@@ -1,5 +1,5 @@
 export default function reducer(state = {
-    open: '1',
+    open: false,
 }, action) {
     switch (action.type) {
         case 'OPEN_NAV':
@@ -9,6 +9,10 @@ export default function reducer(state = {
         case 'CLOSE_NAV':
         {
             return { ...state, open: false };
+        }
+        case 'TOGGLE_NAV':
+        {
+            return {...state, open: !state.open}
         }
     }
     return state;

@@ -3,42 +3,38 @@ import { Link } from 'react-router';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
+import { closeNav, toggleNav } from '../actions/navbarActions';
+
 @connect((store) => {
     return {
-        open: store.navbar,
+        open: store.navbar.open,
     };
 })
 class NavBar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            active: false,
-        };
-    }
-
 
     handleOnClick = () => {
-        this.setState({
-            active: !this.state.active,
-        });
+        this.props.dispatch(toggleNav());
+    };
+
+    handleCloseNav = () => {
+        this.props.dispatch(closeNav());
     };
 
     navClassNames = () =>
         classNames({
             'nav-menu': true,
             'nav-right': true,
-            'is-active': this.state.active,
+            'is-active': this.props.open,
         });
 
     hamburgerClassNames = () =>
         classNames({
             'nav-toggle': true,
-            'is-active': this.state.active,
+            'is-active': this.props.open,
         });
 
 
     render() {
-        console.log(this.props.open);
         return (
             <nav className="nav">
                 <div className="nav-left">
@@ -55,16 +51,16 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    <Link to="/" className="nav-item">
+                    <Link to="/" className="nav-item" onClick={this.handleCloseNav}>
                         Home
                     </Link>
-                    <Link className="nav-item" to="projects">
+                    <Link className="nav-item" to="projects" onClick={this.handleCloseNav}>
                         Projects
                     </Link>
-                    <Link to="resume" className="nav-item" >
+                    <Link to="resume" className="nav-item" onClick={this.handleCloseNav}>
                         Resume
                     </Link>
-                    <Link to="contact" className="nav-item">
+                    <Link to="contact" className="nav-item" onClick={this.handleCloseNav}>
                         Contact
                     </Link>
                 </div>
