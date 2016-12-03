@@ -58,11 +58,14 @@
     "classnames": "^2.2.5",
     "express": "^4.14.0",
     "font-awesome": "^4.7.0",
+    "joi": "^10.0.2",
+    "joi-validation-strategy": "^0.3.3",
     "lodash": "^4.17.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
+    "react-validation-mixin": "^5.4.0",
     "redux": "^3.6.0"
   }
 }

@@ -35,9 +35,9 @@ class NavBar extends Component {
         return (
             <nav className="nav">
                 <div className="nav-left">
-                    <a className="nav-item is-brand" href="/">
-                        <h1 className="title is-1">Penthious</h1>
-                    </a>
+                    <Link to="/" className="nav-item is-brand">
+                        <h1 className="title is-1 navbar--brand">Penthious</h1>
+                    </Link>
                 </div>
 
 
