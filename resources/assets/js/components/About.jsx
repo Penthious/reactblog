@@ -20,7 +20,7 @@ const About = () => (
                 </p>
             </div>
             <div className="column is-4 is-offset-1-mobile is-10-mobile ">
-                <img className="is-1by1 about--rotate" src="/images/tomas.jpg" alt="" />
+                <img className="is-1by1" src="/images/tomas.jpg" alt="" />
             </div>
         </div>
         <div className="columns">
@@ -57,10 +57,10 @@ const About = () => (
         </div>
         <div className="columns ">
             <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
-                <img className="about--rotate about--order2" src="/images/piano.jpg" alt="" />
+                <img src="/images/piano.jpg" alt="" />
             </div>
             <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
-                <p className="about--order1">
+                <p>
                     A few things I love to do on my spare time is firstly to skateboard. I use to
                     spends hours skating
                     all day long before and after school. Lately I don&#39;t skate much as im

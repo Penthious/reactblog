@@ -13868,7 +13868,7 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-4 is-offset-1-mobile is-10-mobile ' },
-                _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
+                _react2.default.createElement('img', { className: 'is-1by1', src: '/images/tomas.jpg', alt: '' })
             )
         ),
         _react2.default.createElement(
@@ -13913,14 +13913,14 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-4 is-offset-1-mobile is-10-mobile' },
-                _react2.default.createElement('img', { className: 'about--rotate about--order2', src: '/images/piano.jpg', alt: '' })
+                _react2.default.createElement('img', { src: '/images/piano.jpg', alt: '' })
             ),
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-5 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    { className: 'about--order1' },
+                    null,
                     'A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating all day long before and after school. Lately I don\'t skate much as im constantly studying and writing new things. I also love to play video games, I am a RPG type of person but I will play some call of duty or battlefield from time to time. I usually am online first thing in the morning for about a hour as it helps me wake up and get ready for the day. Also I have started learning piano as its such a beautiful instrument, also is great for your mind!'
                 )
             )
