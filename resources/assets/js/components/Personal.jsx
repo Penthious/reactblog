@@ -15,9 +15,9 @@ class Projects extends Component {
                     <div className="card contact--height">
                         <div className="card-image">
                             <figure className="image is-4by3">
-                                {/*<Link to={this.props.link}>*/}
-                                    <img src={this.props.image} alt="" />
-                                {/*</Link>*/}
+                                <a href={this.props.link}>
+                                    <img src={this.props.image} alt="" target="_blank" />
+                                </a>
                             </figure>
                         </div>
                         <div className="card-content">
@@ -26,6 +26,10 @@ class Projects extends Component {
                                 <br />
                                 <small>{this.props.created_at}</small>
                             </div>
+                        </div>
+
+                        <div>
+                            <a href={this.props.link} className="button is-primary">View</a>
                         </div>
                     </div>
                 </div>

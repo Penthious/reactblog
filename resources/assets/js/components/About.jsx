@@ -19,12 +19,12 @@ const About = () => (
                     learning to do but i&#39;m taking it one day at a time.
                 </p>
             </div>
-            <div className="column is-offset-1 is-5 is-offset-3-mobile">
+            <div className="column is-4 is-offset-1-mobile is-10-mobile ">
                 <img className="is-1by1 about--rotate" src="/images/tomas.jpg" alt="" />
             </div>
         </div>
         <div className="columns">
-            <div className="column is-offset-1 is-5 is-offset-3-mobile">
+            <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
                 <img className="about--order2" src="/images/family.jpg" alt="" />
             </div>
             <div className="column is-5 is-offset-1-mobile is-10-mobile">
@@ -51,12 +51,12 @@ const About = () => (
                     back pain from sitting all day.
                 </p>
             </div>
-            <div className="column is-offset-1 is-5 is-offset-3-mobile">
+            <div className="column is-4 is-offset-1-mobile is-10-mobile">
                 <img className="is-1by1" src="/images/desk.jpg" alt="" />
             </div>
         </div>
         <div className="columns ">
-            <div className="column is-offset-1 is-4 is-offset-3-mobile">
+            <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
                 <img className="about--rotate about--order2" src="/images/piano.jpg" alt="" />
             </div>
             <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">

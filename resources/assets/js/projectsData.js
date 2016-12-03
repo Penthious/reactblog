@@ -27,10 +27,10 @@ const projectsData =
               {
                   name: '',
                   created_at: 'Wednesday, November 30',
-                  description: 'The game we all know and love Simple simon.',
-                  github: 'https://github.com/Penthious/react-simpleSimon',
+                  description: 'Placeholder for now',
+                  github: '',
                   image: '',
-                  link: 'simpleSimon',
+                  link: '',
               },
               {
                   name: 'TandC',
@@ -38,7 +38,7 @@ const projectsData =
                   description: 'TandC is a resource site meant to help out new comers.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/tandc.png',
-                  link: 'simpleSimon',
+                  link: '/images/tandc.png',
               },
               {
                   name: 'Blue Line',
@@ -46,7 +46,7 @@ const projectsData =
                   description: 'Blue line is a SASS that handles drug screenings.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/bl.png',
-                  link: 'simpleSimon',
+                  link: '/images/bl.png',
               },
               {
                   name: 'Volunteer Verify',
@@ -54,7 +54,7 @@ const projectsData =
                   description: 'Volunteer Verify is a background tester for businesses',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/vv.png',
-                  link: 'simpleSimon',
+                  link: '/images/vv.png',
               },
               {
                   name: 'Paramount Tax',
@@ -62,7 +62,7 @@ const projectsData =
                   description: 'Paramount tax helps the users keep track of the work they did.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/pt.png',
-                  link: 'simpleSimon',
+                  link: '/images/pt.png',
               },
           ];
 

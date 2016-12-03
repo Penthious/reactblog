@@ -9496,38 +9496,38 @@ var projectsData = [{
 }, {
     name: '',
     created_at: 'Wednesday, November 30',
-    description: 'The game we all know and love Simple simon.',
-    github: 'https://github.com/Penthious/react-simpleSimon',
+    description: 'Placeholder for now',
+    github: '',
     image: '',
-    link: 'simpleSimon'
+    link: ''
 }, {
     name: 'TandC',
     created_at: 'Wednesday, November 30',
     description: 'TandC is a resource site meant to help out new comers.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/tandc.png',
-    link: 'simpleSimon'
+    link: '/images/tandc.png'
 }, {
     name: 'Blue Line',
     created_at: 'Wednesday, November 30',
     description: 'Blue line is a SASS that handles drug screenings.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/bl.png',
-    link: 'simpleSimon'
+    link: '/images/bl.png'
 }, {
     name: 'Volunteer Verify',
     created_at: 'Wednesday, November 30',
     description: 'Volunteer Verify is a background tester for businesses',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/vv.png',
-    link: 'simpleSimon'
+    link: '/images/vv.png'
 }, {
     name: 'Paramount Tax',
     created_at: 'Wednesday, November 30',
     description: 'Paramount tax helps the users keep track of the work they did.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/pt.png',
-    link: 'simpleSimon'
+    link: '/images/pt.png'
 }];
 
 exports.default = projectsData;
@@ -13867,7 +13867,7 @@ var About = function About() {
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
+                { className: 'column is-4 is-offset-1-mobile is-10-mobile ' },
                 _react2.default.createElement('img', { className: 'is-1by1 about--rotate', src: '/images/tomas.jpg', alt: '' })
             )
         ),
@@ -13876,7 +13876,7 @@ var About = function About() {
             { className: 'columns' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
+                { className: 'column is-offset-1 is-5 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement('img', { className: 'about--order2', src: '/images/family.jpg', alt: '' })
             ),
             _react2.default.createElement(
@@ -13903,7 +13903,7 @@ var About = function About() {
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-5 is-offset-3-mobile' },
+                { className: 'column is-4 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement('img', { className: 'is-1by1', src: '/images/desk.jpg', alt: '' })
             )
         ),
@@ -13912,7 +13912,7 @@ var About = function About() {
             { className: 'columns ' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-4 is-offset-3-mobile' },
+                { className: 'column is-offset-1 is-4 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement('img', { className: 'about--rotate about--order2', src: '/images/piano.jpg', alt: '' })
             ),
             _react2.default.createElement(
@@ -16156,7 +16156,11 @@ var Projects = function (_Component) {
                             _react2.default.createElement(
                                 'figure',
                                 { className: 'image is-4by3' },
-                                _react2.default.createElement('img', { src: this.props.image, alt: '' })
+                                _react2.default.createElement(
+                                    'a',
+                                    { href: this.props.link },
+                                    _react2.default.createElement('img', { src: this.props.image, alt: '', target: '_blank' })
+                                )
                             )
                         ),
                         _react2.default.createElement(
@@ -16176,6 +16180,15 @@ var Projects = function (_Component) {
                                     null,
                                     this.props.created_at
                                 )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement(
+                                'a',
+                                { href: this.props.link, className: 'button is-primary' },
+                                'View'
                             )
                         )
                     )
@@ -16878,7 +16891,7 @@ exports = module.exports = __webpack_require__(23)();
 
 
 // module
-exports.push([module.i, "img {\n  width: 60%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,WAAW,EAAG;;AAChB;EACE,2BAA2B,EAAG;;AAEhC;EACE,0BAAiB,EAAW;;AAE9B;EACE,wBAAwB;EACxB,wBAAwB;EACxB,aAAa,EAAG;;AAClB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 60%; }\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.boxtest {\n  background-color: green;\n  border: 1px solid black;\n  color: white; }\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,YAAY,EAAG;;AAEjB;EACE,2BAA2B,EAAG;;AAEhC;EACE,0BAAiB,EAAW;;AAE9B;EACE,mBAAmB,EAAG;;AAExB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -16920,7 +16933,7 @@ exports = module.exports = __webpack_require__(23)();
 
 
 // module
-exports.push([module.i, ".resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 150px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n.resume--title {\n  font-weight: bold; }\n\n.resume--text {\n  padding-left: 20px; }\n\n.resume--margin {\n  margin-bottom: 20px; }\n\n@media (max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n  .resume--text {\n    padding-right: 8px; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/resume.sass"],"names":[],"mappings":"AAAA;EACE,0BAAiB;EACjB,aAAa;EACb,cAAc,EAAG;;AAEnB;EACE,iBAAiB;EACjB,oBAAoB;EACpB,eAAe;EACf,2BAA2B,EAAG;;AAEhC;EACE,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE,kBAAkB,EAAG;;AACvB;EACE,mBAAmB,EAAG;;AAExB;EACE,oBAAoB,EAAG;;AAEzB;EACE;IACE,mBAAmB,EAAG;EAExB;IACE,mBAAmB,EAAG,EAAA","file":"resume.sass","sourcesContent":[".resume--image {\n  transform: rotate(180deg);\n  width: 270px;\n  height: 150px; }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n.resume--title {\n  font-weight: bold; }\n.resume--text {\n  padding-left: 20px; }\n\n.resume--margin {\n  margin-bottom: 20px; }\n\n@media(max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n\n  .resume--text {\n    padding-right: 8px; } }\n\n\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, ".resume--image {\n  transform: rotate(180deg); }\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n.resume--title {\n  font-weight: bold; }\n\n.resume--text {\n  padding-left: 20px; }\n\n.resume--margin {\n  margin-bottom: 20px; }\n\n@media (max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n  .resume--text {\n    padding-right: 8px; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/resume.sass"],"names":[],"mappings":"AAAA;EACE,0BAAiB,EAEjB;;AAEF;EACE,iBAAiB;EACjB,oBAAoB;EACpB,eAAe;EACf,2BAA2B,EAAG;;AAEhC;EACE,mBAAmB;EACnB,kBAAkB,EAAG;;AAEvB;EACE,kBAAkB,EAAG;;AACvB;EACE,mBAAmB,EAAG;;AAExB;EACE,oBAAoB,EAAG;;AAEzB;EACE;IACE,mBAAmB,EAAG;EAExB;IACE,mBAAmB,EAAG,EAAA","file":"resume.sass","sourcesContent":[".resume--image {\n  transform: rotate(180deg);\n  //width: 270px\n }  //height: 150px\n\n.resume--header {\n  margin-top: 10px;\n  margin-bottom: 10px;\n  font-size: 2em;\n  text-decoration: underline; }\n\n.resume--bullet {\n  display: list-item;\n  margin-left: 40px; }\n\n.resume--title {\n  font-weight: bold; }\n.resume--text {\n  padding-left: 20px; }\n\n.resume--margin {\n  margin-bottom: 20px; }\n\n@media(max-width: 768px) {\n  .resume--header, .resume--text {\n    padding-left: 10px; }\n\n  .resume--text {\n    padding-right: 8px; } }\n\n\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
