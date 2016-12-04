@@ -9909,21 +9909,21 @@ var projectsData = [{
     link: 'calculator'
 }, {
     name: 'Simple Simon',
-    created_at: 'Wednesday, November 30',
+    created_at: 'Wednesday, December 4',
     description: 'The game we all know and love Simple simon.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '',
     link: 'simpleSimon'
 }, {
     name: 'Stop Watch',
-    created_at: 'Wednesday, November 30',
+    created_at: 'Wednesday, November 27',
     description: 'A basic stop watch to display what I learned in react',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/stopwatch.png',
     link: 'stopwatch'
 }, {
     name: '',
-    created_at: 'Wednesday, November 30',
+    created_at: '',
     description: 'Placeholder for now',
     github: '',
     image: '',
@@ -16666,10 +16666,10 @@ var Carousel = function (_Component) {
             return _react2.default.createElement(
                 _reactSlick2.default,
                 settings,
-                this.props.img.map(function (img) {
+                this.props.img.map(function (img, index) {
                     return _react2.default.createElement(
                         'div',
-                        null,
+                        { key: '' + img + index },
                         _react2.default.createElement('img', { src: '/images' + img })
                     );
                 })

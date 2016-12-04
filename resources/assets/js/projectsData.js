@@ -10,7 +10,7 @@ const projectsData =
               },
               {
                   name: 'Simple Simon',
-                  created_at: 'Wednesday, November 30',
+                  created_at: 'Wednesday, December 4',
                   description: 'The game we all know and love Simple simon.',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '',
@@ -18,7 +18,7 @@ const projectsData =
               },
               {
                   name: 'Stop Watch',
-                  created_at: 'Wednesday, November 30',
+                  created_at: 'Wednesday, November 27',
                   description: 'A basic stop watch to display what I learned in react',
                   github: 'https://github.com/Penthious/react-simpleSimon',
                   image: '/images/stopwatch.png',
@@ -26,7 +26,7 @@ const projectsData =
               },
               {
                   name: '',
-                  created_at: 'Wednesday, November 30',
+                  created_at: '',
                   description: 'Placeholder for now',
                   github: '',
                   image: '',
