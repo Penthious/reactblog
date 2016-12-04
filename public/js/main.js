@@ -16670,7 +16670,7 @@ var Carousel = function (_Component) {
                     return _react2.default.createElement(
                         'div',
                         { key: '' + img + index },
-                        _react2.default.createElement('img', { src: '/images' + img })
+                        _react2.default.createElement('img', { src: '/images' + img, role: 'presentation' })
                     );
                 })
             );

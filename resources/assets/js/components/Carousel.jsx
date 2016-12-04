@@ -20,7 +20,8 @@ class Carousel extends Component {
         };
         return (
             <Slider {...settings}>
-                {this.props.img.map((img, index) => <div key={`${img}${index}`}><img src={`/images${img}`} /></div>)}
+                {this.props.img.map((img, index) => <div key={`${img}${index}`}>
+                    <img src={`/images${img}`} role="presentation" /></div>)}
             </Slider>
         );
     }
