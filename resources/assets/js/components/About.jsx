@@ -10,7 +10,7 @@ const About = () => (
                 <h1 className="title is-1 about--underline">Tomas Leffew</h1>
             </div>
         </div>
-        <div className="columns">
+        <div className="columns about--background">
             <div className="column is-offset-1 is-6 is-offset-1-mobile is-10-mobile">
                 <p>
                     Hello My name is Tomas, if you want to know a little about me please feel free
@@ -37,7 +37,7 @@ const About = () => (
                 </p>
             </div>
         </div>
-        <div className="columns">
+        <div className="columns about--background">
             <div className="column is-offset-1 is-6 is-offset-1-mobile is-10-mobile">
                 <p>
                     This is my workstation, this is where I spend the majority of my day at! I built
@@ -56,7 +56,7 @@ const About = () => (
                 <Carousel img={['/desk.jpg', '/desk.jpg']} />
             </div>
         </div>
-        <div className="columns ">
+        <div className="columns">
             <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
                 <Carousel img={['/piano.jpg', '/piano.jpg']} />
             </div>
