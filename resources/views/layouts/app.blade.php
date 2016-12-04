@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
     @yield('header_styles')
 </head>
 

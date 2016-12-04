@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Carousel from './Carousel';
 import '../../sass/about.sass';
 
 const About = () => (
@@ -20,12 +21,12 @@ const About = () => (
                 </p>
             </div>
             <div className="column is-4 is-offset-1-mobile is-10-mobile ">
-                <img className="is-1by1" src="/images/tomas.jpg" alt="" />
+                <Carousel img={['/tomas.jpg', '/cjtomas.jpg', '/res7tomas.jpg']} />
             </div>
         </div>
         <div className="columns">
             <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
-                <img className="about--order2" src="/images/family.jpg" alt="" />
+                <Carousel img={['/family.jpg', '/familywaterfall.jpg', '/familymountain.jpg']} />
             </div>
             <div className="column is-5 is-offset-1-mobile is-10-mobile">
                 <p>
@@ -52,12 +53,12 @@ const About = () => (
                 </p>
             </div>
             <div className="column is-4 is-offset-1-mobile is-10-mobile">
-                <img className="is-1by1" src="/images/desk.jpg" alt="" />
+                <Carousel img={['/desk.jpg', '/desk.jpg']} />
             </div>
         </div>
         <div className="columns ">
             <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
-                <img src="/images/piano.jpg" alt="" />
+                <Carousel img={['/piano.jpg', '/piano.jpg']} />
             </div>
             <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
                 <p>
