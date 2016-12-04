@@ -1,11 +1,7 @@
-import React, {
-    Component,
-    PropTypes,
-} from 'react';
+import React, { Component, PropTypes } from 'react';
 import Slider from 'react-slick';
 
 import '../../../../node_modules/slick-carousel/slick/slick.css';
-//import '../../../../node_modules/slick-carousel/slick/slick-theme.css';
 
 class Carousel extends Component {
     render() {
