@@ -21,7 +21,7 @@ const About = () => (
                 </p>
             </div>
             <div className="column is-4 is-offset-1-mobile is-10-mobile ">
-                <Carousel img={['/tomas.jpg', '/cjtomas.jpg', '/res7tomas.jpg']} />
+                <Carousel img={['/tomas2.jpg', '/cjtomas.jpg', '/res7tomas.jpg']} />
             </div>
         </div>
         <div className="columns">
@@ -53,12 +53,12 @@ const About = () => (
                 </p>
             </div>
             <div className="column is-4 is-offset-1-mobile is-10-mobile">
-                <Carousel img={['/desk.jpg', '/desk.jpg']} />
+                <Carousel img={['/desk.jpg', '/chair.jpg', '/keyboard.jpg']} />
             </div>
         </div>
         <div className="columns">
             <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
-                <Carousel img={['/piano.jpg', '/piano.jpg']} />
+                <Carousel img={['/piano.jpg', '/game.jpg']} />
             </div>
             <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
                 <p>

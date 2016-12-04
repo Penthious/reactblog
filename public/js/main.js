@@ -14591,7 +14591,7 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-4 is-offset-1-mobile is-10-mobile ' },
-                _react2.default.createElement(_Carousel2.default, { img: ['/tomas.jpg', '/cjtomas.jpg', '/res7tomas.jpg'] })
+                _react2.default.createElement(_Carousel2.default, { img: ['/tomas2.jpg', '/cjtomas.jpg', '/res7tomas.jpg'] })
             )
         ),
         _react2.default.createElement(
@@ -14627,7 +14627,7 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-4 is-offset-1-mobile is-10-mobile' },
-                _react2.default.createElement(_Carousel2.default, { img: ['/desk.jpg', '/desk.jpg'] })
+                _react2.default.createElement(_Carousel2.default, { img: ['/desk.jpg', '/chair.jpg', '/keyboard.jpg'] })
             )
         ),
         _react2.default.createElement(
@@ -14636,7 +14636,7 @@ var About = function About() {
             _react2.default.createElement(
                 'div',
                 { className: 'column is-offset-1 is-4 is-offset-1-mobile is-10-mobile' },
-                _react2.default.createElement(_Carousel2.default, { img: ['/piano.jpg', '/piano.jpg'] })
+                _react2.default.createElement(_Carousel2.default, { img: ['/piano.jpg', '/game.jpg'] })
             ),
             _react2.default.createElement(
                 'div',
