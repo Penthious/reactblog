@@ -11,6 +11,7 @@ import Contact from './Contact';
 import Projects from './Projects';
 import Calculator from '../projects/calculator/Calculator';
 import Timer from '../projects/stopwatch/Timer';
+import Todo from '../projects/todo/Todo';
 
 const App = () => (
     <Router history={hashHistory}>
@@ -19,6 +20,7 @@ const App = () => (
             <Route path="projects" component={Projects} />
             <Route path="calculator" component={Calculator} />
             <Route path="stopwatch" component={Timer} />
+            <Route path="todo" component={Todo} />
             <Route path="resume" component={Resume} />
             <Route path="contact" component={Contact} />
         </Route>

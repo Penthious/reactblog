@@ -14,7 +14,7 @@ const Resume = () => (
                 <p className="resume--text"><a href="https://github.com/Penthious">https://github.com/Penthious</a>
                 </p>
             </div>
-            <div className="column is-offset-1 is-3 is-offset-1-mobile">
+            <div className="column is-offset-1 is-3 is-offset-1-mobile is-10-mobile">
                 <img src="/images/tomas.jpg" alt="" />
             </div>
         </div>

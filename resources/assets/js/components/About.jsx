@@ -25,10 +25,10 @@ const About = () => (
             </div>
         </div>
         <div className="columns">
-            <div className="column is-offset-1 is-5 is-offset-1-mobile is-10-mobile">
+            <div className="column is-offset-1 is-4 is-offset-1-mobile is-10-mobile">
                 <Carousel img={['/family.jpg', '/familywaterfall.jpg', '/familymountain.jpg']} />
             </div>
-            <div className="column is-5 is-offset-1-mobile is-10-mobile">
+            <div className="column is-5 is-offset-1 is-offset-1-mobile is-10-mobile">
                 <p>
                     I have two children and am married, my oldest is 3 years old and my youngest is
                     2. My kids and wife are what drives me to keep on improving. I want to be able

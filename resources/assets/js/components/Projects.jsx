@@ -13,6 +13,13 @@ class Projects extends Component {
     render() {
         return (
             <div className="container">
+                <div className="columns">
+                    <div className="column is-offset-2 is-8 is-offset-1-mobile is-10-mobile">
+                        <p className="project--title project--underline">
+                            All my current react projects
+                        </p>
+                    </div>
+                </div>
 
                 <div className="columns project--card">
                     {this.allProjects().map((project, index) => {
@@ -32,7 +39,8 @@ class Projects extends Component {
                 <hr />
                 <div className="columns">
                     <div className="column is-offset-2 is-8 is-offset-1-mobile is-10-mobile">
-                        <p className="project--title">All code under here is on a private github but feel free to message me and I can team view
+                        <p className="project--title">All code under here is on a private github but
+                            feel free to message me and I can team view
                             with you to show you the code</p>
                     </div>
                 </div>
