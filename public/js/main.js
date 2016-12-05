@@ -17454,17 +17454,17 @@ var Display = function Display(props) {
             _react2.default.createElement(
                 "div",
                 { className: "column is-offset-1 is-3 is-offset-4-mobile is-8-mobile" },
-                _react2.default.createElement("input", { type: "text", value: props.firstInput, disabled: true })
+                _react2.default.createElement("input", { type: "text", className: "input", value: props.firstInput, disabled: true })
             ),
             _react2.default.createElement(
                 "div",
                 { className: "column is-3 is-offset-4-mobile is-8-mobile" },
-                _react2.default.createElement("input", { type: "text", value: props.secondInput, disabled: true })
+                _react2.default.createElement("input", { type: "text", className: "input", value: props.secondInput, disabled: true })
             ),
             _react2.default.createElement(
                 "div",
                 { className: "column is-3 is-offset-4-mobile is-8-mobile" },
-                _react2.default.createElement("input", { type: "text", value: props.thirdInput, disabled: true })
+                _react2.default.createElement("input", { type: "text", className: "input", value: props.thirdInput, disabled: true })
             )
         ),
         _react2.default.createElement(
@@ -17473,7 +17473,7 @@ var Display = function Display(props) {
             _react2.default.createElement(
                 "div",
                 { className: "column is-offset-4 is-3 is-offset-4-mobile is-8-mobile" },
-                _react2.default.createElement("input", { className: "is-centered", disabled: true, value: props.output })
+                _react2.default.createElement("input", { className: "is-centered input", disabled: true, value: props.output })
             )
         )
     );
