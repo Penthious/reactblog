@@ -40,10 +40,11 @@ class Todo extends Component {
     };
 
     deleteTask = (taskToDelete) => {
-        console.log(taskToDelete);
         const foundTodo = this.state.todos.find(todo => todo.task === taskToDelete);
-        this.state.todos.splice(foundTodo, 1);
-        this.setState({todos: this.state.todos});
+        const newTodos = this.state.todos.filter((todo) => {
+            return todo !== foundTodo;
+        });
+        this.setState({todos: newTodos});
 
     };
 

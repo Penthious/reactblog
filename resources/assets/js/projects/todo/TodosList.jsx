@@ -10,7 +10,6 @@ import TodosListItem from './TodosListItem';
 class todosList extends Component {
 
     render() {
-        console.log(this.props);
         return (
             <table>
                 <TodosListHeader />
