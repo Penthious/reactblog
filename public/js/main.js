@@ -14577,8 +14577,8 @@ var About = function About() {
                 { className: 'column is-offset-1 is-6 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    null,
-                    'Hello My name is Tomas, if you want to know a little about me please feel free to read on. Now to start I am at the time of writing this (December 2, 2016) 21 years old. I started to program last year about this time and I have learned a lot. From backend architecture to front end responsiveness, I still have so much learning to do but i\'m taking it one day at a time.'
+                    { className: 'about--p' },
+                    'Hello My name is Tomas, if you want to know a little about me please feel free to read on. Now to start I am at the time of writing this (December 2, 2016) 21 years old. I started to program last year about this time and I have learned a lot. From backend architecture to frontend responsiveness, I still have so much learning to do but I\'m taking it one day at a time.'
                 )
             ),
             _react2.default.createElement(
@@ -14600,8 +14600,8 @@ var About = function About() {
                 { className: 'column is-5 is-offset-1 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    null,
-                    'I have two children and am married, my oldest is 3 years old and my youngest is 2. They are the driving force that keeps me improving. I want to be able to show my children that yes anyone can move up in the world if you put enough time and effort into it.'
+                    { className: 'about--p' },
+                    'I have two children and am married, my oldest is 3 years old and my youngest is 2. They are the driving force that keeps me improving. I want to be able to show my children that anyone can move up in the world if you put enough time and effort into it.'
                 )
             )
         ),
@@ -14613,8 +14613,8 @@ var About = function About() {
                 { className: 'column is-offset-1 is-6 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    null,
-                    'This is my workstation, this is where I spend the majority of my day at! I built my own split keyboard for ergonomic reasons and plus I really enjoy tinkering with technology. I built my own computer so I could add the exact parts I wanted to it. The chair was first just to match my color scheme but I\'v grown to like it haha. Lastly my desk is a stand up desk, it has helped greatly in back pain from sitting all day.'
+                    { className: 'about--p' },
+                    'This is my workstation. This is where I spend the majority of my day! I built my own split keyboard for ergonomic reasons and plus I really enjoy tinkering with technology. I built my own computer so I could add the exact parts I wanted to it. The chair was first just to match my color scheme but I\'v grown to like it haha. Lastly my desk is a stand up desk, it has helped greatly in back pain from sitting all day.'
                 )
             ),
             _react2.default.createElement(
@@ -14628,7 +14628,7 @@ var About = function About() {
             { className: 'columns' },
             _react2.default.createElement(
                 'div',
-                { className: 'column is-offset-1 is-4 is-offset-1-mobile is-10-mobile' },
+                { className: 'about--p column is-offset-1 is-4 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(_Carousel2.default, { img: ['/piano.jpg', '/game.jpg'] })
             ),
             _react2.default.createElement(
@@ -14636,7 +14636,7 @@ var About = function About() {
                 { className: 'column is-offset-1 is-5 is-offset-1-mobile is-10-mobile' },
                 _react2.default.createElement(
                     'p',
-                    null,
+                    { className: 'about--p' },
                     'A few things I love to do on my spare time is firstly to skateboard. I use to spends hours skating all day long before and after school. Lately I don\'t skate much as im constantly studying and writing new things. I also love to play video games, I am a RPG type of person but I will play some call of duty or battlefield from time to time. I usually am online first thing in the morning for about a hour as it helps me wake up and get ready for the day. Also I have started learning piano as its such a beautiful instrument, also is great for your mind!'
                 )
             )
@@ -18238,7 +18238,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, "img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n.about--background {\n  background-color: whitesmoke; }\n\n.columns {\n  margin: 5px 0px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,YAAY,EAAG;;AAEjB;EACE,2BAA2B,EAAG;;AAEhC;EACE,0BAAiB,EAAW;;AAE9B;EACE,mBAAmB,EAAG;;AAExB;EACE,6BAA6B,EAAG;;AAElC;EACE,gBAAgB,EAAG;;AAErB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n.about--background {\n  background-color: whitesmoke; }\n\n.columns {\n  margin: 5px 0px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n.about--background {\n  background-color: whitesmoke; }\n\n.columns {\n  margin: 5px 0px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n\n@media (min-width: 1180px) {\n  .about--p {\n    padding-top: 30px; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/about.sass"],"names":[],"mappings":"AAAA;EACE,YAAY,EAAG;;AAEjB;EACE,2BAA2B,EAAG;;AAEhC;EACE,0BAAiB,EAAW;;AAE9B;EACE,mBAAmB,EAAG;;AAExB;EACE,6BAA6B,EAAG;;AAElC;EACE,gBAAgB,EAAG;;AAErB;EACE;IACE,SAAS,EAAG;EACd;IACE,SAAS,EAAG,EAAA;;AAEhB;EACE;IACE,kBAAkB,EAAG,EAAA","file":"about.sass","sourcesContent":["img {\n  width: 100%; }\n\n.about--underline {\n  text-decoration: underline; }\n\n.about--rotate {\n  transform: rotate(180deg); }\n\n.about--image-margin {\n  margin-right: 15px; }\n\n.about--background {\n  background-color: whitesmoke; }\n\n.columns {\n  margin: 5px 0px; }\n\n@media (max-width: 768px) {\n  .about--order1 {\n    order: 1; }\n  .about--order2 {\n    order: 2; } }\n\n@media (min-width: 1180px) {\n  .about--p {\n    padding-top: 30px; } }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -36977,7 +36977,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var App = function App() {
     return _react2.default.createElement(
         _reactRouter.Router,
-        { history: _reactRouter.hashHistory },
+        { history: _reactRouter.browserHistory },
         _react2.default.createElement(
             _reactRouter.Route,
             { path: '/', component: _Layout2.default },
@@ -36987,7 +36987,8 @@ var App = function App() {
             _react2.default.createElement(_reactRouter.Route, { path: 'stopwatch', component: _Timer2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'todo', component: _Todo2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _Resume2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default })
+            _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default }),
+            _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
         )
     );
 };

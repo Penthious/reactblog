@@ -1,7 +1,7 @@
 import ReactDom from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { Redirect, Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import store from '../store/store';
 import Layout from './Layout';
@@ -14,7 +14,7 @@ import Timer from '../projects/stopwatch/Timer';
 import Todo from '../projects/todo/Todo';
 
 const App = () => (
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={About} />
             <Route path="projects" component={Projects} />
@@ -23,6 +23,7 @@ const App = () => (
             <Route path="todo" component={Todo} />
             <Route path="resume" component={Resume} />
             <Route path="contact" component={Contact} />
+            <Redirect from="*" to="/" />
         </Route>
     </Router>
 );
