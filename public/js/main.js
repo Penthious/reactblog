@@ -17113,7 +17113,7 @@ var Projects = function (_Component) {
                                 { className: 'content' },
                                 _react2.default.createElement(
                                     'p',
-                                    null,
+                                    { className: 'project--p-height' },
                                     this.props.description
                                 ),
                                 _react2.default.createElement('br', null),
@@ -17129,7 +17129,7 @@ var Projects = function (_Component) {
                             null,
                             _react2.default.createElement(
                                 'a',
-                                { href: this.props.link, className: 'button is-primary' },
+                                { href: this.props.link, className: 'button is-primary project--margin' },
                                 'View'
                             )
                         )
@@ -17237,7 +17237,7 @@ var Project = function (_Component) {
                                 { className: 'content' },
                                 _react2.default.createElement(
                                     'p',
-                                    null,
+                                    { className: 'project--p-height' },
                                     this.props.description
                                 ),
                                 _react2.default.createElement('br', null),
@@ -17249,7 +17249,7 @@ var Project = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 _reactRouter.Link,
-                                { to: this.props.link, className: 'button is-primary' },
+                                { to: this.props.link, className: 'button is-primary project--margin' },
                                 'View'
                             )
                         )
@@ -18280,7 +18280,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, ".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,wBAAwB,EAAG;;AAE7B;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG","file":"projects.sass","sourcesContent":[".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, ".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n\n.card-content {\n  height: 39%; }\n\n.project--margin {\n  margin-left: 40%; }\n\n.project--p-height {\n  height: 75px; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,wBAAwB,EAAG;;AAE7B;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG;;AAEhC;EACE,YAAY,EAAG;;AAEjB;EACE,iBAAiB,EAAG;;AAEtB;EACE,aAAa,EAAG","file":"projects.sass","sourcesContent":[".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n\n.card-content {\n  height: 39%; }\n\n.project--margin {\n  margin-left: 40%; }\n\n.project--p-height {\n  height: 75px; }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 

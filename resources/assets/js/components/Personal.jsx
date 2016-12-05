@@ -22,14 +22,14 @@ class Projects extends Component {
                         </div>
                         <div className="card-content">
                             <div className="content">
-                                <p>{this.props.description}</p>
+                                <p className="project--p-height">{this.props.description}</p>
                                 <br />
                                 <small>{this.props.created_at}</small>
                             </div>
                         </div>
 
                         <div>
-                            <a href={this.props.link} className="button is-primary">View</a>
+                            <a href={this.props.link} className="button is-primary project--margin">View</a>
                         </div>
                     </div>
                 </div>
