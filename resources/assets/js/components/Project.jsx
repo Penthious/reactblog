@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 class Project extends Component {
     render() {
         return (
-            <div>
+            <div className="project--card-container">
                 <div className="column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height">
                     <div className="card project--height">
                         <div className="card-image">

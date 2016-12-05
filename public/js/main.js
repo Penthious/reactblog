@@ -17092,7 +17092,7 @@ var Projects = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'project--card-container' },
                 _react2.default.createElement(
                     'div',
                     { className: 'column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height' },
@@ -17194,7 +17194,7 @@ var Project = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'project--card-container' },
                 _react2.default.createElement(
                     'div',
                     { className: 'column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height' },
@@ -18290,7 +18290,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, ".project--card {\n  justify-content: center;\n  margin-bottom: 10px; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,wBAAwB;EACxB,oBAAoB,EAAG;;AAEzB;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG","file":"projects.sass","sourcesContent":[".project--card {\n  justify-content: center;\n  margin-bottom: 10px; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, ".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,wBAAwB,EAAG;;AAE7B;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG","file":"projects.sass","sourcesContent":[".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
