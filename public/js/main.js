@@ -14578,7 +14578,7 @@ var About = function About() {
                 _react2.default.createElement(
                     'p',
                     null,
-                    'Hello My name is Tomas, if you want to know a little about me please feel free to read on. Now to start I am at the time of writing this (December 2, 2016) 21 years old. I started to program last year about this time and I have leaned a lot. From backend architecture to front end responsiveness, I still have so much learning to do but i\'m taking it one day at a time.'
+                    'Hello My name is Tomas, if you want to know a little about me please feel free to read on. Now to start I am at the time of writing this (December 2, 2016) 21 years old. I started to program last year about this time and I have learned a lot. From backend architecture to front end responsiveness, I still have so much learning to do but i\'m taking it one day at a time.'
                 )
             ),
             _react2.default.createElement(
@@ -14601,7 +14601,7 @@ var About = function About() {
                 _react2.default.createElement(
                     'p',
                     null,
-                    'I have two children and am married, my oldest is 3 years old and my youngest is 2. My kids and wife are what drives me to keep on improving. I want to be able to show my children that yes anyone can move up in the world if you put enough time and effort into it.'
+                    'I have two children and am married, my oldest is 3 years old and my youngest is 2. They are the driving force that keeps me improving. I want to be able to show my children that yes anyone can move up in the world if you put enough time and effort into it.'
                 )
             )
         ),
