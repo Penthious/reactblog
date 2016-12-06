@@ -15691,7 +15691,7 @@ var Timer = function (_Component) {
                 { className: 'columns' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'column is-offset-4 is-offset-1-mobile is-10-mobile timer--margin' },
+                    { className: 'column is-offset-4 is-10-mobile timer--margin' },
                     _react2.default.createElement(
                         'div',
                         { className: 'Timer' },

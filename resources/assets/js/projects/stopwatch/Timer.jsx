@@ -59,7 +59,7 @@ class Timer extends Component {
     render() {
         return (
             <div className="columns">
-                <div className="column is-offset-4 is-offset-1-mobile is-10-mobile timer--margin">
+                <div className="column is-offset-4 is-10-mobile timer--margin">
 
                     <div className="Timer">
 
