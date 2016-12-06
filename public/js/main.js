@@ -15573,7 +15573,7 @@ var Calculator = function (_Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'columns' },
+                    { className: 'columns calculator--margin' },
                     _react2.default.createElement(
                         'div',
                         { className: 'column is-offset-3 is-6 is-10-mobile' },
@@ -17329,7 +17329,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 is-offset-2-mobile is-8-mobile button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-11-mobile button-box--style' },
                         set1.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
@@ -17347,7 +17347,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-11-mobile button-box--style' },
                         set2.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
@@ -17365,7 +17365,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-11-mobile button-box--style' },
                         set3.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
@@ -17383,7 +17383,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-11-mobile button-box--style' },
                         set4.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
@@ -17401,7 +17401,7 @@ var Buttons = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'column is-offset-3 is-9 button-box--style' },
+                        { className: 'column is-offset-3 is-9 is-11-mobile button-box--style' },
                         set5.map(function (val) {
                             return _react2.default.createElement(
                                 'button',
@@ -17453,17 +17453,17 @@ var Display = function Display(props) {
             { className: "columns" },
             _react2.default.createElement(
                 "div",
-                { className: "column is-offset-1 is-3 is-offset-4-mobile is-8-mobile" },
+                { className: "column is-offset-1 is-3 is-offset-3-mobile is-8-mobile" },
                 _react2.default.createElement("input", { type: "text", className: "input", value: props.firstInput, disabled: true })
             ),
             _react2.default.createElement(
                 "div",
-                { className: "column is-3 is-offset-4-mobile is-8-mobile" },
+                { className: "column is-3 is-offset-3-mobile is-8-mobile" },
                 _react2.default.createElement("input", { type: "text", className: "input", value: props.secondInput, disabled: true })
             ),
             _react2.default.createElement(
                 "div",
-                { className: "column is-3 is-offset-4-mobile is-8-mobile" },
+                { className: "column is-3 is-offset-3-mobile is-8-mobile" },
                 _react2.default.createElement("input", { type: "text", className: "input", value: props.thirdInput, disabled: true })
             )
         ),
@@ -17472,7 +17472,7 @@ var Display = function Display(props) {
             { className: "columns" },
             _react2.default.createElement(
                 "div",
-                { className: "column is-offset-4 is-3 is-offset-4-mobile is-8-mobile" },
+                { className: "column is-offset-4 is-3 is-offset-3-mobile is-8-mobile" },
                 _react2.default.createElement("input", { className: "is-centered input", disabled: true, value: props.output })
             )
         )
@@ -18196,7 +18196,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, ".button-size {\n  width: 50px;\n  height: 50px;\n  font-size: 1.3em; }\n\n.button-box--style {\n  padding-bottom: 0px;\n  padding-top: 0px;\n  margin-left: 28% !important; }\n\ninput {\n  width: 100%;\n  height: 50px;\n  text-align: center;\n  font-size: 1.4em; }\n\n@media (max-width: 768px) {\n  input {\n    width: 50%;\n    justify-content: center;\n    align-content: center; }\n  .button-box--style {\n    margin-left: 32% !important; } }\n", "", {"version":3,"sources":["/./resources/assets/js/projects/calculator/resources/assets/js/projects/calculator/calculator.sass"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,aAAa;EACb,iBAAiB,EAAG;;AAEtB;EACE,oBAAoB;EACpB,iBAAiB;EACjB,4BAA0B,EAAG;;AAE/B;EACE,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,iBAAiB,EAAG;;AAEtB;EACE;IACE,WAAW;IACX,wBAAwB;IACxB,sBAAsB,EAAG;EAE3B;IACE,4BAA0B,EAAG,EAAA","file":"calculator.sass","sourcesContent":[".button-size {\n  width: 50px;\n  height: 50px;\n  font-size: 1.3em; }\n\n.button-box--style {\n  padding-bottom: 0px;\n  padding-top: 0px;\n  margin-left: 28%!important; }\n\ninput {\n  width: 100%;\n  height: 50px;\n  text-align: center;\n  font-size: 1.4em; }\n\n@media (max-width: 768px) {\n  input {\n    width: 50%;\n    justify-content: center;\n    align-content: center; }\n\n  .button-box--style {\n    margin-left: 32%!important; } }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, ".calculator--margin {\n  margin-bottom: 15px; }\n\n.button-size {\n  width: 50px;\n  height: 50px;\n  font-size: 1.3em; }\n\n.button-box--style {\n  padding-bottom: 0px;\n  padding-top: 0px;\n  margin-left: 28% !important; }\n\ninput {\n  width: 100%;\n  height: 50px;\n  text-align: center;\n  font-size: 1.4em; }\n\n@media (max-width: 768px) {\n  input {\n    width: 50%;\n    justify-content: center;\n    align-content: center; }\n  .button-box--style {\n    margin-left: 32% !important; } }\n", "", {"version":3,"sources":["/./resources/assets/js/projects/calculator/resources/assets/js/projects/calculator/calculator.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,YAAY;EACZ,aAAa;EACb,iBAAiB,EAAG;;AAEtB;EACE,oBAAoB;EACpB,iBAAiB;EACjB,4BAA0B,EAAG;;AAE/B;EACE,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,iBAAiB,EAAG;;AAEtB;EACE;IACE,WAAW;IACX,wBAAwB;IACxB,sBAAsB,EAAG;EAE3B;IACE,4BAA0B,EAAG,EAAA","file":"calculator.sass","sourcesContent":[".calculator--margin {\n  margin-bottom: 15px; }\n\n.button-size {\n  width: 50px;\n  height: 50px;\n  font-size: 1.3em; }\n\n.button-box--style {\n  padding-bottom: 0px;\n  padding-top: 0px;\n  margin-left: 28%!important; }\n\ninput {\n  width: 100%;\n  height: 50px;\n  text-align: center;\n  font-size: 1.4em; }\n\n@media (max-width: 768px) {\n  input {\n    width: 50%;\n    justify-content: center;\n    align-content: center; }\n\n  .button-box--style {\n    margin-left: 32%!important; } }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 

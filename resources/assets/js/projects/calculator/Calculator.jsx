@@ -171,7 +171,7 @@ class Calculator extends Component {
                         <Display{...this.state} />
                     </div>
                 </div>
-                <div className="columns">
+                <div className="columns calculator--margin">
                     <div className="column is-offset-3 is-6 is-10-mobile">
                         <Buttons {...this.state} handleInputChange={this.handleInputChange} />
                     </div>

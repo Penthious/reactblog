@@ -18,31 +18,31 @@ class Buttons extends Component {
         return (
             <div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-9 is-offset-2-mobile is-8-mobile button-box--style">
+                    <div className="column is-offset-3 is-9 is-11-mobile button-box--style">
                         {set1.map(val => <button className="button-size" key={`${val}hashed`}
                                                  onClick={() => this.handleOnClick(val)}>{val}</button>)}
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-9 button-box--style">
+                    <div className="column is-offset-3 is-9 is-11-mobile button-box--style">
                         {set2.map(val => <button className="button-size" key={`${val}hashed`}
                                                  onClick={() => this.handleOnClick(val)}>{val}</button>)}
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-9 button-box--style">
+                    <div className="column is-offset-3 is-9 is-11-mobile button-box--style">
                         {set3.map(val => <button className="button-size" key={`${val}hashed`}
                                                  onClick={() => this.handleOnClick(val)}>{val}</button>)}
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-9 button-box--style">
+                    <div className="column is-offset-3 is-9 is-11-mobile button-box--style">
                         {set4.map(val => <button className="button-size" key={`${val}hashed`}
                                                  onClick={() => this.handleOnClick(val)}>{val}</button>)}
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-offset-3 is-9 button-box--style">
+                    <div className="column is-offset-3 is-9 is-11-mobile button-box--style">
                         {set5.map(val => <button className="button-size" key={`${val}hashed`}
                                                  onClick={() => this.handleOnClick(val)}>{val}</button>)}
                     </div>
