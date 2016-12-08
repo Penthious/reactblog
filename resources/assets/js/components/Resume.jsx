@@ -11,7 +11,14 @@ const Resume = () => (
                 <p className="resume--text">Site: penthious.com</p>
                 <p className="resume--text">Phone: 210-290-4890</p>
                 <p className="resume--text">Email: tleffew1994@gmail.com</p>
-                <p className="resume--text"><a href="https://github.com/Penthious">https://github.com/Penthious</a>
+                <p className="resume--text">
+                    <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://github.com/Penthious"
+                    >
+                        https://github.com/Penthious
+                    </a>
                 </p>
             </div>
             <div className="column is-offset-1 is-3 is-offset-1-mobile is-10-mobile">

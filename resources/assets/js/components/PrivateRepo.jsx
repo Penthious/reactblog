@@ -33,6 +33,8 @@ class PrivateRepo extends Component {
                                                     <a
                                                         href={this.props.link}
                                                         className="is-flex github-container"
+                                                        rel="noopener noreferrer"
+                                                        target="_blank"
                                                     >
                                                         <i
                                                             className="fa fa-github"
