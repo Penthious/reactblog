@@ -14960,6 +14960,10 @@ var _Project = __webpack_require__(171);
 
 var _Project2 = _interopRequireDefault(_Project);
 
+var _PrivateRepo = __webpack_require__(372);
+
+var _PrivateRepo2 = _interopRequireDefault(_PrivateRepo);
+
 var _Personal = __webpack_require__(170);
 
 var _Personal2 = _interopRequireDefault(_Personal);
@@ -14967,6 +14971,10 @@ var _Personal2 = _interopRequireDefault(_Personal);
 var _projectsData = __webpack_require__(87);
 
 var _projectsData2 = _interopRequireDefault(_projectsData);
+
+var _privateRepoData = __webpack_require__(371);
+
+var _privateRepoData2 = _interopRequireDefault(_privateRepoData);
 
 __webpack_require__(364);
 
@@ -14994,6 +15002,8 @@ var Projects = function (_Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Projects.__proto__ || Object.getPrototypeOf(Projects)).call.apply(_ref, [this].concat(args))), _this), _this.allProjects = function () {
             return _projectsData2.default;
+        }, _this.privateRepos = function () {
+            return _privateRepoData2.default;
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -15009,6 +15019,37 @@ var Projects = function (_Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'column is-offset-2 is-8 is-offset-1-mobile is-10-mobile' },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'project--title' },
+                            'Full blown apps, contact me if you want to see the code.'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'columns' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'column is-offset-4 is-3 is-offset-3-mobile is-4-mobile' },
+                        _react2.default.createElement(
+                            _reactRouter.Link,
+                            { to: 'contact', className: 'is-primary button' },
+                            'Contact'
+                        )
+                    )
+                ),
+                this.privateRepos().map(function (project) {
+                    return _react2.default.createElement(_PrivateRepo2.default, project);
+                }),
+                _react2.default.createElement('hr', null),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'columns' },
+                    _react2.default.createElement(
+                        'div',
+                        {
+                            className: 'column is-offset-2 is-8 is-offset-1-mobile is-10-mobile' },
                         _react2.default.createElement(
                             'p',
                             { className: 'project--title project--underline' },
@@ -15032,51 +15073,6 @@ var Projects = function (_Component) {
                     this.allProjects().map(function (project, index) {
                         if (index === 2 || index === 3) {
                             return _react2.default.createElement(_Project2.default, _extends({ key: '' + project.name + index }, project));
-                        }
-                    })
-                ),
-                _react2.default.createElement('hr', null),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'columns' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'column is-offset-2 is-8 is-offset-1-mobile is-10-mobile' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'project--title' },
-                            'All code under here is on a private github but feel free to message me and I can team view with you to show you the code'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'columns' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'column is-offset-4 is-3 is-offset-3-mobile is-4-mobile' },
-                        _react2.default.createElement(
-                            _reactRouter.Link,
-                            { to: 'contact', className: 'is-primary button' },
-                            'Contact'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'columns project--card' },
-                    this.allProjects().map(function (project, index) {
-                        if (index === 4 || index === 5) {
-                            return _react2.default.createElement(_Personal2.default, _extends({ key: '' + project.name + index }, project));
-                        }
-                    })
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'columns project--card' },
-                    this.allProjects().map(function (project, index) {
-                        if (index === 6 || index === 7) {
-                            return _react2.default.createElement(_Personal2.default, _extends({ key: '' + project.name + index }, project));
                         }
                     })
                 )
@@ -18290,7 +18286,7 @@ exports = module.exports = __webpack_require__(15)();
 
 
 // module
-exports.push([module.i, ".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,wBAAwB,EAAG;;AAE7B;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG","file":"projects.sass","sourcesContent":[".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, ".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n\n.media-left {\n  margin-right: 0; }\n\n.image-container {\n  max-width: 300px; }\n\n.project-description {\n  padding: 10px;\n  margin-left: 10px; }\n\n.project-technologies {\n  padding: 10px;\n  margin-left: 10px; }\n\n.media-content.is-flex.media-flex {\n  flex-direction: column;\n  justify-content: space-between;\n  align-content: center;\n  align-items: space-between;\n  height: 100%; }\n\n.content {\n  height: 100%;\n  flex-direction: column;\n  justify-content: space-around; }\n\n.media-left.is-flex {\n  justify-content: center;\n  align-items: center; }\n\n.column.is-5.is-flex.image-column {\n  align-self: center; }\n\ndiv.media-left.is-flex {\n  justify-content: center; }\n\n.github-span {\n  margin-left: 10px;\n  line-height: 1; }\n\n.is-flex.github-container {\n  justify-content: flex-end;\n  align-items: flex-end;\n  border-bottom: none;\n  color: #111; }\n\n.content a:not(.button) {\n  border-bottom: 0; }\n\n.content a:not(.button):visited {\n  color: #111; }\n\n.fa.fa-github {\n  justify-content: flex-end;\n  align-self: flex-end; }\n\nspan.github-span {\n  align-self: flex-end; }\n\n.is-one-quarter.is-fixed {\n  position: absolute;\n  right: 75px;\n  top: 10px;\n  max-width: 200px; }\n\n@media (max-width: 769px) {\n  .column.is-5.is-flex.image-column {\n    border-right: 0; } }\n\n.column.is-5.is-flex.image-column {\n  border-radius: 4px; }\n\ndiv.section.main-section {\n  background-color: whitesmoke; }\n\n@media (max-width: 500) {\n  .box.portfolio {\n    min-height: 500px; } }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/projects.sass"],"names":[],"mappings":"AAAA;EACE,oBAAoB,EAAG;;AAEzB;EACE,wBAAwB,EAAG;;AAE7B;EACE,aAAa,EAAG;;AAElB;EACE,mBAAmB;EACnB,eAAe;EACf,oBAAoB,EAAG;;AAEzB;EACE,2BAA2B,EAAG;;AAShC;EACE,gBAAgB,EAAG;;AAErB;EACE,iBAAiB,EAAG;;AAEtB;EACE,cAAc;EACd,kBAAkB,EAAG;;AAEvB;EACE,cAAc;EACd,kBAAkB,EAAG;;AAGvB;EACE,uBAAuB;EACvB,+BAA+B;EAC/B,sBAAsB;EACtB,2BAA2B;EAC3B,aAAa,EAAG;;AAElB;EACE,aAAa;EACb,uBAAuB;EACvB,8BAA8B,EAAG;;AAEnC;EACE,wBAAwB;EACxB,oBAAoB,EAAG;;AAEzB;EACE,mBAAmB,EAAG;;AAExB;EACE,wBAAwB,EAAG;;AAE7B;EACE,kBAAkB;EAClB,eAAe,EAAG;;AAEpB;EACE,0BAA0B;EAC1B,sBAAsB;EACtB,oBAAoB;EACpB,YAAY,EAAG;;AAEjB;EACE,iBAAiB,EAAG;;AAEtB;EACE,YAAY,EAAG;;AAEjB;EACE,0BAA0B;EAC1B,qBAAqB,EAAG;;AAE1B;EACE,qBAAqB,EAAG;;AAE1B;EACE,mBAAmB;EACnB,YAAY;EACZ,UAAU;EACV,iBAAiB,EAAG;;AAEtB;EACE;IACE,gBAAgB,EAAG,EAAA;;AAEvB;EACE,mBAAmB,EAAG;;AAExB;EACE,6BAA6B,EAAG;;AAElC;EACE;IACE,kBAAkB,EAAG,EAAA","file":"projects.sass","sourcesContent":[".project--card-container {\n  margin-bottom: 15px; }\n\n.project--card {\n  justify-content: center; }\n\n.project--height {\n  height: 100%; }\n\n.project--title {\n  text-align: center;\n  font-size: 2em;\n  margin-bottom: 60px; }\n\n.project--underline {\n  text-decoration: underline; }\n\n\n\n\n\n\n$orange: #FF851B;\n\n.media-left {\n  margin-right: 0; }\n\n.image-container {\n  max-width: 300px; }\n\n.project-description {\n  padding: 10px;\n  margin-left: 10px; }\n\n.project-technologies {\n  padding: 10px;\n  margin-left: 10px; }\n\n\n.media-content.is-flex.media-flex {\n  flex-direction: column;\n  justify-content: space-between;\n  align-content: center;\n  align-items: space-between;\n  height: 100%; }\n\n.content {\n  height: 100%;\n  flex-direction: column;\n  justify-content: space-around; }\n\n.media-left.is-flex {\n  justify-content: center;\n  align-items: center; }\n\n.column.is-5.is-flex.image-column {\n  align-self: center; }\n\ndiv.media-left.is-flex {\n  justify-content: center; }\n\n.github-span {\n  margin-left: 10px;\n  line-height: 1; }\n\n.is-flex.github-container {\n  justify-content: flex-end;\n  align-items: flex-end;\n  border-bottom: none;\n  color: #111; }\n\n.content a:not(.button) {\n  border-bottom: 0; }\n\n.content a:not(.button):visited {\n  color: #111; }\n\n.fa.fa-github {\n  justify-content: flex-end;\n  align-self: flex-end; }\n\nspan.github-span {\n  align-self: flex-end; }\n\n.is-one-quarter.is-fixed {\n  position: absolute;\n  right: 75px;\n  top: 10px;\n  max-width: 200px; }\n\n@media (max-width: 769px) {\n  .column.is-5.is-flex.image-column {\n    border-right: 0; } }\n\n.column.is-5.is-flex.image-column {\n  border-radius: 4px; }\n\ndiv.section.main-section {\n  background-color: whitesmoke; }\n\n@media (max-width: 500) {\n  .box.portfolio {\n    min-height: 500px; } }\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -37007,6 +37003,195 @@ _reactDom2.default.render(_react2.default.createElement(
     { store: _store2.default },
     _react2.default.createElement(App, null)
 ), document.getElementById('app'));
+
+/***/ },
+/* 371 */
+/***/ function(module, exports) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var privateRepoData = [{
+    name: 'penthious.com',
+    description: ' is my personal site that I built to display my skills. It is built with' + ' responsiveness in mind while using react and bulma for the UI. Redux to handle the' + ' state and laravel to handle the backend layer.',
+    image: '/images/blog.png',
+    tech: 'Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
+    link: 'https://github.com/Penthious/reactblog'
+}, {
+    name: 'TandC',
+    description: ' TandC is a resource site meant to help out new comers with articles and' + ' videos. My task was the article section, building out the CRUD and styling the front' + ' end layout.',
+    image: '/images/tandc.png',
+    tech: 'Laravel, Bulma, Flexbox, jQuery, sass, Disqus'
+}, {
+    name: 'Blueine Screening Source',
+    description: ' is a large, enterprise drug testing software. I was tasked with building' + ' the logic and controls behind making and handling online communications. The' + ' software had a complex backend with a large amount of sql tables.',
+    image: '/images/bl.png',
+    tech: 'Laravel, Twitter Bootstrap, AJAX, Datatables, jQuery, NPM,' + ' Gulp, twillio'
+}, {
+    name: 'Volunteer Verify',
+    description: ' is a background tester for businesses, my tasks were to handle the and' + ' set up the background testing API along with making a ticket system so admins can let' + ' users know when and why the tests came back the way they did.',
+    image: '/images/vv.png',
+    tech: 'Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API'
+}, {
+    name: 'Paramount Tax',
+    description: ' Paramount tax helps the users keep track of the work they did.',
+    image: '/images/pt.png',
+    tech: 'Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat'
+}, {
+    name: 'Sweet Yams',
+    description: ' was built for our local organic restaurant, it consisted of a CRUD for' + ' the owners, a online ordering system, and google map for directions. My part in this' + ' project was building and setting up the online ordering system with the stripe API,' + ' and integrating google maps.',
+    image: '/images/sweetyams.png',
+    tech: 'Laravel, Twitter Bootstrap, jQuery, custom sass, NPM, google API, stripe API',
+    link: 'https://github.com/thesweetyams/sweetyams'
+}];
+
+exports.default = privateRepoData;
+
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PrivateRepo = function (_Component) {
+    _inherits(PrivateRepo, _Component);
+
+    function PrivateRepo() {
+        _classCallCheck(this, PrivateRepo);
+
+        return _possibleConstructorReturn(this, (PrivateRepo.__proto__ || Object.getPrototypeOf(PrivateRepo)).apply(this, arguments));
+    }
+
+    _createClass(PrivateRepo, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "columns" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "column is-two-thirds is-offset-2" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "box portfolio" },
+                        _react2.default.createElement(
+                            "article",
+                            { className: "media" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "columns" },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "column is-5 is-flex image-column" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "media-left is-flex" },
+                                        _react2.default.createElement(
+                                            "figure",
+                                            { className: "image-container" },
+                                            _react2.default.createElement("img", { src: this.props.image, alt: this.props.image })
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "column is-7" },
+                                    _react2.default.createElement(
+                                        "div",
+                                        { className: "media-content is-flex media-flex" },
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "content is-flex" },
+                                            _react2.default.createElement(
+                                                "p",
+                                                { className: "project-description" },
+                                                _react2.default.createElement(
+                                                    "strong",
+                                                    null,
+                                                    this.props.name
+                                                ),
+                                                this.props.description
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "project-technologies" },
+                                                _react2.default.createElement(
+                                                    "p",
+                                                    null,
+                                                    _react2.default.createElement(
+                                                        "strong",
+                                                        null,
+                                                        "Technologies used:"
+                                                    ),
+                                                    this.props.tech
+                                                ),
+                                                this.props.link ? _react2.default.createElement(
+                                                    "a",
+                                                    {
+                                                        href: this.props.link,
+                                                        className: "is-flex github-container"
+                                                    },
+                                                    _react2.default.createElement("i", {
+                                                        className: "fa fa-github",
+                                                        "aria-hidden": "true"
+                                                    }),
+                                                    _react2.default.createElement(
+                                                        "span",
+                                                        { className: "github-span" },
+                                                        "Public Repo"
+                                                    )
+                                                ) : _react2.default.createElement(
+                                                    "div",
+                                                    { className: "is-flex github-container" },
+                                                    _react2.default.createElement(
+                                                        "span",
+                                                        {
+                                                            className: "github-span"
+                                                        },
+                                                        "Private Repo"
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return PrivateRepo;
+}(_react.Component);
+
+PrivateRepo.propTypes = {};
+PrivateRepo.defaultProps = {};
+
+exports.default = PrivateRepo;
 
 /***/ }
 /******/ ]);
