@@ -1,6 +1,7 @@
-const webpack = require('webpack');
+const webpack           = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const combineLoaders = require('webpack-combine-loaders');
+const combineLoaders    = require('webpack-combine-loaders');
+const autoprefixer      = require('autoprefixer');
 
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json'],
     },
     module: {
-        loaders: [
+        rules: [
             // js loader
             {
                 test: /\.jsx?$/,
@@ -24,7 +25,7 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react', 'stage-0'],
-                     plugins: ['transform-class-properties', 'transform-decorators-legacy'],
+                    plugins: ['transform-class-properties', 'transform-decorators-legacy'],
                 },
             },
             {
