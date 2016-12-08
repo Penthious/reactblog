@@ -4,6 +4,7 @@ const privateRepoData = [
         description: ' is my personal site that I built to display my skills. It is built with' +
         ' responsiveness in mind while using react and bulma for the UI. Redux to handle the' +
         ' state and laravel to handle the backend layer.',
+
         image: '/images/blog.png',
         tech: 'Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
         link: 'https://github.com/Penthious/reactblog',

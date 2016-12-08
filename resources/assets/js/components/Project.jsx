@@ -30,11 +30,11 @@ class Project extends Component {
                             </div>
 
                             <div className="content">
-                                <p>{this.props.description}</p>
+                                <p className="project--p-height">{this.props.description}</p>
                                 <br />
                                 <small>{this.props.created_at}</small>
                             </div>
-                            <Link to={this.props.link} className="button is-primary">View</Link>
+                            <Link to={this.props.link} className="button is-primary project--margin">View</Link>
                         </div>
                     </div>
                 </div>

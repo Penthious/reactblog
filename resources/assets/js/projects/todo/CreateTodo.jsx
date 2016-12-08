@@ -9,7 +9,6 @@ class CreateTodo extends Component {
         this.state = {
             error: null,
         }
-        console.log('1',this.props);
     }
 
     handleCreate = (e) => {

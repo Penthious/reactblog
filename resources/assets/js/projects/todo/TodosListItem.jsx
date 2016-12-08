@@ -12,11 +12,11 @@ class TodosListItem extends Component {
     }
 
     onEditClick = () => {
-        this.setState({isEditing: true});
+        this.setState({ isEditing: true });
     };
 
     onCancelClick = () => {
-        this.setState({isEditing: false});
+        this.setState({ isEditing: false });
     };
 
     onSaveClick = (e) => {
@@ -28,13 +28,12 @@ class TodosListItem extends Component {
     };
 
     renderTasksSection() {
-        console.log(this.props);
         const { task, isCompleted } = this.props;
         const taskStyle = {
             color: isCompleted ? 'green' : 'red',
             cursor: 'pointer',
         };
-        if(this.state.isEditing){
+        if (this.state.isEditing) {
             return (
                 <td>
                     <form onSubmit={this.onSaveClick} className="todo--input">
@@ -48,7 +47,7 @@ class TodosListItem extends Component {
                 className="todo--item"
                 style={taskStyle}
                 onClick={() => this.props.toggleTask(task)}
-             >
+            >
                 {task}
             </td>
         );
@@ -81,7 +80,7 @@ class TodosListItem extends Component {
     }
 }
 
-TodosListItem.propTypes    = {};
+TodosListItem.propTypes = {};
 TodosListItem.defaultProps = {};
 
 export default TodosListItem;
