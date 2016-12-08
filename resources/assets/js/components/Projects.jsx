@@ -1,9 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import  Project from './Project';
+import Project from './Project';
 import PrivateRepo from './PrivateRepo';
-import Personal from './Personal';
 import projectsData from '../projectsData';
 import privateRepoData from '../privateRepoData';
 import '../../sass/projects.sass';
@@ -31,7 +30,7 @@ class Projects extends Component {
                     </div>
                 </div>
 
-                {this.privateRepos().map(project => <PrivateRepo {...project} />)}
+                {this.privateRepos().map(project => <PrivateRepo key={project.name} {...project} />)}
 
 
                 <hr />

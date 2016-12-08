@@ -6,7 +6,7 @@ const privateRepoData = [
         ' state and laravel to handle the backend layer.',
 
         image: '/images/blog.png',
-        tech: 'Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
+        tech: ' Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
         link: 'https://github.com/Penthious/reactblog',
     },
     {
@@ -15,7 +15,7 @@ const privateRepoData = [
         ' videos. My task was the article section, building out the CRUD and styling the front' +
         ' end layout.',
         image: '/images/tandc.png',
-        tech: 'Laravel, Bulma, Flexbox, jQuery, sass, Disqus',
+        tech: ' Laravel, Bulma, Flexbox, jQuery, sass, Disqus',
     },
     {
         name: 'Blueine Screening Source',
@@ -23,7 +23,7 @@ const privateRepoData = [
         ' the logic and controls behind making and handling online communications. The' +
         ' software had a complex backend with a large amount of sql tables.',
         image: '/images/bl.png',
-        tech: 'Laravel, Twitter Bootstrap, AJAX, Datatables, jQuery, NPM,' +
+        tech: ' Laravel, Twitter Bootstrap, AJAX, Datatables, jQuery, NPM,' +
         ' Gulp, twillio',
     },
     {
@@ -32,13 +32,13 @@ const privateRepoData = [
         ' set up the background testing API along with making a ticket system so admins can let' +
         ' users know when and why the tests came back the way they did.',
         image: '/images/vv.png',
-        tech: 'Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API',
+        tech: ' Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API',
     },
     {
         name: 'Paramount Tax',
         description: ' Paramount tax helps the users keep track of the work they did.',
         image: '/images/pt.png',
-        tech: 'Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat',
+        tech: ' Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat',
     },
     {
         name: 'Sweet Yams',
@@ -47,7 +47,7 @@ const privateRepoData = [
         ' project was building and setting up the online ordering system with the stripe API,' +
         ' and integrating google maps.',
         image: '/images/sweetyams.png',
-        tech: 'Laravel, Twitter Bootstrap, jQuery, custom sass, NPM, google API, stripe API',
+        tech: ' Laravel, Twitter Bootstrap, jQuery, custom sass, NPM, google API, stripe API',
         link: 'https://github.com/thesweetyams/sweetyams',
     },
 ];

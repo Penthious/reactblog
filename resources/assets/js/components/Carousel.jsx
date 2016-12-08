@@ -8,9 +8,10 @@ class Carousel extends Component {
         const settings = {
             dots: false,
             infinite: true,
-            speed: 700,
-            arrows: false,
-            autoplay: true,
+            speed: 1000,
+            delay: 1000,
+            arrows: true,
+            autoplay: false,
             slidesToShow: 1,
             slidesToScroll: 1,
         };

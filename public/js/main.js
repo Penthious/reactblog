@@ -14964,10 +14964,6 @@ var _PrivateRepo = __webpack_require__(171);
 
 var _PrivateRepo2 = _interopRequireDefault(_PrivateRepo);
 
-var _Personal = __webpack_require__(170);
-
-var _Personal2 = _interopRequireDefault(_Personal);
-
 var _projectsData = __webpack_require__(87);
 
 var _projectsData2 = _interopRequireDefault(_projectsData);
@@ -15040,7 +15036,7 @@ var Projects = function (_Component) {
                     )
                 ),
                 this.privateRepos().map(function (project) {
-                    return _react2.default.createElement(_PrivateRepo2.default, project);
+                    return _react2.default.createElement(_PrivateRepo2.default, _extends({ key: project.name }, project));
                 }),
                 _react2.default.createElement('hr', null),
                 _react2.default.createElement(
@@ -16818,9 +16814,10 @@ var Carousel = function (_Component) {
             var settings = {
                 dots: false,
                 infinite: true,
-                speed: 700,
-                arrows: false,
-                autoplay: true,
+                speed: 1000,
+                delay: 1000,
+                arrows: true,
+                autoplay: false,
                 slidesToShow: 1,
                 slidesToScroll: 1
             };
@@ -17035,122 +17032,7 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
 exports.default = NavBar;
 
 /***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(31);
-
-var _projectsData = __webpack_require__(87);
-
-var _projectsData2 = _interopRequireDefault(_projectsData);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Projects = function (_Component) {
-    _inherits(Projects, _Component);
-
-    function Projects() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, Projects);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Projects.__proto__ || Object.getPrototypeOf(Projects)).call.apply(_ref, [this].concat(args))), _this), _this.allProjects = function () {
-            return _projectsData2.default;
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(Projects, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'project--card-container' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'card project--height' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'card-image' },
-                            _react2.default.createElement(
-                                'figure',
-                                { className: 'image is-4by3' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { href: this.props.link },
-                                    _react2.default.createElement('img', { src: this.props.image, alt: '', target: '_blank' })
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'card-content' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'content' },
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'project--p-height' },
-                                    this.props.description
-                                ),
-                                _react2.default.createElement('br', null),
-                                _react2.default.createElement(
-                                    'small',
-                                    null,
-                                    this.props.created_at
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement(
-                                'a',
-                                { href: this.props.link, className: 'button is-primary project--margin' },
-                                'View'
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Projects;
-}(_react.Component);
-
-Projects.propTypes = {};
-
-exports.default = Projects;
-
-/***/ },
+/* 170 */,
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -17429,33 +17311,33 @@ var privateRepoData = [{
     description: ' is my personal site that I built to display my skills. It is built with' + ' responsiveness in mind while using react and bulma for the UI. Redux to handle the' + ' state and laravel to handle the backend layer.',
 
     image: '/images/blog.png',
-    tech: 'Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
+    tech: ' Laravel, React, ES6, bulma, flexbox, sass, Redux, babel',
     link: 'https://github.com/Penthious/reactblog'
 }, {
     name: 'TandC',
     description: ' TandC is a resource site meant to help out new comers with articles and' + ' videos. My task was the article section, building out the CRUD and styling the front' + ' end layout.',
     image: '/images/tandc.png',
-    tech: 'Laravel, Bulma, Flexbox, jQuery, sass, Disqus'
+    tech: ' Laravel, Bulma, Flexbox, jQuery, sass, Disqus'
 }, {
     name: 'Blueine Screening Source',
     description: ' is a large, enterprise drug testing software. I was tasked with building' + ' the logic and controls behind making and handling online communications. The' + ' software had a complex backend with a large amount of sql tables.',
     image: '/images/bl.png',
-    tech: 'Laravel, Twitter Bootstrap, AJAX, Datatables, jQuery, NPM,' + ' Gulp, twillio'
+    tech: ' Laravel, Twitter Bootstrap, AJAX, Datatables, jQuery, NPM,' + ' Gulp, twillio'
 }, {
     name: 'Volunteer Verify',
     description: ' is a background tester for businesses, my tasks were to handle the and' + ' set up the background testing API along with making a ticket system so admins can let' + ' users know when and why the tests came back the way they did.',
     image: '/images/vv.png',
-    tech: 'Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API'
+    tech: ' Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API'
 }, {
     name: 'Paramount Tax',
     description: ' Paramount tax helps the users keep track of the work they did.',
     image: '/images/pt.png',
-    tech: 'Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat'
+    tech: ' Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat'
 }, {
     name: 'Sweet Yams',
     description: ' was built for our local organic restaurant, it consisted of a CRUD for' + ' the owners, a online ordering system, and google map for directions. My part in this' + ' project was building and setting up the online ordering system with the stripe API,' + ' and integrating google maps.',
     image: '/images/sweetyams.png',
-    tech: 'Laravel, Twitter Bootstrap, jQuery, custom sass, NPM, google API, stripe API',
+    tech: ' Laravel, Twitter Bootstrap, jQuery, custom sass, NPM, google API, stripe API',
     link: 'https://github.com/thesweetyams/sweetyams'
 }];
 
