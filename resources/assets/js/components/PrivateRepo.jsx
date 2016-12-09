@@ -19,7 +19,7 @@ class PrivateRepo extends Component {
                                     </div>
                                 </div>
                                 <div className="column is-7">
-                                    <div className="media-content is-flex media-flex">
+                                    <div className="media-content is-flex-mobile media-flex">
                                         <div className="content is-flex">
                                             <p className="project-description">
                                                 <strong>{this.props.name}</strong>
