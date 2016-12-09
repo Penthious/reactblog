@@ -1,9 +1,6 @@
 .project--card-container {
   margin-bottom: 15px;
 }
-div.column.is-7 > div > div > div > a{
-  display: block;
-}
 .project--card {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
