@@ -5,7 +5,7 @@ import Project from './Project';
 import PrivateRepo from './PrivateRepo';
 import projectsData from '../projectsData';
 import privateRepoData from '../privateRepoData';
-import '../../sass/projects.css';
+import '../../sass/projects.sass';
 
 class Projects extends Component {
     allProjects = () => projectsData;
