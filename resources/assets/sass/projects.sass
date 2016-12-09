@@ -2,6 +2,8 @@
   margin-bottom: 15px
 
 .project--card
+  -webkit-justify-content: center
+  -ms-flex-pack: center
   justify-content: center
 
 .project--height
@@ -14,12 +16,6 @@
 
 .project--underline
   text-decoration: underline
-
-
-
-
-
-
 
 .media-left
   margin-right: 0
@@ -35,27 +31,47 @@
   padding: 10px
   margin-left: 10px
 
-
 .media-content.is-flex.media-flex
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-justify-content: space-between
+  -ms-flex-pack: justify
   justify-content: space-between
+  -webkit-align-content: center
+  -ms-flex-line-pack: center
   align-content: center
+  -webkit-align-items: space-between
+  -ms-flex-align: space-between
   align-items: space-between
   height: 100%
 
 .content
   height: 100%
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-justify-content: space-around
+  -ms-flex-pack: distribute
   justify-content: space-around
 
 .media-left.is-flex
+  -webkit-justify-content: center
+  -ms-flex-pack: center
   justify-content: center
+  -webkit-align-items: center
+  -ms-flex-align: center
   align-items: center
 
 .column.is-5.is-flex.image-column
+  -webkit-align-self: center
+  -ms-flex-item-align: center
+  -ms-grid-row-align: center
   align-self: center
 
 div.media-left.is-flex
+  -webkit-justify-content: center
+  -ms-flex-pack: center
   justify-content: center
 
 .github-span
@@ -63,7 +79,11 @@ div.media-left.is-flex
   line-height: 1
 
 .is-flex.github-container
+  -webkit-justify-content: flex-end
+  -ms-flex-pack: end
   justify-content: flex-end
+  -webkit-align-items: flex-end
+  -ms-flex-align: end
   align-items: flex-end
   border-bottom: none
   color: #111
@@ -75,10 +95,16 @@ div.media-left.is-flex
   color: #111
 
 .fa.fa-github
+  -webkit-justify-content: flex-end
+  -ms-flex-pack: end
   justify-content: flex-end
+  -webkit-align-self: flex-end
+  -ms-flex-item-align: end
   align-self: flex-end
 
 span.github-span
+  -webkit-align-self: flex-end
+  -ms-flex-item-align: end
   align-self: flex-end
 
 .is-one-quarter.is-fixed
@@ -100,6 +126,7 @@ div.section.main-section
 @media (max-width: 500)
   .box.portfolio
     min-height: 500px
+
 .card-content
   height: 39%
 

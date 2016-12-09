@@ -1,7 +1,6 @@
 const webpack           = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const combineLoaders    = require('webpack-combine-loaders');
-const autoprefixer      = require('autoprefixer');
 
 
 module.exports = {
@@ -17,7 +16,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json'],
     },
     module: {
-        rules: [
+        loaders: [
             // js loader
             {
                 test: /\.jsx?$/,
