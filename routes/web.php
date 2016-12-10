@@ -27,6 +27,10 @@ Route::get('/todo', [
     'uses' => 'HomeController@index',
     'as' => 'home',
 ]);
+Route::get('/clock', [
+    'uses' => 'HomeController@index',
+    'as' => 'home',
+]);
 Route::get('/calculator', [
     'uses' => 'HomeController@index',
     'as' => 'home',

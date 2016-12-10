@@ -8,12 +8,12 @@ const projectsData = [
         link: 'calculator',
     },
     {
-        name: 'Simple Simon',
-        created_at: 'Wednesday, December 4',
-        description: 'The game we all know and love Simple simon.',
-        github: 'https://github.com/Penthious/react-simpleSimon',
+        name: 'Pomodoro clock',
+        created_at: 'Friday, December 9',
+        description: 'A pomodoro session tracker',
+        github: 'https://github.com/Penthious/reactPomodoroClock',
         image: '/images/work-in-progress.png',
-        link: 'projects',
+        link: 'clock',
     },
     {
         name: 'Stop Watch',
