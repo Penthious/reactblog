@@ -11,7 +11,7 @@ const privateRepoData = [
     },
     {
         name: 'TandC',
-        description: ' TandC is a resource site meant to help out new comers with articles and' +
+        description: ' is a resource site meant to help out new comers with articles and' +
         ' videos. My task was the article section, building out the CRUD and styling the front' +
         ' end layout.',
         image: '/images/tandc.png',
@@ -36,7 +36,9 @@ const privateRepoData = [
     },
     {
         name: 'Paramount Tax',
-        description: ' Paramount tax helps the users keep track of the work they did.',
+        description: ' helps the users keep track of the work they did and the' +
+        ' payment they were to receive. My main role was to build the backend to allow for the' +
+        ' correct data to be passed to the front end so we could show the correct info.',
         image: '/images/pt.png',
         tech: ' Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat',
     },

@@ -58,7 +58,7 @@ const projectsData = [
     {
         name: 'Paramount Tax',
         created_at: 'Wednesday, November 30',
-        description: 'Paramount tax helps the users keep track of the work they did.',
+        description: 'Paramount tax elps the users keep track of the work they did.',
         github: 'https://github.com/Penthious/react-simpleSimon',
         image: '/images/pt.png',
         link: '/images/pt.png',

@@ -17549,7 +17549,7 @@ var privateRepoData = [{
     link: 'https://github.com/Penthious/reactblog'
 }, {
     name: 'TandC',
-    description: ' TandC is a resource site meant to help out new comers with articles and' + ' videos. My task was the article section, building out the CRUD and styling the front' + ' end layout.',
+    description: ' is a resource site meant to help out new comers with articles and' + ' videos. My task was the article section, building out the CRUD and styling the front' + ' end layout.',
     image: '/images/tandc.png',
     tech: ' Laravel, Bulma, Flexbox, jQuery, sass, Disqus'
 }, {
@@ -17564,7 +17564,7 @@ var privateRepoData = [{
     tech: ' Laravel, Twitter Bootstrap, jQuery, Ajax, NPM, gulp, stripe API'
 }, {
     name: 'Paramount Tax',
-    description: ' Paramount tax helps the users keep track of the work they did.',
+    description: ' helps the users keep track of the work they did and the' + ' payment they were to receive. My main role was to build the backend to allow for the' + ' correct data to be passed to the front end so we could show the correct info.',
     image: '/images/pt.png',
     tech: ' Laravel, Twitter Bootstrap, jQuery, NPM, gulp, bower, stripe API, behat'
 }, {
@@ -18771,7 +18771,7 @@ var projectsData = [{
 }, {
     name: 'Paramount Tax',
     created_at: 'Wednesday, November 30',
-    description: 'Paramount tax helps the users keep track of the work they did.',
+    description: 'Paramount tax elps the users keep track of the work they did.',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/pt.png',
     link: '/images/pt.png'
