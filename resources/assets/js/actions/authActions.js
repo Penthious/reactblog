@@ -2,11 +2,11 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 
 export function userInfo(data) {
-    return dispatch => {
+    return (dispatch) => {
         axios.get('/api/userinfo', {
             headers: { authorization: `Bearer${data}` },
         })
-            .then(response => {
+            .then((response) => {
                 dispatch({
                     type: 'USER_INFO',
                     payload: response.data,
@@ -19,7 +19,7 @@ export function userInfo(data) {
 export function loginUser({ email, password }) {
     return function (dispatch) {
         axios.post('/login', { email, password })
-            .then(response => {
+            .then((response) => {
                 dispatch({
                     type: 'LOGIN_TOKEN',
                     payload: response.data.token,
@@ -29,10 +29,15 @@ export function loginUser({ email, password }) {
                 dispatch(userInfo(response.data.token));
             })
 
-            .catch(()=> {
+            .catch(() => {
                 // dispatch(authError("Empty Required Field"));
                 console.log('test');
             });
     };
+}
+
+export function logoutUser() {
+    localStorage.removeItem('token');
+    return { type: 'LOGOUT' };
 }
 

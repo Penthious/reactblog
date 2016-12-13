@@ -14,11 +14,12 @@ import Timer from '../projects/stopwatch/Timer';
 import Todo from '../projects/todo/Todo';
 import Clock from '../projects/pomodoro/Clock';
 import Login from './Login';
+import Logout from './auth/Logout';
 
 const token = localStorage.getItem('token');
-
 if (token) {
-    store.dispatch({ type: 'AUTH_USER' });
+    console.log(store);
+    store.dispatch({ type: 'AUTHENTICATE' });
 }
 
 const App = () => (
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="resume" component={Resume} />
             <Route path="contact" component={Contact} />
             <Route path="login" component={Login} />
+            <Route path="logout" component={Logout} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>

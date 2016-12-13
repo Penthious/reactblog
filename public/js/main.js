@@ -19868,6 +19868,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.userInfo = userInfo;
 exports.loginUser = loginUser;
+exports.logoutUser = logoutUser;
 
 var _axios = __webpack_require__(122);
 
@@ -19909,6 +19910,11 @@ function loginUser(_ref) {
             console.log('test');
         });
     };
+}
+
+function logoutUser() {
+    localStorage.removeItem('token');
+    return { type: 'LOGOUT' };
 }
 
 /***/ },
@@ -48223,12 +48229,16 @@ var _Login = __webpack_require__(214);
 
 var _Login2 = _interopRequireDefault(_Login);
 
+var _Logout = __webpack_require__(580);
+
+var _Logout2 = _interopRequireDefault(_Logout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var token = localStorage.getItem('token');
-
 if (token) {
-    _store2.default.dispatch({ type: 'AUTH_USER' });
+    console.log(_store2.default);
+    _store2.default.dispatch({ type: 'AUTHENTICATE' });
 }
 
 var App = function App() {
@@ -48247,6 +48257,7 @@ var App = function App() {
             _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _Resume2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: 'logout', component: _Logout2.default }),
             _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
         )
     );
@@ -48257,6 +48268,72 @@ _reactDom2.default.render(_react2.default.createElement(
     { store: _store2.default },
     _react2.default.createElement(App, null)
 ), document.getElementById('app'));
+
+/***/ },
+/* 580 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(21);
+
+var _reactRouter = __webpack_require__(32);
+
+var _authActions = __webpack_require__(240);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Logout = (_dec = (0, _reactRedux.connect)(function (store) {
+    return {};
+}), _dec(_class = function (_Component) {
+    _inherits(Logout, _Component);
+
+    function Logout() {
+        _classCallCheck(this, Logout);
+
+        return _possibleConstructorReturn(this, (Logout.__proto__ || Object.getPrototypeOf(Logout)).apply(this, arguments));
+    }
+
+    _createClass(Logout, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            this.props.dispatch((0, _authActions.logoutUser)());
+            _reactRouter.browserHistory.push('/');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', null);
+        }
+    }]);
+
+    return Logout;
+}(_react.Component)) || _class);
+
+
+Logout.propTypes = {};
+Logout.defaultProps = {};
+
+exports.default = Logout;
 
 /***/ }
 /******/ ]);

@@ -21,6 +21,7 @@ $routeGet = [
     'stopwatch',
     'projects',
     'login',
+    'logout'
 ];
 $routePost = [
   'sendMail',
