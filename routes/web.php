@@ -10,45 +10,38 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$routeGet = [
+    '/',
+    'contact',
+    'resume',
+    'todo',
+    'clock',
+    'calculator',
+    'stopwatch',
+    'projects',
+    'login',
+];
+$routePost = [
+  'sendMail',
+];
+foreach ($routeGet as $route){
+    Route::get($route, [
+        'uses' => 'HomeController@index',
+        'as' => 'home',
+    ]);
+}
 
-Route::get('/', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
+foreach ($routePost as $route){
+    Route::post($route, [
+        'uses' => 'HomeController@sendMail',
+        'as' => 'mail',
+    ]);
+}
+Route::post('login', [
+    'uses' => 'Auth\LoginController@login',
 ]);
-Route::get('/contact', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
+Route::post('logout', [
+    'uses' => 'Auth\LoginController@logout',
 ]);
-Route::get('/resume', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/todo', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/clock', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/calculator', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/stopwatch', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/projects', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-
-Route::post('/sendMail', [
-    'uses' => 'HomeController@sendMail',
-    'as' => 'mail',
-]);
-
-//Auth::routes();
 
 //Route::get('/home', 'HomeController@index');

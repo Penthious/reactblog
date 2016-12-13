@@ -7,4 +7,4 @@ import reducer from '../reducers/index';
 
 const middleware = applyMiddleware(promise(), thunk);
 
-export default createStore(reducer, middleware);
+export default createStore(reducer, middleware,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

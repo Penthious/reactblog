@@ -9,4 +9,5 @@ export default function authReducer(state = {
         case 'LOGOUT':
             return { ...state, authenticated: false };
     }
+    return { ...state };
 }

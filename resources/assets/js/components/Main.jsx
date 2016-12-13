@@ -13,6 +13,7 @@ import Calculator from '../projects/calculator/Calculator';
 import Timer from '../projects/stopwatch/Timer';
 import Todo from '../projects/todo/Todo';
 import Clock from '../projects/pomodoro/Clock';
+import Login from './Login';
 
 const App = () => (
     <Router history={browserHistory}>
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="clock" component={Clock} />
             <Route path="resume" component={Resume} />
             <Route path="contact" component={Contact} />
+            <Route path="login" component={Login} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>
