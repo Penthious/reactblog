@@ -15,6 +15,12 @@ import Todo from '../projects/todo/Todo';
 import Clock from '../projects/pomodoro/Clock';
 import Login from './Login';
 
+const token = localStorage.getItem('token');
+
+if (token) {
+    store.dispatch({ type: 'AUTH_USER' });
+}
+
 const App = () => (
     <Router history={browserHistory}>
         <Route path="/" component={Layout}>

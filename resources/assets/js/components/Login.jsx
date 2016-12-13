@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import {browserHistory} from 'react-router';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { loginUser } from '../actions/authActions';
+import { loginUser, userInfo } from '../actions/authActions';
 
 
 @connect((store) => {
     return {
         authenticated: store.auth.authenticated,
+        token: store.auth.token,
     };
 })
 class Login extends Component {
@@ -24,6 +25,7 @@ class Login extends Component {
 
     handleFormSubmit = (values) => {
         this.props.dispatch(loginUser({ email: values.email, password: values.password }));
+
         console.log(values);
     };
 
@@ -32,14 +34,6 @@ class Login extends Component {
         return (
             <div>
                 <form onSubmit={handleSubmit(this.handleFormSubmit)}>
-                    <div>
-                        <label htmlFor="firstName">First Name</label>
-                        <Field name="firstName" component="input" type="text" />
-                    </div>
-                    <div>
-                        <label htmlFor="lastName">Last Name</label>
-                        <Field name="lastName" component="input" type="text" />
-                    </div>
                     <div>
                         <label htmlFor="email">Email</label>
                         <Field name="email" component="input" type="email" />

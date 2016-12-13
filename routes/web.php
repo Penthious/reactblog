@@ -1,4 +1,5 @@
 <?php
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,12 +38,20 @@ foreach ($routePost as $route){
         'as' => 'mail',
     ]);
 }
+
 Route::post('login', [
 //    'uses' => 'Auth\LoginController@login',
-'uses' => 'HomeController@login'
+//'uses' => 'HomeController@login'
+'uses' => 'Auth\AuthenticateController@authenticate'
 ]);
+
 Route::post('logout', [
     'uses' => 'Auth\LoginController@logout',
 ]);
 
+Route::group(['prefix' => 'api', 'jwt.auth'], function (){
+   Route::get('userinfo', function () {
+      return JWTAuth::parseToken()->authenticate();
+   });
+});
 //Route::get('/home', 'HomeController@index');
