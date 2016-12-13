@@ -48,3 +48,7 @@ Route::post('/sendMail', [
     'uses' => 'HomeController@sendMail',
     'as' => 'mail',
 ]);
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index');
