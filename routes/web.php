@@ -38,7 +38,8 @@ foreach ($routePost as $route){
     ]);
 }
 Route::post('login', [
-    'uses' => 'Auth\LoginController@login',
+//    'uses' => 'Auth\LoginController@login',
+'uses' => 'HomeController@login'
 ]);
 Route::post('logout', [
     'uses' => 'Auth\LoginController@logout',

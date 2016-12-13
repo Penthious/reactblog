@@ -17610,6 +17610,8 @@ var _reduxForm = __webpack_require__(202);
 
 var _reactRedux = __webpack_require__(26);
 
+var _authActions = __webpack_require__(579);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17631,7 +17633,7 @@ var Login = (_dec = (0, _reactRedux.connect)(function (store) {
         var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
 
         _this.handleFormSubmit = function (values) {
-
+            _this.props.dispatch((0, _authActions.loginUser)({ email: values.email, password: values.password }));
             console.log(values);
         };
 
@@ -18981,9 +18983,9 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var middleware = (0, _redux.applyMiddleware)((0, _reduxPromiseMiddleware2.default)(), _reduxThunk2.default);
+var middleware = (0, _redux.applyMiddleware)((0, _reduxPromiseMiddleware2.default)(), _reduxThunk2.default, (0, _reduxLogger2.default)());
 
-exports.default = (0, _redux.createStore)(_index2.default, middleware, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+exports.default = (0, _redux.createStore)(_index2.default, middleware);
 
 /***/ },
 /* 221 */
@@ -48199,6 +48201,46 @@ function authReducer() {
             return _extends({}, state, { authenticated: false });
     }
     return _extends({}, state);
+}
+
+/***/ },
+/* 579 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.loginUser = loginUser;
+
+var _axios = __webpack_require__(222);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _reactRouter = __webpack_require__(39);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function loginUser(_ref) {
+    var email = _ref.email,
+        password = _ref.password;
+
+    console.log(email, password);
+    return function (dispatch) {
+        _axios2.default.post('/login', { email: email, password: password }).then(function (response) {
+            dispatch({
+                type: 'USER_INFO',
+                payload: response.data
+            });
+            console.log('1');
+            //browserHistory.push("/");
+        }).catch(function () {
+            //dispatch(authError("Empty Required Field"));
+            console.log('test');
+        });
+    };
 }
 
 /***/ }

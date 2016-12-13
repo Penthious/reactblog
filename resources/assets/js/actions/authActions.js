@@ -1,19 +1,22 @@
 import axios from 'axios';
 import {browserHistory} from 'react-router';
 
-export function loginUser({email,password}){
-    return function(dispatch){
-        axios.post('/login', {email,password})
+export function loginUser({email,password}) {
+    console.log(email, password);
+    return function (dispatch) {
+        axios.post('/login', { email, password, })
             .then(response => {
-                dispatch({type: 'USER_INFO',
-                    payload:response.data.token
+                dispatch({
+                    type: 'USER_INFO',
+                    payload: response.data
                 });
-                localStorage.setItem('token',response.data.token);
-                browserHistory.push("/");
+                console.log('1');
+                //browserHistory.push("/");
             })
 
-            .catch(()=>{
-                dispatch(authError("Empty Required Field"));
+            .catch(()=> {
+                //dispatch(authError("Empty Required Field"));
+                console.log('test');
             });
     }
 
