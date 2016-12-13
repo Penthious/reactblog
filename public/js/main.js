@@ -14649,7 +14649,7 @@ var Contact = function (_Component) {
                 email: _this.state.email,
                 reason: _this.state.reason,
                 message: _this.state.message
-            }).then(function (response) {
+            }).then(function () {
                 _this.setState({
                     success: true,
                     disabled: false,
@@ -14658,7 +14658,7 @@ var Contact = function (_Component) {
                     reason: '',
                     message: ''
                 });
-            }).catch(function (error) {
+            }).catch(function () {
                 _this.setState({
                     disabled: false,
                     error: true
@@ -17012,8 +17012,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -17026,52 +17024,33 @@ __webpack_require__(363);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Carousel = function (_Component) {
-    _inherits(Carousel, _Component);
-
-    function Carousel() {
-        _classCallCheck(this, Carousel);
-
-        return _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).apply(this, arguments));
-    }
-
-    _createClass(Carousel, [{
-        key: 'render',
-        value: function render() {
-            var settings = {
-                dots: false,
-                infinite: true,
-                speed: 1000,
-                delay: 1000,
-                arrows: true,
-                autoplay: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            };
+var Carousel = function Carousel(props) {
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        delay: 1000,
+        arrows: true,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+    return _react2.default.createElement(
+        _reactSlick2.default,
+        settings,
+        props.img.map(function (img, index) {
             return _react2.default.createElement(
-                _reactSlick2.default,
-                settings,
-                this.props.img.map(function (img, index) {
-                    return _react2.default.createElement(
-                        'div',
-                        { key: '' + img + index },
-                        _react2.default.createElement('img', { src: '/images' + img, role: 'presentation' })
-                    );
-                })
+                'div',
+                { key: '' + img + index },
+                _react2.default.createElement('img', { src: '/images' + img, role: 'presentation' })
             );
-        }
-    }]);
+        })
+    );
+};
 
-    return Carousel;
-}(_react.Component);
-
-_reactSlick2.default.propTypes = {};
+_reactSlick2.default.propTypes = {
+    img: _react.PropTypes.string
+};
 _reactSlick2.default.defaultProps = {};
 
 exports.default = Carousel;
@@ -17113,7 +17092,12 @@ var Footer = function Footer() {
                     null,
                     _react2.default.createElement(
                         "a",
-                        { className: "icon", href: "https://github.com/penthious", rel: "noopener noreferrer", target: "_blank" },
+                        {
+                            className: "icon",
+                            href: "https://github.com/penthious",
+                            rel: "noopener noreferrer",
+                            target: "_blank"
+                        },
                         _react2.default.createElement("i", { className: "fa fa-github" })
                     )
                 )
@@ -17198,15 +17182,6 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
     }
 
     _createClass(NavBar, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            var _this2 = this;
-
-            document.body.addEventListener('click', function () {
-                _this2.props.dispatch((0, _navbarActions.closeNav)());
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(

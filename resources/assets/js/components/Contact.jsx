@@ -42,7 +42,7 @@ class Contact extends Component {
             reason: this.state.reason,
             message: this.state.message,
         })
-            .then((response) => {
+            .then(() => {
                 this.setState({
                     success: true,
                     disabled: false,
@@ -52,7 +52,7 @@ class Contact extends Component {
                     message: '',
                 });
             })
-            .catch((error) => {
+            .catch(() => {
                 this.setState({
                     disabled: false,
                     error: true,
@@ -109,7 +109,7 @@ class Contact extends Component {
                             value={this.state.reason}
                             onChange={this.handleReason}
                         >
-                            <option value='' disabled>Select Reason:</option>
+                            <option value="" disabled>Select Reason:</option>
                             <option value="feedback">Feedback</option>
                             <option value="say_hello">Say Hello</option>
                             <option value="hire">Hire</option>
