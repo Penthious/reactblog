@@ -1,4 +1,4 @@
-export default function reducer(state = {
+export default function navbarReducer(state = {
     open: false,
 }, action) {
     switch (action.type) {
@@ -12,7 +12,7 @@ export default function reducer(state = {
         }
         case 'TOGGLE_NAV':
         {
-            return {...state, open: !state.open}
+            return { ...state, open: !state.open }
         }
     }
     return state;
