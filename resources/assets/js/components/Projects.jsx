@@ -30,13 +30,13 @@ class Projects extends Component {
                     </div>
                 </div>
 
-                {this.privateRepos().map(project => <PrivateRepo key={project.name} {...project} />)}
+                {this.privateRepos().map(project =>
+                    <PrivateRepo key={project.name} {...project} />)}
 
 
                 <hr />
                 <div className="columns">
-                    <div
-                        className="column is-offset-2 is-8 is-offset-1-mobile is-10-mobile">
+                    <div className="column is-offset-2 is-8 is-offset-1-mobile is-10-mobile">
                         <p className="project--title project--underline">
                             All my current react projects
                         </p>

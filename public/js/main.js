@@ -14974,8 +14974,7 @@ var Projects = function (_Component) {
                     { className: 'columns' },
                     _react2.default.createElement(
                         'div',
-                        {
-                            className: 'column is-offset-2 is-8 is-offset-1-mobile is-10-mobile' },
+                        { className: 'column is-offset-2 is-8 is-offset-1-mobile is-10-mobile' },
                         _react2.default.createElement(
                             'p',
                             { className: 'project--title project--underline' },
@@ -17250,120 +17249,99 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PrivateRepo = function (_Component) {
-    _inherits(PrivateRepo, _Component);
-
-    function PrivateRepo() {
-        _classCallCheck(this, PrivateRepo);
-
-        return _possibleConstructorReturn(this, (PrivateRepo.__proto__ || Object.getPrototypeOf(PrivateRepo)).apply(this, arguments));
-    }
-
-    _createClass(PrivateRepo, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
+var PrivateRepo = function PrivateRepo(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "columns" },
+        _react2.default.createElement(
+            "div",
+            { className: "column is-two-thirds is-offset-2" },
+            _react2.default.createElement(
                 "div",
-                { className: "columns" },
+                { className: "box portfolio" },
                 _react2.default.createElement(
-                    "div",
-                    { className: "column is-two-thirds is-offset-2" },
+                    "article",
+                    { className: "media" },
                     _react2.default.createElement(
                         "div",
-                        { className: "box portfolio" },
+                        { className: "columns" },
                         _react2.default.createElement(
-                            "article",
-                            { className: "media" },
+                            "div",
+                            { className: "column is-5 is-flex image-column" },
                             _react2.default.createElement(
                                 "div",
-                                { className: "columns" },
+                                { className: "media-left is-flex" },
+                                _react2.default.createElement(
+                                    "figure",
+                                    { className: "image-container" },
+                                    _react2.default.createElement("img", { src: props.image, alt: props.image })
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "column is-7" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "media-content is-flex-mobile media-flex" },
                                 _react2.default.createElement(
                                     "div",
-                                    { className: "column is-5 is-flex image-column" },
+                                    { className: "content is-flex" },
+                                    _react2.default.createElement(
+                                        "p",
+                                        { className: "project-description" },
+                                        _react2.default.createElement(
+                                            "strong",
+                                            null,
+                                            props.name
+                                        ),
+                                        props.description
+                                    ),
                                     _react2.default.createElement(
                                         "div",
-                                        { className: "media-left is-flex" },
+                                        { className: "project-technologies" },
                                         _react2.default.createElement(
-                                            "figure",
-                                            { className: "image-container" },
-                                            _react2.default.createElement("img", { src: this.props.image, alt: this.props.image })
-                                        )
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    { className: "column is-7" },
-                                    _react2.default.createElement(
-                                        "div",
-                                        { className: "media-content is-flex-mobile media-flex" },
-                                        _react2.default.createElement(
-                                            "div",
-                                            { className: "content is-flex" },
+                                            "p",
+                                            null,
                                             _react2.default.createElement(
-                                                "p",
-                                                { className: "project-description" },
-                                                _react2.default.createElement(
-                                                    "strong",
-                                                    null,
-                                                    this.props.name
-                                                ),
-                                                this.props.description
+                                                "strong",
+                                                null,
+                                                "Technologies used:"
                                             ),
+                                            props.tech
+                                        ),
+                                        props.link ? _react2.default.createElement(
+                                            "a",
+                                            {
+                                                href: props.link,
+                                                className: "is-flex github-container",
+                                                rel: "noopener noreferrer",
+                                                target: "_blank"
+                                            },
+                                            _react2.default.createElement("i", {
+                                                className: "fa fa-github",
+                                                "aria-hidden": "true"
+                                            }),
                                             _react2.default.createElement(
-                                                "div",
-                                                { className: "project-technologies" },
-                                                _react2.default.createElement(
-                                                    "p",
-                                                    null,
-                                                    _react2.default.createElement(
-                                                        "strong",
-                                                        null,
-                                                        "Technologies used:"
-                                                    ),
-                                                    this.props.tech
-                                                ),
-                                                this.props.link ? _react2.default.createElement(
-                                                    "a",
-                                                    {
-                                                        href: this.props.link,
-                                                        className: "is-flex github-container",
-                                                        rel: "noopener noreferrer",
-                                                        target: "_blank"
-                                                    },
-                                                    _react2.default.createElement("i", {
-                                                        className: "fa fa-github",
-                                                        "aria-hidden": "true"
-                                                    }),
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        { className: "github-span" },
-                                                        "Public Repo"
-                                                    )
-                                                ) : _react2.default.createElement(
-                                                    "div",
-                                                    { className: "is-flex github-container" },
-                                                    _react2.default.createElement(
-                                                        "span",
-                                                        {
-                                                            className: "github-span"
-                                                        },
-                                                        "Private Repo"
-                                                    )
-                                                )
+                                                "span",
+                                                { className: "github-span" },
+                                                "Public Repo"
+                                            )
+                                        ) : _react2.default.createElement(
+                                            "div",
+                                            { className: "is-flex github-container" },
+                                            _react2.default.createElement(
+                                                "span",
+                                                {
+                                                    className: "github-span"
+                                                },
+                                                "Private Repo"
                                             )
                                         )
                                     )
@@ -17372,14 +17350,18 @@ var PrivateRepo = function (_Component) {
                         )
                     )
                 )
-            );
-        }
-    }]);
+            )
+        )
+    );
+};
 
-    return PrivateRepo;
-}(_react.Component);
-
-PrivateRepo.propTypes = {};
+PrivateRepo.propTypes = {
+    link: _react.PropTypes.string,
+    description: _react.PropTypes.string,
+    name: _react.PropTypes.string,
+    image: _react.PropTypes.string,
+    tech: _react.PropTypes.string
+};
 PrivateRepo.defaultProps = {};
 
 exports.default = PrivateRepo;
