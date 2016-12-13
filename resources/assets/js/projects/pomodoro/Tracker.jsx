@@ -11,7 +11,8 @@ class Tracker extends Component {
             this.props.handleBreakTime();
         }
     };
-    handleWork  = (value = null) => {
+
+    handleWork = (value = null) => {
         if (value) {
             this.props.handleWorkTime(value);
         } else {
@@ -20,7 +21,7 @@ class Tracker extends Component {
     };
 
     changeActive = (e) => {
-        this.props.handleActive(e.target.innerHTML)
+        this.props.handleActive(e.target.innerHTML);
     };
 
     render() {

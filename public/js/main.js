@@ -17420,8 +17420,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -17430,102 +17428,93 @@ var _reactRouter = __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Project = function (_Component) {
-    _inherits(Project, _Component);
-
-    function Project() {
-        _classCallCheck(this, Project);
-
-        return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).apply(this, arguments));
-    }
-
-    _createClass(Project, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
+var Project = function Project(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'project--card-container' },
+        _react2.default.createElement(
+            'div',
+            {
+                className: 'column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height'
+            },
+            _react2.default.createElement(
                 'div',
-                { className: 'project--card-container' },
+                { className: 'card project--height' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'column is-12-desktop is-12-tablet is-offset-2-mobile is-9-mobile project--height' },
+                    { className: 'card-image' },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'card project--height' },
+                        'figure',
+                        { className: 'image is-4by3' },
                         _react2.default.createElement(
-                            'div',
-                            { className: 'card-image' },
-                            _react2.default.createElement(
-                                'figure',
-                                { className: 'image is-4by3' },
-                                _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: this.props.link },
-                                    _react2.default.createElement('img', { src: this.props.image, alt: '' })
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'card-content' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'media' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'media-content' },
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'subtitle is-6' },
-                                        _react2.default.createElement(
-                                            'a',
-                                            {
-                                                href: this.props.github,
-                                                rel: 'noopener noreferrer',
-                                                target: '_blank'
-                                            },
-                                            'Code for ',
-                                            this.props.name
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'content' },
-                                _react2.default.createElement(
-                                    'p',
-                                    { className: 'project--p-height' },
-                                    this.props.description
-                                ),
-                                _react2.default.createElement('br', null),
-                                _react2.default.createElement(
-                                    'small',
-                                    null,
-                                    this.props.created_at
-                                )
-                            ),
-                            _react2.default.createElement(
-                                _reactRouter.Link,
-                                { to: this.props.link, className: 'button is-primary project--margin' },
-                                'View'
-                            )
+                            _reactRouter.Link,
+                            { to: props.link },
+                            _react2.default.createElement('img', { src: props.image, alt: '' })
                         )
                     )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'card-content' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'media' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'media-content' },
+                            _react2.default.createElement(
+                                'p',
+                                { className: 'subtitle is-6' },
+                                _react2.default.createElement(
+                                    'a',
+                                    {
+                                        href: props.github,
+                                        rel: 'noopener noreferrer',
+                                        target: '_blank'
+                                    },
+                                    'Code for ',
+                                    props.name
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content' },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'project--p-height' },
+                            props.description
+                        ),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'small',
+                            null,
+                            props.created_at
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactRouter.Link,
+                        {
+                            to: props.link,
+                            className: 'button is-primary project--margin'
+                        },
+                        'View'
+                    )
                 )
-            );
-        }
-    }]);
+            )
+        )
+    );
+};
 
-    return Project;
-}(_react.Component);
-
-Project.propTypes = {};
+Project.propTypes = {
+    link: _react.PropTypes.string,
+    created_at: _react.PropTypes.string,
+    description: _react.PropTypes.string,
+    name: _react.PropTypes.string,
+    github: _react.PropTypes.string,
+    image: _react.PropTypes.string
+};
 Project.defaultProps = {};
 
 exports.default = Project;
