@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.nam', 'Penthious') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome/font-awesome.min.css') }}">

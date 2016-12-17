@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-
 import '../../sass/resume.sass';
 
 const Resume = () => (
