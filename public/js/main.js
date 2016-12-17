@@ -20161,7 +20161,7 @@ var Footer = function Footer() {
                             _react2.default.createElement(
                                 "a",
                                 { href: "https://www.freecodecamp.com/penthious" },
-                                "Codepen"
+                                "FreeCodeCamp"
                             )
                         )
                     ),
