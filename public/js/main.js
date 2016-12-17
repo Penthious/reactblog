@@ -18188,7 +18188,12 @@ var Resume = function Resume() {
                 { className: 'column is-offset-3-tablet is-5 is-offset-1-mobile is-6-mobile' },
                 _react2.default.createElement(
                     'a',
-                    { className: 'button is-primary resume--margin', href: '/downloads/resume.pdf' },
+                    {
+                        className: 'button is-primary resume--margin',
+                        href: '/downloads/resume.pdf',
+                        rel: 'noopener noreferrer',
+                        target: '_blank'
+                    },
                     'Download Resume'
                 )
             )
@@ -20114,7 +20119,28 @@ var Footer = function Footer() {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "Follow me on Github or view this site's source code"
+                    "Follow me on ",
+                    _react2.default.createElement(
+                        "a",
+                        {
+                            className: "about--underline",
+                            href: "https://github.com/penthious",
+                            rel: "noopener noreferrer",
+                            target: "_blank"
+                        },
+                        "Github"
+                    ),
+                    " or view this site's ",
+                    _react2.default.createElement(
+                        "a",
+                        {
+                            className: "about--underline",
+                            href: "https://github.com/Penthious/reactblog",
+                            rel: "noopener noreferrer",
+                            target: "_blank"
+                        },
+                        "source code"
+                    )
                 ),
                 _react2.default.createElement(
                     "div",
@@ -20137,7 +20163,11 @@ var Footer = function Footer() {
                             null,
                             _react2.default.createElement(
                                 "a",
-                                { href: "https://github.com/penthious" },
+                                {
+                                    href: "https://github.com/penthious",
+                                    rel: "noopener noreferrer",
+                                    target: "_blank"
+                                },
                                 "Github"
                             )
                         )
@@ -20160,7 +20190,11 @@ var Footer = function Footer() {
                             null,
                             _react2.default.createElement(
                                 "a",
-                                { href: "https://www.freecodecamp.com/penthious" },
+                                {
+                                    href: "https://www.freecodecamp.com/penthious",
+                                    rel: "noopener noreferrer",
+                                    target: "_blank"
+                                },
                                 "FreeCodeCamp"
                             )
                         )
@@ -20183,7 +20217,11 @@ var Footer = function Footer() {
                             null,
                             _react2.default.createElement(
                                 "a",
-                                { href: "https://codepen.io/Penthious/" },
+                                {
+                                    href: "https://codepen.io/Penthious/",
+                                    rel: "noopener noreferrer",
+                                    target: "_blank"
+                                },
                                 "Codepen"
                             )
                         )

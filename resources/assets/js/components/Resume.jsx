@@ -112,8 +112,14 @@ const Resume = () => (
         </div>
         <div className="columns">
             <div className="column is-offset-3-tablet is-5 is-offset-1-mobile is-6-mobile">
-                <a className="button is-primary resume--margin" href="/downloads/resume.pdf">Download
-                    Resume</a>
+                <a
+                    className="button is-primary resume--margin"
+                    href="/downloads/resume.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Download Resume
+                </a>
             </div>
         </div>
     </div>
