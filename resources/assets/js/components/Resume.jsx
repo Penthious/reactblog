@@ -99,7 +99,11 @@ const Resume = () => (
                         <p>Education</p>
                     </div>
                     <div>
-                        <p className="resume--text">Codeup - Januray 2016 - May 2016</p>
+                        <p className="resume--text">FreeCodeCamp - January 2016 - December 2016</p>
+                        <p className="resume--bullet">Frontend Certificate</p>
+                        <br />
+                        <p className="resume--text">Codeup - January 2016 - May 2016</p>
+                        <p className="resume--bullet">Full Stack Certificate</p>
                         <br />
                         <p className="resume--text">North West Vista College 2012-2014</p>
                     </div>
