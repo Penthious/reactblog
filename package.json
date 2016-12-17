@@ -71,6 +71,7 @@
     "react-slick": "^0.14.5",
     "react-validation-mixin": "^5.4.0",
     "redux": "^3.6.0",
+    "redux-form": "^6.3.2",
     "redux-logger": "^2.7.4",
     "redux-promise-middleware": "^4.2.0",
     "redux-thunk": "^2.1.0",

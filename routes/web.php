@@ -1,4 +1,5 @@
 <?php
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,41 +11,48 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$routeGet = [
+    '/',
+    'contact',
+    'resume',
+    'todo',
+    'clock',
+    'calculator',
+    'stopwatch',
+    'projects',
+    'login',
+    'logout'
+];
+$routePost = [
+  'sendMail',
+];
+foreach ($routeGet as $route){
+    Route::get($route, [
+        'uses' => 'HomeController@index',
+        'as' => 'home',
+    ]);
+}
 
-Route::get('/', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/contact', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/resume', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/todo', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/clock', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/calculator', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/stopwatch', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
-]);
-Route::get('/projects', [
-    'uses' => 'HomeController@index',
-    'as' => 'home',
+foreach ($routePost as $route){
+    Route::post($route, [
+        'uses' => 'HomeController@sendMail',
+        'as' => 'mail',
+    ]);
+}
+
+Route::post('login', [
+//    'uses' => 'Auth\LoginController@login',
+//'uses' => 'HomeController@login'
+'uses' => 'Auth\AuthenticateController@authenticate'
 ]);
 
-Route::post('/sendMail', [
-    'uses' => 'HomeController@sendMail',
-    'as' => 'mail',
+Route::post('logout', [
+    'uses' => 'Auth\LoginController@logout',
 ]);
+
+Route::group(['prefix' => 'api', 'jwt.auth'], function (){
+   Route::get('userinfo', function () {
+      return JWTAuth::parseToken()->authenticate();
+   });
+});
+//Route::get('/home', 'HomeController@index');
