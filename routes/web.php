@@ -24,35 +24,31 @@ $routeGet = [
     'logout'
 ];
 $routePost = [
-  'sendMail',
+    'sendMail',
 ];
-foreach ($routeGet as $route){
+foreach ( $routeGet as $route ) {
     Route::get($route, [
         'uses' => 'HomeController@index',
-        'as' => 'home',
+        'as'   => 'home',
     ]);
 }
 
-foreach ($routePost as $route){
-    Route::post($route, [
-        'uses' => 'HomeController@sendMail',
-        'as' => 'mail',
-    ]);
-}
+Route::post('sendMail', [
+    'uses' => 'HomeController@sendMail',
+    'as'   => 'mail',
+]);
 
 Route::post('login', [
-//    'uses' => 'Auth\LoginController@login',
-//'uses' => 'HomeController@login'
-'uses' => 'Auth\AuthenticateController@authenticate'
+    'uses' => 'Auth\AuthenticateController@authenticate'
 ]);
 
 Route::post('logout', [
     'uses' => 'Auth\LoginController@logout',
 ]);
 
-Route::group(['prefix' => 'api', 'jwt.auth'], function (){
-   Route::get('userinfo', function () {
-      return JWTAuth::parseToken()->authenticate();
-   });
+Route::group(['prefix' => 'api', 'jwt.auth'], function () {
+    Route::get('userinfo', function () {
+        return JWTAuth::parseToken()->authenticate();
+    });
 });
 //Route::get('/home', 'HomeController@index');
