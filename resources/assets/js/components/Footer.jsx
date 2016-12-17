@@ -29,7 +29,7 @@ const Footer = () => (
                             <i className="fa fa-free-code-camp" />
                         </a>
                         <div>
-                            <a href="https://www.freecodecamp.com/penthious">Codepen</a>
+                            <a href="https://www.freecodecamp.com/penthious">FreeCodeCamp</a>
                         </div>
                     </div>
                     <div className="column">
