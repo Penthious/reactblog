@@ -1,11 +1,16 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-export const userInfo = data =>
+export const logoutUser = () => {
+    localStorage.removeItem('token');
+    return { type: 'LOGOUT' };
+};
+
+export const userInfo = token =>
     (dispatch) => {
         axios.get('/api/userinfo',
             {
-                headers: { authorization: `Bearer${data}` },
+                headers: { authorization: `Bearer${token}` },
             })
             .then((response) => {
                 dispatch({
@@ -13,6 +18,9 @@ export const userInfo = data =>
                     payload: response.data,
                 });
                 // browserHistory.push('/');
+            })
+            .catch(() => {
+                dispatch(logoutUser());
             });
     };
 
@@ -37,8 +45,4 @@ export const loginUser = ({ email, password }) =>
     };
 
 
-export const logoutUser = () => {
-    localStorage.removeItem('token');
-    return { type: 'LOGOUT' };
-};
 

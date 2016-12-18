@@ -6974,7 +6974,7 @@ module.exports = function(module) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.logoutUser = exports.loginUser = exports.userInfo = undefined;
+exports.loginUser = exports.userInfo = exports.logoutUser = undefined;
 
 var _axios = __webpack_require__(73);
 
@@ -6984,16 +6984,23 @@ var _reactRouter = __webpack_require__(22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var userInfo = exports.userInfo = function userInfo(data) {
+var logoutUser = exports.logoutUser = function logoutUser() {
+    localStorage.removeItem('token');
+    return { type: 'LOGOUT' };
+};
+
+var userInfo = exports.userInfo = function userInfo(token) {
     return function (dispatch) {
         _axios2.default.get('/api/userinfo', {
-            headers: { authorization: 'Bearer' + data }
+            headers: { authorization: 'Bearer' + token }
         }).then(function (response) {
             dispatch({
                 type: 'USER_INFO',
                 payload: response.data
             });
             // browserHistory.push('/');
+        }).catch(function () {
+            dispatch(logoutUser());
         });
     };
 };
@@ -7015,11 +7022,6 @@ var loginUser = exports.loginUser = function loginUser(_ref) {
             console.log(error);
         });
     };
-};
-
-var logoutUser = exports.logoutUser = function logoutUser() {
-    localStorage.removeItem('token');
-    return { type: 'LOGOUT' };
 };
 
 /***/ },
