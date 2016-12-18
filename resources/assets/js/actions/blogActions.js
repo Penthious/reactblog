@@ -57,16 +57,19 @@ export const deletePost = id =>
             });
     };
 
-export const editPostSuccess = (data) => ({});
+export const editPostSuccess = data => ({
+    type: EDIT_POST_SUCCESS,
+    payload: data,
+});
 
-export const editPost = id =>
-    (dispatch) => {
-        axios.get(`/api/edit/${id}`,
-            {
-                headers: { authorization: localStorage.getItem('token') },
-            })
-            .then((response) => {
-                console.log(response);
-            });
-    };
+export const editPost = id => (dispatch) => {
+    dispatch({ type: EDIT_POST });
+    axios.get(`/api/edit/${id}`,
+        {
+            headers: { authorization: localStorage.getItem('token') },
+        })
+        .then((response) => {
+            dispatch(editPostSuccess(response));
+        });
+};
 

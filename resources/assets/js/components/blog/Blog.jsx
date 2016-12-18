@@ -69,7 +69,7 @@ class Blog extends Component {
                     <footer className="card-footer">
                         <Link to={`blog/show/${post.id}`} className="card-footer-item">View</Link>
                         { auth ? <Link
-                            to={`blog/edit/${post.id}`}
+                            to={`api/edit/${post.id}`}
                             className="card-footer-item"
                         >
                             Edit

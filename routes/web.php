@@ -49,7 +49,7 @@ Route::post('logout', [
 
 Route::group(['prefix' => 'blog'],function (){
     Route::get('/', 'PostController@index');
-    Route::get('show', 'PostController@show');
+    Route::get('show/{id}', 'PostController@show');
 });
 
 Route::group(['prefix' => 'api', 'jwt.auth'], function () {

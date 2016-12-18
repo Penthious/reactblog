@@ -42,8 +42,8 @@ const App = () => (
             <Route path="logout" component={Logout} />
             <Route path="blog" component={Blog}>
                 <Route path="show/:id" component={ShowPost} />
-                <Route path="edit/:id" component={EditPost} />
             </Route>
+            <Route path="/api/edit/:id" component={EditPost} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>

@@ -50,12 +50,12 @@ class Handler extends ExceptionHandler
             {
                 // not found
                 case 404:
-                    return redirect()->route('home');
+                    return redirect()->to('/');
                     break;
 
                 // internal error
                 case '500':
-                    return redirect()->route('home');
+                    return redirect()->to('/');
                     break;
 
                 default:

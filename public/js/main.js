@@ -18454,7 +18454,7 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
                             auth ? _react2.default.createElement(
                                 _reactRouter.Link,
                                 {
-                                    to: 'blog/edit/' + post.id,
+                                    to: 'api/edit/' + post.id,
                                     className: 'card-footer-item'
                                 },
                                 'Edit'
@@ -20325,15 +20325,19 @@ var deletePost = exports.deletePost = function deletePost(id) {
 };
 
 var editPostSuccess = exports.editPostSuccess = function editPostSuccess(data) {
-    return {};
+    return {
+        type: _types.EDIT_POST_SUCCESS,
+        payload: data
+    };
 };
 
 var editPost = exports.editPost = function editPost(id) {
     return function (dispatch) {
+        dispatch({ type: _types.EDIT_POST });
         _axios2.default.get('/api/edit/' + id, {
             headers: { authorization: localStorage.getItem('token') }
         }).then(function (response) {
-            console.log(response);
+            dispatch(editPostSuccess(response));
         });
     };
 };
@@ -48868,9 +48872,9 @@ var App = function App() {
             _react2.default.createElement(
                 _reactRouter.Route,
                 { path: 'blog', component: _Blog2.default },
-                _react2.default.createElement(_reactRouter.Route, { path: 'show/:id', component: _ShowPost2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: 'edit/:id', component: _EditPost2.default })
+                _react2.default.createElement(_reactRouter.Route, { path: 'show/:id', component: _ShowPost2.default })
             ),
+            _react2.default.createElement(_reactRouter.Route, { path: '/api/edit/:id', component: _EditPost2.default }),
             _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
         )
     );
