@@ -47,6 +47,7 @@ Route::post('logout', [
 ]);
 
 Route::group(['prefix' => 'api', 'jwt.auth'], function () {
+    Route::resource('posts', 'PostController');
     Route::get('userinfo', function () {
         return JWTAuth::parseToken()->authenticate();
     });
