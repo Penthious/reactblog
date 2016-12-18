@@ -33,6 +33,17 @@ class NavBar extends Component {
             'is-active': this.props.open,
         });
 
+    renderAccount = () => {
+        if (this.props.auth) {
+            return (
+                <Link to="account" className="nav-item" onClick={this.handleCloseNav}>
+                    Account
+                </Link>
+            );
+        }
+        return null;
+    };
+
 
     render() {
         return (
@@ -51,9 +62,9 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    {/*<Link to="blog" className="nav-item" onClick={this.handleCloseNav}>*/}
-                        {/*Blog*/}
-                    {/*</Link>*/}
+                    <Link to="blog" className="nav-item" onClick={this.handleCloseNav}>
+                        Blog
+                    </Link>
                     <Link to="/" className="nav-item" onClick={this.handleCloseNav}>
                         Home
                     </Link>
@@ -66,13 +77,7 @@ class NavBar extends Component {
                     <Link to="contact" className="nav-item" onClick={this.handleCloseNav}>
                         Contact
                     </Link>
-                    {this.props.auth ?
-                        <Link to="account" className="nav-item" onClick={this.handleCloseNav}>
-                            Account
-                        </Link>
-                        :
-                        null
-                    }
+                    {this.renderAccount()}
                 </div>
             </nav>
         );

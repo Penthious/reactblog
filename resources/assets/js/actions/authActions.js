@@ -11,7 +11,7 @@ export function userInfo(data) {
                     type: 'USER_INFO',
                     payload: response.data,
                 });
-                browserHistory.push('/');
+                // browserHistory.push('/');
             });
     };
 }
