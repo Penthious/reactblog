@@ -72,9 +72,12 @@ class Blog extends Component {
                     </footer>
                 </div>)}
         </div>);
-    }
+    };
 
     render() {
+        if (this.props.children) {
+            return this.props.children;
+        }
         const { posts, loading } = this.props.postsList;
         if (loading === true) {
             return <div className="loader" />;
@@ -91,6 +94,10 @@ Blog.propTypes = {
     postsList: PropTypes.arrayOf(PropTypes.shape),
     auth: PropTypes.bool,
     dispatch: PropTypes.func,
+    children: React.PropTypes.oneOfType([
+        React.PropTypes.arrayOf(React.PropTypes.node),
+        React.PropTypes.node,
+    ]),
 };
 Blog.defaultProps = {};
 

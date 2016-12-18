@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import Project from './Project';
@@ -11,8 +11,10 @@ class Projects extends Component {
     allProjects = () => projectsData;
     privateRepos = () => privateRepoData;
 
-
     render() {
+        if (this.props.children) {
+            return this.props.children;
+        }
         return (
             <div className="container">
 
@@ -64,4 +66,10 @@ class Projects extends Component {
     }
 }
 
+Projects.propTypes = {
+    children: React.PropTypes.oneOfType([
+        React.PropTypes.arrayOf(React.PropTypes.node),
+        React.PropTypes.node,
+    ]),
+};
 export default Projects;

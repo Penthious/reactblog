@@ -17893,6 +17893,9 @@ var Projects = function (_Component) {
     _createClass(Projects, [{
         key: 'render',
         value: function render() {
+            if (this.props.children) {
+                return this.props.children;
+            }
             return _react2.default.createElement(
                 'div',
                 { className: 'container' },
@@ -17966,6 +17969,9 @@ var Projects = function (_Component) {
     return Projects;
 }(_react.Component);
 
+Projects.propTypes = {
+    children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.arrayOf(_react2.default.PropTypes.node), _react2.default.PropTypes.node])
+};
 exports.default = Projects;
 
 /***/ },
@@ -18465,6 +18471,9 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
     }, {
         key: 'render',
         value: function render() {
+            if (this.props.children) {
+                return this.props.children;
+            }
             var _props$postsList = this.props.postsList,
                 posts = _props$postsList.posts,
                 loading = _props$postsList.loading;
@@ -18487,7 +18496,8 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
 Blog.propTypes = {
     postsList: _react.PropTypes.arrayOf(_react.PropTypes.shape),
     auth: _react.PropTypes.bool,
-    dispatch: _react.PropTypes.func
+    dispatch: _react.PropTypes.func,
+    children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.arrayOf(_react2.default.PropTypes.node), _react2.default.PropTypes.node])
 };
 Blog.defaultProps = {};
 
@@ -22168,56 +22178,28 @@ var projectsData = [{
     description: 'A simple calculator built out of react',
     github: 'https://github.com/Penthious/reactCalculator',
     image: '/images/calculator.png',
-    link: 'calculator'
+    link: 'projects/calculator'
 }, {
     name: 'Pomodoro clock',
     created_at: 'Friday, December 9',
     description: 'A pomodoro session tracker',
     github: 'https://github.com/Penthious/reactPomodoroClock',
     image: '/images/work-in-progress.png',
-    link: 'clock'
+    link: 'projects/clock'
 }, {
     name: 'Stop Watch',
     created_at: 'Wednesday, November 27',
     description: 'A basic stop watch to display what I learned in react',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/stopwatch.png',
-    link: 'stopwatch'
+    link: 'projects/stopwatch'
 }, {
     name: 'Todo',
     created_at: 'Sunday, December 4',
     description: 'A todo list with basic validation.',
     github: 'https://github.com/Penthious/reactTodo',
     image: '/images/todo.png',
-    link: 'todo'
-}, {
-    name: 'TandC',
-    created_at: 'Wednesday, November 30',
-    description: 'TandC is a resource site meant to help out new comers.',
-    github: 'https://github.com/Penthious/react-simpleSimon',
-    image: '/images/tandc.png',
-    link: '/images/tandc.png'
-}, {
-    name: 'Blue Line',
-    created_at: 'Wednesday, November 30',
-    description: 'Blue line is a SASS that handles drug screenings.',
-    github: 'https://github.com/Penthious/react-simpleSimon',
-    image: '/images/bl.png',
-    link: '/images/bl.png'
-}, {
-    name: 'Volunteer Verify',
-    created_at: 'Wednesday, November 30',
-    description: 'Volunteer Verify is a background tester for businesses',
-    github: 'https://github.com/Penthious/react-simpleSimon',
-    image: '/images/vv.png',
-    link: '/images/vv.png'
-}, {
-    name: 'Paramount Tax',
-    created_at: 'Wednesday, November 30',
-    description: 'Paramount tax elps the users keep track of the work they did.',
-    github: 'https://github.com/Penthious/react-simpleSimon',
-    image: '/images/pt.png',
-    link: '/images/pt.png'
+    link: 'projects/todo'
 }];
 
 exports.default = projectsData;
@@ -48933,17 +48915,23 @@ var App = function App() {
             _reactRouter.Route,
             { path: '/', component: _Layout2.default },
             _react2.default.createElement(_reactRouter.IndexRoute, { component: _About2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _Projects2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'calculator', component: _Calculator2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'stopwatch', component: _Timer2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'todo', component: _Todo2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'clock', component: _Clock2.default }),
+            _react2.default.createElement(
+                _reactRouter.Route,
+                { path: 'projects', component: _Projects2.default },
+                _react2.default.createElement(_reactRouter.Route, { path: 'calculator', component: _Calculator2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: 'stopwatch', component: _Timer2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: 'todo', component: _Todo2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: 'clock', component: _Clock2.default })
+            ),
             _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _Resume2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'logout', component: _Logout2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'blog', component: _Blog2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'blog/show/:id', component: _ShowPost2.default }),
+            _react2.default.createElement(
+                _reactRouter.Route,
+                { path: 'blog', component: _Blog2.default },
+                _react2.default.createElement(_reactRouter.Route, { path: 'show/:id', component: _ShowPost2.default })
+            ),
             _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
         )
     );
