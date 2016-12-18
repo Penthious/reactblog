@@ -38,6 +38,7 @@ const App = () => (
             <Route path="login" component={Login} />
             <Route path="logout" component={Logout} />
             <Route path="blog" component={Blog} />
+            <Route path="posts/:id" component={Blog} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>

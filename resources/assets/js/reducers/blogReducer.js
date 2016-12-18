@@ -25,7 +25,7 @@ export default function (state = INITIAL_STATE, action) {
         case FETCH_POST_SUCCESS:
             return {
                 ...state,
-                postsList: { posts: [action.payload], error: null, loading: false },
+                postsList: { posts: action.payload, error: null, loading: false },
             };
         case SHOW_POST:
             return {

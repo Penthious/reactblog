@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index( Request $request )
     {
-        $post = Post::all();
+            $post = Post::all();
 
-        return response()->json($post, 200);
+            return response()->json($post, 200);
     }
 
     public function store( Request $request )
