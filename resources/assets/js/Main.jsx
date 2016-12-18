@@ -16,7 +16,8 @@ import Clock from './projects/pomodoro/Clock';
 import Login from './components/Login';
 import Logout from './components/auth/Logout';
 import Blog from './components/blog/Blog';
-import ShowPost from './components/blog/ShowPost'
+import ShowPost from './components/blog/ShowPost';
+import EditPost from './components/blog/EditPost';
 import { userInfo } from './actions/authActions';
 
 const token = localStorage.getItem('token');
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="logout" component={Logout} />
             <Route path="blog" component={Blog}>
                 <Route path="show/:id" component={ShowPost} />
+                <Route path="edit/:id" component={EditPost} />
             </Route>
             <Redirect from="*" to="/" />
         </Route>

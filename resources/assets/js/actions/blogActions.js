@@ -31,7 +31,7 @@ export const fetchAllPosts = () => (dispatch) => {
 
     axios.get('/blog')
         .then((response) => {
-            const data = response.data.map(post => ({ ...post, isActive: false }));
+            const data       = response.data.map(post => ({ ...post, isActive: false }));
             data[0].isActive = true;
             dispatch(fetchAllPostsSuccess(data));
         });
@@ -56,3 +56,17 @@ export const deletePost = id =>
                 dispatch(deletePostSuccess());
             });
     };
+
+export const editPostSuccess = (data) => ({});
+
+export const editPost = id =>
+    (dispatch) => {
+        axios.get(`/api/edit/${id}`,
+            {
+                headers: { authorization: localStorage.getItem('token') },
+            })
+            .then((response) => {
+                console.log(response);
+            });
+    };
+

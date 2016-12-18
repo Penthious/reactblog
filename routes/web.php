@@ -54,7 +54,7 @@ Route::group(['prefix' => 'blog'],function (){
 
 Route::group(['prefix' => 'api', 'jwt.auth'], function () {
     Route::post('store', 'PostController@store');
-    Route::post('edit/{id}', 'PostController@edit');
+    Route::get('edit/{id}', 'PostController@edit');
     Route::post('update/{id}', 'PostController@update');
     Route::delete('destroy/{id}', 'PostController@destroy');
     Route::get('userinfo', function () {

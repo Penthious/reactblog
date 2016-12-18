@@ -21,12 +21,12 @@ class PostController extends Controller
     public function store( Request $request )
     {
         if ( $request->wantsJson() ) {
+            Post::create($request->all());
+
+            return response()->json('Created', 200);
         }
 
         return view('welcome');
-        Post::create($request->all());
-
-        return response()->json('Created', 200);
     }
 
     public function show( $id, Request $request )

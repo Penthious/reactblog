@@ -21,7 +21,7 @@ class Blog extends Component {
 
     // this needs to change to redux dont forget!!!!
     handleOnClick = (index) => {
-        const post = this.props.postsList.posts[index];
+        const post    = this.props.postsList.posts[index];
         // change this to redux !!!!!!!!!
         post.isActive = !post.isActive;
         // console.log(this.props.postsList.posts[id - 1]);
@@ -32,6 +32,12 @@ class Blog extends Component {
         classNames({
             'card-content': true,
             'is-hidden': !active,
+        });
+    handleCardArrow   = (active) =>
+        classNames({
+            fa: true,
+            'fa-angle-down': active,
+            'fa-angle-right': !active,
         });
 
     handleDelete = (id) => {
@@ -50,19 +56,24 @@ class Blog extends Component {
                             {post.name}
                         </p>
                         <a className="card-header-icon" onClick={() => this.handleOnClick(index)}>
-                            <i className="fa fa-angle-down" />
+                            <i className={this.handleCardArrow(post.isActive)} />
                         </a>
                     </header>
                     <div className={this.handleHiddenClass(post.isActive)}>
                         <div className="content">
                             {post.body}
                             <br />
-                            <small>11:09 PM - 1 Jan 2016</small>
+                            <small>{post.created_at}</small>
                         </div>
                     </div>
                     <footer className="card-footer">
                         <Link to={`blog/show/${post.id}`} className="card-footer-item">View</Link>
-                        { auth ? <a className="card-footer-item">Edit</a> : null }
+                        { auth ? <Link
+                            to={`blog/edit/${post.id}`}
+                            className="card-footer-item"
+                        >
+                            Edit
+                        </Link> : null }
                         { auth ? <a
                             onClick={() => this.handleDelete(post.id)}
                             className="card-footer-item"
@@ -90,7 +101,7 @@ class Blog extends Component {
     }
 }
 
-Blog.propTypes = {
+Blog.propTypes    = {
     postsList: PropTypes.arrayOf(PropTypes.shape),
     auth: PropTypes.bool,
     dispatch: PropTypes.func,
