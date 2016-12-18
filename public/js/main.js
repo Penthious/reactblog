@@ -17390,9 +17390,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _dec, _class;
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reduxForm = __webpack_require__(204);
+
+var _reactRedux = __webpack_require__(19);
 
 var _axios = __webpack_require__(122);
 
@@ -17408,7 +17414,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Contact = function (_Component) {
+var Contact = (_dec = (0, _reactRedux.connect)(function (store) {
+    return {};
+}), _dec(_class = function (_Component) {
     _inherits(Contact, _Component);
 
     function Contact(props) {
@@ -17416,45 +17424,23 @@ var Contact = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
 
-        _this.handleName = function (e) {
-            _this.setState({ name: e.target.value });
-        };
-
-        _this.handleEmail = function (e) {
-            _this.setState({ email: e.target.value });
-        };
-
-        _this.handleReason = function (e) {
-            _this.setState({ reason: e.target.value });
-        };
-
-        _this.handleMessage = function (e) {
-            _this.setState({ message: e.target.value });
-        };
-
-        _this.handleOnClick = function () {
+        _this.handleFormSubmit = function (values) {
             _this.setState({
-                disabled: true,
                 success: false,
                 error: false
             });
             _axios2.default.post('/sendMail', {
-                name: _this.state.name,
-                email: _this.state.email,
-                reason: _this.state.reason,
-                message: _this.state.message
+                name: values.name,
+                email: values.email,
+                reason: values.reason,
+                message: values.message
             }).then(function () {
+                _this.props.dispatch({ type: 'ACCOUNT_SAVE_SUCCESS' });
                 _this.setState({
-                    success: true,
-                    disabled: false,
-                    name: '',
-                    email: '',
-                    reason: '',
-                    message: ''
+                    success: true
                 });
             }).catch(function () {
                 _this.setState({
-                    disabled: false,
                     error: true
                 });
             });
@@ -17462,12 +17448,7 @@ var Contact = function (_Component) {
 
         _this.state = {
             success: false,
-            danger: false,
-            disabled: false,
-            name: '',
-            email: '',
-            reason: '',
-            message: ''
+            danger: false
         };
         return _this;
     }
@@ -17475,7 +17456,11 @@ var Contact = function (_Component) {
     _createClass(Contact, [{
         key: 'render',
         value: function render() {
-            var disabled = this.state.disabled ? 'disabled' : '';
+            var _props = this.props,
+                handleSubmit = _props.handleSubmit,
+                invalid = _props.invalid,
+                submitting = _props.submitting;
+
             return _react2.default.createElement(
                 'div',
                 null,
@@ -17524,76 +17509,77 @@ var Contact = function (_Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'column is-offset-3 is-6 is-offset-1-mobile is-9-mobile' },
-                        _react2.default.createElement('input', {
-                            type: 'text',
-                            className: 'input',
-                            name: 'name',
-                            placeholder: 'Name:',
-                            value: this.state.name,
-                            onChange: this.handleName
-                        }),
-                        _react2.default.createElement('input', {
-                            type: 'text',
-                            className: 'input',
-                            name: 'email',
-                            placeholder: 'Email:',
-                            value: this.state.email,
-                            onChange: this.handleEmail
-                        }),
                         _react2.default.createElement(
-                            'select',
-                            {
-                                name: 'reason',
-                                className: 'select',
-                                value: this.state.reason,
-                                onChange: this.handleReason
-                            },
+                            'form',
+                            { onSubmit: handleSubmit(this.handleFormSubmit) },
+                            _react2.default.createElement(_reduxForm.Field, {
+                                type: 'text',
+                                className: 'input',
+                                name: 'name',
+                                placeholder: 'Name:',
+                                component: 'input',
+                                required: true
+                            }),
+                            _react2.default.createElement(_reduxForm.Field, {
+                                type: 'text',
+                                className: 'input',
+                                name: 'email',
+                                placeholder: 'Email:',
+                                component: 'input',
+                                required: true
+                            }),
                             _react2.default.createElement(
-                                'option',
-                                { value: '', disabled: true },
-                                'Select Reason:'
+                                _reduxForm.Field,
+                                {
+                                    name: 'reason',
+                                    className: 'select',
+                                    component: 'select'
+                                },
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: '', disabled: true },
+                                    'Select Reason:'
+                                ),
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: 'feedback' },
+                                    'Feedback'
+                                ),
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: 'say_hello' },
+                                    'Say Hello'
+                                ),
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: 'hire' },
+                                    'Hire'
+                                ),
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: 'code' },
+                                    'View Code'
+                                ),
+                                _react2.default.createElement(
+                                    'option',
+                                    { value: 'other' },
+                                    'Other'
+                                )
                             ),
+                            _react2.default.createElement(_reduxForm.Field, {
+                                className: 'textarea',
+                                name: 'message',
+                                placeholder: 'Message me anything',
+                                component: 'textarea'
+                            }),
                             _react2.default.createElement(
-                                'option',
-                                { value: 'feedback' },
-                                'Feedback'
-                            ),
-                            _react2.default.createElement(
-                                'option',
-                                { value: 'say_hello' },
-                                'Say Hello'
-                            ),
-                            _react2.default.createElement(
-                                'option',
-                                { value: 'hire' },
-                                'Hire'
-                            ),
-                            _react2.default.createElement(
-                                'option',
-                                { value: 'code' },
-                                'View Code'
-                            ),
-                            _react2.default.createElement(
-                                'option',
-                                { value: 'other' },
-                                'Other'
+                                'button',
+                                {
+                                    className: 'button is-primary contact--button',
+                                    disabled: invalid || submitting
+                                },
+                                'Send'
                             )
-                        ),
-                        _react2.default.createElement('textarea', {
-                            className: 'textarea',
-                            name: 'message',
-                            placeholder: 'Message me anything',
-                            value: this.state.message,
-                            onChange: this.handleMessage
-                        }),
-                        _react2.default.createElement(
-                            'button',
-                            {
-                                className: 'button is-primary contact--button',
-                                disabled: disabled,
-                                onClick: this.handleOnClick
-                            },
-                            'Send'
                         )
                     )
                 )
@@ -17602,10 +17588,15 @@ var Contact = function (_Component) {
     }]);
 
     return Contact;
-}(_react.Component);
+}(_react.Component)) || _class);
+
 
 Contact.propTypes = {};
 Contact.defaultProps = {};
+
+Contact = (0, _reduxForm.reduxForm)({
+    form: 'contact'
+})(Contact);
 
 exports.default = Contact;
 
@@ -20386,11 +20377,6 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
                     { className: this.navClassNames() },
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { to: 'blog', className: 'nav-item', onClick: this.handleCloseNav },
-                        'Blog'
-                    ),
-                    _react2.default.createElement(
-                        _reactRouter.Link,
                         { to: '/', className: 'nav-item', onClick: this.handleCloseNav },
                         'Home'
                     ),
@@ -21973,7 +21959,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = (0, _redux.combineReducers)({
     navbar: _navbarReducer2.default,
     auth: _authReducer2.default,
-    form: _reduxForm.reducer
+    form: _reduxForm.reducer.plugin({
+        contact: function contact(state, action) {
+            switch (action.type) {
+                case 'ACCOUNT_SAVE_SUCCESS':
+                    return undefined;
+                default:
+                    return state;
+            }
+        }
+    })
 });
 
 /***/ },

@@ -7,5 +7,14 @@ import auth from './authReducer';
 export default combineReducers({
     navbar,
     auth,
-    form: formReducer,
+    form: formReducer.plugin({
+        contact: (state, action) => {
+            switch (action.type) {
+                case 'ACCOUNT_SAVE_SUCCESS':
+                    return undefined;
+                default:
+                    return state;
+            }
+        },
+    }),
 });
