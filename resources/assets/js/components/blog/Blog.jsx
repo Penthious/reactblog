@@ -19,15 +19,9 @@ class Blog extends Component {
         this.props.dispatch(fetchAllPosts());
     }
 
-    componentDidMount() {
-        // console.log(this.props);
-        // this.props.postsList.posts[0].isActive = true;
-    }
-
-
     // this needs to change to redux dont forget!!!!
     handleOnClick = (index) => {
-        let post = this.props.postsList.posts[index];
+        const post = this.props.postsList.posts[index];
         // change this to redux !!!!!!!!!
         post.isActive = !post.isActive;
         // console.log(this.props.postsList.posts[id - 1]);
@@ -38,12 +32,10 @@ class Blog extends Component {
         classNames({
             'card-content': true,
             'is-hidden': !active,
-            'tanslations': true,
         });
 
     handleDelete = (id) => {
         if (confirm('Are you sure you want to Delete this post?')) {
-            console.log('true');
             this.props.dispatch(deletePost(id));
         }
     };
@@ -61,7 +53,7 @@ class Blog extends Component {
                             <i className="fa fa-angle-down" />
                         </a>
                     </header>
-                    <div className={this.handleHiddenClass(post.isActive)} ref={post.id}>
+                    <div className={this.handleHiddenClass(post.isActive)}>
                         <div className="content">
                             {post.body}
                             <br />
@@ -83,7 +75,7 @@ class Blog extends Component {
     }
 
     render() {
-        const { posts, loading, error } = this.props.postsList;
+        const { posts, loading } = this.props.postsList;
         if (loading === true) {
             return <div className="loader" />;
         }
@@ -95,7 +87,11 @@ class Blog extends Component {
     }
 }
 
-Blog.propTypes = {};
+Blog.propTypes = {
+    postsList: PropTypes.arrayOf(PropTypes.shape),
+    auth: PropTypes.bool,
+    dispatch: PropTypes.func,
+};
 Blog.defaultProps = {};
 
 export default Blog;

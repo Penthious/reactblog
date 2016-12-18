@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
@@ -83,4 +83,9 @@ class NavBar extends Component {
     }
 }
 
+NavBar.propTypes = {
+    dispatch: PropTypes.func,
+    open: PropTypes.bool,
+    auth: PropTypes.bool,
+};
 export default NavBar;

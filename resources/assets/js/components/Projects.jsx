@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import Project from './Project';
@@ -46,9 +46,9 @@ class Projects extends Component {
                 <div className="columns project--card">
                     {this.allProjects().map((project, index) => {
                         if (index === 0 || index === 1) {
-
                             return <Project key={`${project.name}${index}`} {...project} />;
                         }
+                        return null;
                     })}
                 </div>
                 <div className="columns project--card">
@@ -56,14 +56,12 @@ class Projects extends Component {
                         if (index === 2 || index === 3) {
                             return <Project key={`${project.name}${index}`} {...project} />;
                         }
+                        return null;
                     })}
                 </div>
             </div>
         );
     }
 }
-
-
-Projects.propTypes = {};
 
 export default Projects;
