@@ -24,8 +24,8 @@ export function fetchAllPosts() {
 
         axios.get('/blog')
             .then((response) => {
-                console.log(response);
-                dispatch(fetchAllPostsSuccess(response.data));
+                const data = response.data.map(post => ({ ...post, isActive: false }));
+                dispatch(fetchAllPostsSuccess(data));
             });
     };
 }
