@@ -18,8 +18,8 @@ class Blog extends Component {
     }
 
     renderPosts = posts =>
-        posts.map(post => <div>
-            <Link to={`posts/${post.id}`}>
+        posts.map(post => <div key={post.id}>
+            <Link to={`blog/show/${post.id}`}>
                 {post.name}
             </Link>
         </div>);
@@ -31,7 +31,6 @@ class Blog extends Component {
         }
         return (
             <div>
-                <p>test</p>
                 {this.renderPosts(posts)}
             </div>
         );

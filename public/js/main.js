@@ -18362,10 +18362,10 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
             return posts.map(function (post) {
                 return _react2.default.createElement(
                     'div',
-                    null,
+                    { key: post.id },
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { to: 'posts/' + post.id },
+                        { to: 'blog/show/' + post.id },
                         post.name
                     )
                 );
@@ -18392,11 +18392,6 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'test'
-                ),
                 this.renderPosts(posts)
             );
         }
@@ -20483,6 +20478,15 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
                 'nav-toggle': true,
                 'is-active': _this.props.open
             });
+        }, _this.renderAccount = function () {
+            if (_this.props.auth) {
+                return _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: 'account', className: 'nav-item', onClick: _this.handleCloseNav },
+                    'Account'
+                );
+            }
+            return null;
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -20540,11 +20544,7 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
                         { to: 'contact', className: 'nav-item', onClick: this.handleCloseNav },
                         'Contact'
                     ),
-                    this.props.auth ? _react2.default.createElement(
-                        _reactRouter.Link,
-                        { to: 'account', className: 'nav-item', onClick: this.handleCloseNav },
-                        'Account'
-                    ) : null
+                    this.renderAccount()
                 )
             );
         }
@@ -48690,6 +48690,10 @@ var _Blog = __webpack_require__(220);
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
+var _ShowPost = __webpack_require__(585);
+
+var _ShowPost2 = _interopRequireDefault(_ShowPost);
+
 var _authActions = __webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -48718,7 +48722,7 @@ var App = function App() {
             _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'logout', component: _Logout2.default }),
             _react2.default.createElement(_reactRouter.Route, { path: 'blog', component: _Blog2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'posts/:id', component: _Blog2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: 'blog/show/:id', component: _ShowPost2.default }),
             _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
         )
     );
@@ -48729,6 +48733,63 @@ _reactDom2.default.render(_react2.default.createElement(
     { store: _store2.default },
     _react2.default.createElement(App, null)
 ), document.getElementById('app'));
+
+/***/ },
+/* 585 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ShowPost = function (_Component) {
+    _inherits(ShowPost, _Component);
+
+    function ShowPost() {
+        _classCallCheck(this, ShowPost);
+
+        return _possibleConstructorReturn(this, (ShowPost.__proto__ || Object.getPrototypeOf(ShowPost)).apply(this, arguments));
+    }
+
+    _createClass(ShowPost, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'testing'
+                )
+            );
+        }
+    }]);
+
+    return ShowPost;
+}(_react.Component);
+
+ShowPost.propTypes = {};
+ShowPost.defaultProps = {};
+
+exports.default = ShowPost;
 
 /***/ }
 /******/ ]);
