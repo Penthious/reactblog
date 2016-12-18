@@ -3,22 +3,24 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Redirect, Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import store from '../store/store';
-import Layout from './Layout';
-import About from './About';
-import Resume from './Resume';
-import Contact from './Contact';
-import Projects from './Projects';
-import Calculator from '../projects/calculator/Calculator';
-import Timer from '../projects/stopwatch/Timer';
-import Todo from '../projects/todo/Todo';
-import Clock from '../projects/pomodoro/Clock';
-import Login from './Login';
-import Logout from './auth/Logout';
+import store from './store/store';
+import Layout from './components/Layout';
+import About from './components/About';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
+import Projects from './components/Projects';
+import Calculator from './projects/calculator/Calculator';
+import Timer from './projects/stopwatch/Timer';
+import Todo from './projects/todo/Todo';
+import Clock from './projects/pomodoro/Clock';
+import Login from './components/Login';
+import Logout from './components/auth/Logout';
+import Blog from './components/blog/Blog';
+import { userInfo } from './actions/authActions';
 
 const token = localStorage.getItem('token');
 if (token) {
-    console.log(store);
+    store.dispatch(userInfo(token));
     store.dispatch({ type: 'AUTHENTICATE' });
 }
 
@@ -35,6 +37,7 @@ const App = () => (
             <Route path="contact" component={Contact} />
             <Route path="login" component={Login} />
             <Route path="logout" component={Logout} />
+            <Route path="blog" component={Blog} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>

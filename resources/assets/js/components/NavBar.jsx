@@ -7,11 +7,11 @@ import { closeNav, toggleNav } from '../actions/navbarActions';
 
 @connect((store) => {
     return {
+        auth: store.auth.authenticated,
         open: store.navbar.open,
     };
 })
 class NavBar extends Component {
-
     handleOnClick = () => {
         this.props.dispatch(toggleNav());
     };
@@ -51,6 +51,9 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
+                    {/*<Link to="blog" className="nav-item" onClick={this.handleCloseNav}>*/}
+                        {/*Blog*/}
+                    {/*</Link>*/}
                     <Link to="/" className="nav-item" onClick={this.handleCloseNav}>
                         Home
                     </Link>
@@ -63,6 +66,13 @@ class NavBar extends Component {
                     <Link to="contact" className="nav-item" onClick={this.handleCloseNav}>
                         Contact
                     </Link>
+                    {this.props.auth ?
+                        <Link to="account" className="nav-item" onClick={this.handleCloseNav}>
+                            Account
+                        </Link>
+                        :
+                        null
+                    }
                 </div>
             </nav>
         );

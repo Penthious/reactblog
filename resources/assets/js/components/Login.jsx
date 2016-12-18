@@ -25,8 +25,6 @@ class Login extends Component {
 
     handleFormSubmit = (values) => {
         this.props.dispatch(loginUser({ email: values.email, password: values.password }));
-
-        console.log(values);
     };
 
     render() {
