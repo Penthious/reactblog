@@ -43,6 +43,3 @@ export const loginUser = ({ email, password }) =>
                 console.log(error);
             });
     };
-
-
-
