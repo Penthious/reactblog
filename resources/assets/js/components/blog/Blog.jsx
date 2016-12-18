@@ -6,43 +6,58 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { fetchAllPosts } from '../../actions/blogActions';
+import { fetchAllPosts, deletePost } from '../../actions/blogActions';
+import '../../../sass/blog.sass';
 
-@connect((store) => {
-    return {
+@connect(store =>
+    ({
         postsList: store.blog.postsList,
-    };
-})
+        auth: store.auth.authenticated,
+    }))
 class Blog extends Component {
     componentWillMount() {
         this.props.dispatch(fetchAllPosts());
     }
 
+    componentDidMount() {
+        // console.log(this.props);
+        // this.props.postsList.posts[0].isActive = true;
+    }
+
+
     // this needs to change to redux dont forget!!!!
-    handleOnClick = (id) => {
-        let post = this.props.postsList.posts[id - 1];
+    handleOnClick = (index) => {
+        let post = this.props.postsList.posts[index];
         // change this to redux !!!!!!!!!
         post.isActive = !post.isActive;
-        //console.log(this.props.postsList.posts[id - 1]);
+        // console.log(this.props.postsList.posts[id - 1]);
         this.forceUpdate();
     };
 
-    handleHiddenClass = (active) =>
+    handleHiddenClass = active =>
         classNames({
             'card-content': true,
-            'is-hidden': active,
+            'is-hidden': !active,
+            'tanslations': true,
         });
 
-    renderPosts = posts => {
+    handleDelete = (id) => {
+        if (confirm('Are you sure you want to Delete this post?')) {
+            console.log('true');
+            this.props.dispatch(deletePost(id));
+        }
+    };
 
+    renderPosts = (posts) => {
+        const { auth } = this.props;
         return (<div className="container">
-            {posts.map(post =>
-                <div className="card is-fullwidth" key={post.id}>
+            {posts.map((post, index) =>
+                <div className="card is-fullwidth blog--card" key={post.id}>
                     <header className="card-header">
                         <p className="card-header-title">
                             {post.name}
                         </p>
-                        <a className="card-header-icon" onClick={() => this.handleOnClick(post.id)}>
+                        <a className="card-header-icon" onClick={() => this.handleOnClick(index)}>
                             <i className="fa fa-angle-down" />
                         </a>
                     </header>
@@ -55,8 +70,13 @@ class Blog extends Component {
                     </div>
                     <footer className="card-footer">
                         <Link to={`blog/show/${post.id}`} className="card-footer-item">View</Link>
-                        <a className="card-footer-item">Edit</a>
-                        <a className="card-footer-item">Delete</a>
+                        { auth ? <a className="card-footer-item">Edit</a> : null }
+                        { auth ? <a
+                            onClick={() => this.handleDelete(post.id)}
+                            className="card-footer-item"
+                        >
+                            Delete
+                        </a> : null }
                     </footer>
                 </div>)}
         </div>);

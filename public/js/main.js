@@ -6974,9 +6974,7 @@ module.exports = function(module) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.userInfo = userInfo;
-exports.loginUser = loginUser;
-exports.logoutUser = logoutUser;
+exports.logoutUser = exports.loginUser = exports.userInfo = undefined;
 
 var _axios = __webpack_require__(73);
 
@@ -6986,7 +6984,7 @@ var _reactRouter = __webpack_require__(22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function userInfo(data) {
+var userInfo = exports.userInfo = function userInfo(data) {
     return function (dispatch) {
         _axios2.default.get('/api/userinfo', {
             headers: { authorization: 'Bearer' + data }
@@ -6998,12 +6996,11 @@ function userInfo(data) {
             // browserHistory.push('/');
         });
     };
-}
+};
 
-function loginUser(_ref) {
+var loginUser = exports.loginUser = function loginUser(_ref) {
     var email = _ref.email,
         password = _ref.password;
-
     return function (dispatch) {
         _axios2.default.post('/login', { email: email, password: password }).then(function (response) {
             dispatch({
@@ -7013,17 +7010,17 @@ function loginUser(_ref) {
             localStorage.setItem('token', response.data.token);
             dispatch({ type: 'AUTHENTICATE' });
             dispatch(userInfo(response.data.token));
-        }).catch(function () {
+        }).catch(function (error) {
             // dispatch(authError("Empty Required Field"));
-            console.log('test');
+            console.log(error);
         });
     };
-}
+};
 
-function logoutUser() {
+var logoutUser = exports.logoutUser = function logoutUser() {
     localStorage.removeItem('token');
     return { type: 'LOGOUT' };
-}
+};
 
 /***/ },
 /* 73 */
@@ -17739,6 +17736,7 @@ var Login = (_dec = (0, _reactRedux.connect)(function (store) {
 
         _this.handleFormSubmit = function (values) {
             _this.props.dispatch((0, _authActions.loginUser)({ email: values.email, password: values.password }));
+            _reactRouter.browserHistory.push('/');
         };
 
         console.log(props);
@@ -18329,6 +18327,8 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _blogActions = __webpack_require__(245);
 
+__webpack_require__(587);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18339,7 +18339,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
     return {
-        postsList: store.blog.postsList
+        postsList: store.blog.postsList,
+        auth: store.auth.authenticated
     };
 }), _dec(_class = function (_Component) {
     _inherits(Blog, _Component);
@@ -18355,26 +18356,33 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Blog.__proto__ || Object.getPrototypeOf(Blog)).call.apply(_ref, [this].concat(args))), _this), _this.handleOnClick = function (id) {
-            var post = _this.props.postsList.posts[id - 1];
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Blog.__proto__ || Object.getPrototypeOf(Blog)).call.apply(_ref, [this].concat(args))), _this), _this.handleOnClick = function (index) {
+            var post = _this.props.postsList.posts[index];
             // change this to redux !!!!!!!!!
             post.isActive = !post.isActive;
-            //console.log(this.props.postsList.posts[id - 1]);
+            // console.log(this.props.postsList.posts[id - 1]);
             _this.forceUpdate();
         }, _this.handleHiddenClass = function (active) {
             return (0, _classnames2.default)({
                 'card-content': true,
-                'is-hidden': active
+                'is-hidden': !active,
+                'tanslations': true
             });
+        }, _this.handleDelete = function (id) {
+            if (confirm('Are you sure you want to Delete this post?')) {
+                console.log('true');
+                _this.props.dispatch((0, _blogActions.deletePost)(id));
+            }
         }, _this.renderPosts = function (posts) {
+            var auth = _this.props.auth;
 
             return _react2.default.createElement(
                 'div',
                 { className: 'container' },
-                posts.map(function (post) {
+                posts.map(function (post, index) {
                     return _react2.default.createElement(
                         'div',
-                        { className: 'card is-fullwidth', key: post.id },
+                        { className: 'card is-fullwidth blog--card', key: post.id },
                         _react2.default.createElement(
                             'header',
                             { className: 'card-header' },
@@ -18386,7 +18394,7 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
                             _react2.default.createElement(
                                 'a',
                                 { className: 'card-header-icon', onClick: function onClick() {
-                                        return _this.handleOnClick(post.id);
+                                        return _this.handleOnClick(index);
                                     } },
                                 _react2.default.createElement('i', { className: 'fa fa-angle-down' })
                             )
@@ -18414,16 +18422,21 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
                                 { to: 'blog/show/' + post.id, className: 'card-footer-item' },
                                 'View'
                             ),
-                            _react2.default.createElement(
+                            auth ? _react2.default.createElement(
                                 'a',
                                 { className: 'card-footer-item' },
                                 'Edit'
-                            ),
-                            _react2.default.createElement(
+                            ) : null,
+                            auth ? _react2.default.createElement(
                                 'a',
-                                { className: 'card-footer-item' },
+                                {
+                                    onClick: function onClick() {
+                                        return _this.handleDelete(post.id);
+                                    },
+                                    className: 'card-footer-item'
+                                },
                                 'Delete'
-                            )
+                            ) : null
                         )
                     );
                 })
@@ -18436,6 +18449,12 @@ var Blog = (_dec = (0, _reactRedux.connect)(function (store) {
         value: function componentWillMount() {
             this.props.dispatch((0, _blogActions.fetchAllPosts)());
         }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {}
+        // console.log(this.props);
+        // this.props.postsList.posts[0].isActive = true;
+
 
         // this needs to change to redux dont forget!!!!
 
@@ -20265,11 +20284,9 @@ module.exports = function spread(callback) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.deletePost = exports.deletePostSuccess = exports.fetchAllPosts = exports.fetchAllPostsSuccess = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports.fetchAllPostsSuccess = fetchAllPostsSuccess;
-exports.fetchAllPosts = fetchAllPosts;
 
 var _axios = __webpack_require__(73);
 
@@ -20279,14 +20296,23 @@ var _types = __webpack_require__(52);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function fetchAllPostsSuccess(posts) {
+/**
+ * Sets the state of post to all the received post
+ * @param posts
+ * @returns {{type, payload: *}}
+ */
+var fetchAllPostsSuccess = exports.fetchAllPostsSuccess = function fetchAllPostsSuccess(posts) {
     return {
         type: _types.FETCH_POST_SUCCESS,
         payload: posts
     };
-}
+};
 
-function fetchAllPosts() {
+/**
+ * Ajax call to fetch all post
+ * @returns {Function}
+ */
+var fetchAllPosts = exports.fetchAllPosts = function fetchAllPosts() {
     return function (dispatch) {
         dispatch({ type: _types.FETCH_POST });
 
@@ -20294,10 +20320,32 @@ function fetchAllPosts() {
             var data = response.data.map(function (post) {
                 return _extends({}, post, { isActive: false });
             });
+            data[0].isActive = true;
             dispatch(fetchAllPostsSuccess(data));
         });
     };
-}
+};
+
+/**
+ * Fetches all post after delete;
+ */
+var deletePostSuccess = exports.deletePostSuccess = function deletePostSuccess() {
+    return fetchAllPosts();
+};
+
+/**
+ * Ajax call to delete the current post
+ * @param id
+ */
+var deletePost = exports.deletePost = function deletePost(id) {
+    return function (dispatch) {
+        _axios2.default.delete('/api/destroy/' + id, {
+            headers: { authorization: localStorage.getItem('token') }
+        }).then(function (response) {
+            dispatch(deletePostSuccess());
+        });
+    };
+};
 
 /***/ },
 /* 246 */
@@ -20309,26 +20357,23 @@ function fetchAllPosts() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.openNav = openNav;
-exports.closeNav = closeNav;
-exports.toggleNav = toggleNav;
-function openNav() {
+var openNav = exports.openNav = function openNav() {
     return {
         type: 'OPEN_NAV'
     };
-}
+};
 
-function closeNav() {
+var closeNav = exports.closeNav = function closeNav() {
     return {
         type: 'CLOSE_NAV'
     };
-}
+};
 
-function toggleNav() {
+var toggleNav = exports.toggleNav = function toggleNav() {
     return {
         type: 'TOGGLE_NAV'
     };
-}
+};
 
 /***/ },
 /* 247 */
@@ -48855,6 +48900,46 @@ _reactDom2.default.render(_react2.default.createElement(
     { store: _store2.default },
     _react2.default.createElement(App, null)
 ), document.getElementById('app'));
+
+/***/ },
+/* 586 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(14)();
+// imports
+
+
+// module
+exports.push([module.i, ".blog--card {\n  margin-left: 10%;\n  width: 80% !important;\n  margin-top: 20px; }\n", "", {"version":3,"sources":["/./resources/assets/sass/resources/assets/sass/blog.sass"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,sBAAoB;EACpB,iBAAiB,EAAG","file":"blog.sass","sourcesContent":[".blog--card {\n  margin-left: 10%;\n  width: 80%!important;\n  margin-top: 20px; }\n\n"],"sourceRoot":"webpack://"}]);
+
+// exports
+
+
+/***/ },
+/* 587 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(586);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(19)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./blog.sass", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/sass-loader/index.js?sourceMap!./blog.sass");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }
 /******/ ]);

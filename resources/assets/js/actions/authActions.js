@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-export function userInfo(data) {
-    return (dispatch) => {
-        axios.get('/api/userinfo', {
-            headers: { authorization: `Bearer${data}` },
-        })
+export const userInfo = data =>
+    (dispatch) => {
+        axios.get('/api/userinfo',
+            {
+                headers: { authorization: `Bearer${data}` },
+            })
             .then((response) => {
                 dispatch({
                     type: 'USER_INFO',
@@ -14,10 +15,10 @@ export function userInfo(data) {
                 // browserHistory.push('/');
             });
     };
-}
 
-export function loginUser({ email, password }) {
-    return function (dispatch) {
+
+export const loginUser = ({ email, password }) =>
+    (dispatch) => {
         axios.post('/login', { email, password })
             .then((response) => {
                 dispatch({
@@ -29,15 +30,15 @@ export function loginUser({ email, password }) {
                 dispatch(userInfo(response.data.token));
             })
 
-            .catch(() => {
+            .catch((error) => {
                 // dispatch(authError("Empty Required Field"));
-                console.log('test');
+                console.log(error);
             });
     };
-}
 
-export function logoutUser() {
+
+export const logoutUser = () => {
     localStorage.removeItem('token');
     return { type: 'LOGOUT' };
-}
+};
 

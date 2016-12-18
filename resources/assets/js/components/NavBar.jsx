@@ -5,12 +5,11 @@ import { connect } from 'react-redux';
 
 import { closeNav, toggleNav } from '../actions/navbarActions';
 
-@connect((store) => {
-    return {
+@connect(store =>
+    ({
         auth: store.auth.authenticated,
         open: store.navbar.open,
-    };
-})
+    }))
 class NavBar extends Component {
     handleOnClick = () => {
         this.props.dispatch(toggleNav());

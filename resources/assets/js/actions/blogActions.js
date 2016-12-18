@@ -9,24 +9,50 @@ import {
     EDIT_POST_SUCCESS,
     UPDATE_POST,
     UPDATE_POST_SUCCESS,
+    DELETE_POST,
 } from '../actions/types';
 
-export function fetchAllPostsSuccess(posts) {
-    return {
-        type: FETCH_POST_SUCCESS,
-        payload: posts,
-    };
-}
+/**
+ * Sets the state of post to all the received post
+ * @param posts
+ * @returns {{type, payload: *}}
+ */
+export const fetchAllPostsSuccess = (posts) => ({
+    type: FETCH_POST_SUCCESS,
+    payload: posts,
+});
 
-export function fetchAllPosts() {
-    return (dispatch) => {
-        dispatch({ type: FETCH_POST });
+/**
+ * Ajax call to fetch all post
+ * @returns {Function}
+ */
+export const fetchAllPosts = () => (dispatch) => {
+    dispatch({ type: FETCH_POST });
 
-        axios.get('/blog')
+    axios.get('/blog')
+        .then((response) => {
+            const data = response.data.map(post => ({ ...post, isActive: false }));
+            data[0].isActive = true;
+            dispatch(fetchAllPostsSuccess(data));
+        });
+};
+
+/**
+ * Fetches all post after delete;
+ */
+export const deletePostSuccess = () => fetchAllPosts();
+
+/**
+ * Ajax call to delete the current post
+ * @param id
+ */
+export const deletePost = id =>
+    (dispatch) => {
+        axios.delete(`/api/destroy/${id}`,
+            {
+                headers: { authorization: localStorage.getItem('token') },
+            })
             .then((response) => {
-                const data = response.data.map(post => ({ ...post, isActive: false }));
-                dispatch(fetchAllPostsSuccess(data));
+                dispatch(deletePostSuccess());
             });
     };
-}
-
