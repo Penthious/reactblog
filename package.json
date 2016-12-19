@@ -4,8 +4,8 @@
     "prod": "gulp --production",
     "test": "mocha --require test/helpers/setup.js --compilers js:babel-core/register",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html --require babel-register --extension .jsx npm test",
-    "dev": "gulp watch",
-    "build": "webpack --watch"
+    "dev": "gulp --production",
+    "build": "webpack --watch -p"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",

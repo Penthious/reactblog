@@ -12,11 +12,8 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bulma/css/bulma.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
     @yield('header_styles')
     <!-- Scripts -->
     <script>
