@@ -22,6 +22,7 @@ export const TOGGLE_NAV = 'TOGGLE_NAV';
 /**
  * Blog types
  */
+export const TOGGLE_POST = 'TOGGLE_POST';
 export const FETCH_POST = 'FETCH_POST';
 export const ADD_POST = 'ADD_POST';
 export const SHOW_POST = 'SHOW_POST';

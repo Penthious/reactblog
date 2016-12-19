@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import {
+    TOGGLE_POST,
     FETCH_POST,
     FETCH_POST_SUCCESS,
     SHOW_POST,
@@ -31,7 +32,7 @@ export const fetchAllPosts = () => (dispatch) => {
 
     axios.get('/blog')
         .then((response) => {
-            const data = response.data.map(post => ({ ...post, isActive: false }));
+            const data       = response.data.map(post => ({ ...post, isActive: false }));
             data[0].isActive = true;
             dispatch(fetchAllPostsSuccess(data));
         });
@@ -80,4 +81,23 @@ export const editPost = id => (dispatch) => {
             dispatch(editPostSuccess(response));
         });
 };
+
+/**
+ * Toggles the post state of isActive
+ * @param id
+ */
+export const togglePost = id =>
+    (dispatch, getState) => {
+        const { blog } = getState();
+        const data     = blog.postsList.posts.map((post, index) => {
+            if (index === id) {
+                return { ...post, isActive: !post.isActive };
+            }
+            return { ...post };
+        });
+        dispatch({
+            type: TOGGLE_POST,
+            payload: data,
+        });
+    };
 

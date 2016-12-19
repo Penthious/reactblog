@@ -7,6 +7,7 @@ import {
     EDIT_POST_SUCCESS,
     UPDATE_POST,
     UPDATE_POST_SUCCESS,
+    TOGGLE_POST,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -20,6 +21,8 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
+        case TOGGLE_POST:
+            return { ...state, postsList: { posts: action.payload, error: null, loading: false } };
         case FETCH_POST:
             return { ...state, postsList: { posts: [], error: null, loading: true } };
         case FETCH_POST_SUCCESS:

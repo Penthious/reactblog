@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { fetchAllPosts, deletePost } from '../../actions/blogActions';
+import { fetchAllPosts, deletePost, togglePost } from '../../actions/blogActions';
 import '../../../sass/blog.sass';
 
 @connect(store =>
@@ -19,15 +19,23 @@ class Blog extends Component {
         this.props.dispatch(fetchAllPosts());
     }
 
-    /*
-     * TODO: this needs to change to redux!
+    /**
+     * Toggles the current post hide/show
+     * @param index
      */
     handleOnClick = (index) => {
-        const post = this.props.postsList.posts[index];
-        post.isActive = !post.isActive;
-        this.forceUpdate();
+        this.props.dispatch(togglePost(index));
     };
 
+    handleDelete = (id) => {
+        if (confirm('Are you sure you want to Delete this post?')) {
+            this.props.dispatch(deletePost(id));
+        }
+    };
+
+    /**
+     * Class Names
+     */
     handleHiddenClass = active =>
         classNames({
             'card-content': true,
@@ -40,13 +48,13 @@ class Blog extends Component {
             'fa-angle-down': active,
             'fa-angle-right': !active,
         });
+    /* END CLASS NAMES */
 
-    handleDelete = (id) => {
-        if (confirm('Are you sure you want to Delete this post?')) {
-            this.props.dispatch(deletePost(id));
-        }
-    };
-
+    /**
+     * Maps over all posts and renders them
+     * @param posts
+     * @returns {XML}
+     */
     renderPosts = (posts) => {
         const { auth } = this.props;
         return (<div className="container">
