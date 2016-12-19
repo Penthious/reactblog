@@ -30,18 +30,18 @@ const App = () => (
     <Router history={browserHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={About} />
-            <Route path="projects" component={Projects}>
-                <Route path="calculator" component={Calculator} />
-                <Route path="stopwatch" component={Timer} />
-                <Route path="todo" component={Todo} />
-                <Route path="clock" component={Clock} />
+            <Route path="/projects" component={Projects}>
+                <Route path="/projects/calculator" component={Calculator} />
+                <Route path="/projects/stopwatch" component={Timer} />
+                <Route path="/projects/todo" component={Todo} />
+                <Route path="/projects/clock" component={Clock} />
             </Route>
-            <Route path="resume" component={Resume} />
-            <Route path="contact" component={Contact} />
-            <Route path="login" component={Login} />
-            <Route path="logout" component={Logout} />
-            <Route path="blog" component={Blog}>
-                <Route path="show/:id" component={ShowPost} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
+            <Route path="/blog" component={Blog}>
+                <Route path="/blog/show/:id" component={ShowPost} />
             </Route>
             <Route path="/api/edit/:id" component={EditPost} />
             <Redirect from="*" to="/" />

@@ -61,19 +61,19 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    <Link to="blog" className="nav-item" onClick={this.handleCloseNav}>
+                    <Link to="/blog" className="nav-item" onClick={this.handleCloseNav}>
                         Blog
                     </Link>
                     <Link to="/" className="nav-item" onClick={this.handleCloseNav}>
                         Home
                     </Link>
-                    <Link className="nav-item" to="projects" onClick={this.handleCloseNav}>
+                    <Link to="/projects" className="nav-item" onClick={this.handleCloseNav}>
                         Projects
                     </Link>
-                    <Link to="resume" className="nav-item" onClick={this.handleCloseNav}>
+                    <Link to="/resume" className="nav-item" onClick={this.handleCloseNav}>
                         Resume
                     </Link>
-                    <Link to="contact" className="nav-item" onClick={this.handleCloseNav}>
+                    <Link to="/contact" className="nav-item" onClick={this.handleCloseNav}>
                         Contact
                     </Link>
                     {this.renderAccount()}

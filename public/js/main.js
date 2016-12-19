@@ -33,16 +33,18 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmory imports with the correct context
+/******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
 /******/
-/******/ 	// define getter function for harmory exports
+/******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		Object.defineProperty(exports, name, {
-/******/ 			configurable: false,
-/******/ 			enumerable: true,
-/******/ 			get: getter
-/******/ 		});
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -5366,6 +5368,12 @@ var routes = exports.routes = oneOfType([route, arrayOf(route)]);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(568);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(213);
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(exports, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
 
 
 
@@ -5383,11 +5391,6 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
 }
 
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(exports, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
@@ -6907,6 +6910,7 @@ module.exports = setInnerHTML;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createAll__ = __webpack_require__(533);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__structure_plain__ = __webpack_require__(26);
+Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(exports, "actionTypes", function() { return actionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "arrayInsert", function() { return arrayInsert; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "arrayMove", function() { return arrayMove; });
@@ -11160,6 +11164,7 @@ module.exports = getIteratorFn;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(exports, "ARRAY_INSERT", function() { return ARRAY_INSERT; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "ARRAY_MOVE", function() { return ARRAY_MOVE; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "ARRAY_POP", function() { return ARRAY_POP; });
@@ -16577,6 +16582,7 @@ var SubmissionError = function (_ExtendableError) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(123);
+Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(exports, "arrayInsert", function() { return arrayInsert; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "arrayMove", function() { return arrayMove; });
 /* harmony export (binding) */ __webpack_require__.d(exports, "arrayPop", function() { return arrayPop; });
@@ -20870,7 +20876,7 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
                     { className: this.navClassNames() },
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { to: 'blog', className: 'nav-item', onClick: this.handleCloseNav },
+                        { to: '/blog', className: 'nav-item', onClick: this.handleCloseNav },
                         'Blog'
                     ),
                     _react2.default.createElement(
@@ -20880,17 +20886,17 @@ var NavBar = (_dec = (0, _reactRedux.connect)(function (store) {
                     ),
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { className: 'nav-item', to: 'projects', onClick: this.handleCloseNav },
+                        { to: '/projects', className: 'nav-item', onClick: this.handleCloseNav },
                         'Projects'
                     ),
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { to: 'resume', className: 'nav-item', onClick: this.handleCloseNav },
+                        { to: '/resume', className: 'nav-item', onClick: this.handleCloseNav },
                         'Resume'
                     ),
                     _react2.default.createElement(
                         _reactRouter.Link,
-                        { to: 'contact', className: 'nav-item', onClick: this.handleCloseNav },
+                        { to: '/contact', className: 'nav-item', onClick: this.handleCloseNav },
                         'Contact'
                     ),
                     this.renderAccount()
@@ -22343,28 +22349,28 @@ var projectsData = [{
     description: 'A simple calculator built out of react',
     github: 'https://github.com/Penthious/reactCalculator',
     image: '/images/calculator.png',
-    link: 'projects/calculator'
+    link: '/projects/calculator'
 }, {
     name: 'Pomodoro clock',
     created_at: 'Friday, December 9',
     description: 'A pomodoro session tracker',
     github: 'https://github.com/Penthious/reactPomodoroClock',
     image: '/images/work-in-progress.png',
-    link: 'projects/clock'
+    link: '/projects/clock'
 }, {
     name: 'Stop Watch',
     created_at: 'Wednesday, November 27',
     description: 'A basic stop watch to display what I learned in react',
     github: 'https://github.com/Penthious/react-simpleSimon',
     image: '/images/stopwatch.png',
-    link: 'projects/stopwatch'
+    link: '/projects/stopwatch'
 }, {
     name: 'Todo',
     created_at: 'Sunday, December 4',
     description: 'A todo list with basic validation.',
     github: 'https://github.com/Penthious/reactTodo',
     image: '/images/todo.png',
-    link: 'projects/todo'
+    link: '/projects/todo'
 }];
 
 exports.default = projectsData;
@@ -49088,20 +49094,20 @@ var App = function App() {
             _react2.default.createElement(_reactRouter.IndexRoute, { component: _About2.default }),
             _react2.default.createElement(
                 _reactRouter.Route,
-                { path: 'projects', component: _Projects2.default },
-                _react2.default.createElement(_reactRouter.Route, { path: 'calculator', component: _Calculator2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: 'stopwatch', component: _Timer2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: 'todo', component: _Todo2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: 'clock', component: _Clock2.default })
+                { path: '/projects', component: _Projects2.default },
+                _react2.default.createElement(_reactRouter.Route, { path: '/projects/calculator', component: _Calculator2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: '/projects/stopwatch', component: _Timer2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: '/projects/todo', component: _Todo2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: '/projects/clock', component: _Clock2.default })
             ),
-            _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _Resume2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _Contact2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
-            _react2.default.createElement(_reactRouter.Route, { path: 'logout', component: _Logout2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: '/resume', component: _Resume2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
+            _react2.default.createElement(_reactRouter.Route, { path: '/logout', component: _Logout2.default }),
             _react2.default.createElement(
                 _reactRouter.Route,
-                { path: 'blog', component: _Blog2.default },
-                _react2.default.createElement(_reactRouter.Route, { path: 'show/:id', component: _ShowPost2.default })
+                { path: '/blog', component: _Blog2.default },
+                _react2.default.createElement(_reactRouter.Route, { path: '/blog/show/:id', component: _ShowPost2.default })
             ),
             _react2.default.createElement(_reactRouter.Route, { path: '/api/edit/:id', component: _EditPost2.default }),
             _react2.default.createElement(_reactRouter.Redirect, { from: '*', to: '/' })
