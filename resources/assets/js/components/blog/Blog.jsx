@@ -19,12 +19,12 @@ class Blog extends Component {
         this.props.dispatch(fetchAllPosts());
     }
 
-    // this needs to change to redux dont forget!!!!
+    /*
+     * TODO: this needs to change to redux!
+     */
     handleOnClick = (index) => {
-        const post    = this.props.postsList.posts[index];
-        // change this to redux !!!!!!!!!
+        const post = this.props.postsList.posts[index];
         post.isActive = !post.isActive;
-        // console.log(this.props.postsList.posts[id - 1]);
         this.forceUpdate();
     };
 
@@ -33,7 +33,8 @@ class Blog extends Component {
             'card-content': true,
             'is-hidden': !active,
         });
-    handleCardArrow   = (active) =>
+
+    handleCardArrow = active =>
         classNames({
             fa: true,
             'fa-angle-down': active,

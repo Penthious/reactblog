@@ -17,7 +17,7 @@ import {
  * @param posts
  * @returns {{type, payload: *}}
  */
-export const fetchAllPostsSuccess = (posts) => ({
+export const fetchAllPostsSuccess = posts => ({
     type: FETCH_POST_SUCCESS,
     payload: posts,
 });
@@ -31,7 +31,7 @@ export const fetchAllPosts = () => (dispatch) => {
 
     axios.get('/blog')
         .then((response) => {
-            const data       = response.data.map(post => ({ ...post, isActive: false }));
+            const data = response.data.map(post => ({ ...post, isActive: false }));
             data[0].isActive = true;
             dispatch(fetchAllPostsSuccess(data));
         });
@@ -57,11 +57,19 @@ export const deletePost = id =>
             });
     };
 
+/**
+ * Sets the state of editPost to the post we just got back
+ * @param data
+ */
 export const editPostSuccess = data => ({
     type: EDIT_POST_SUCCESS,
     payload: data,
 });
 
+/**
+ * Ajax call to get the current edited post
+ * @param id
+ */
 export const editPost = id => (dispatch) => {
     dispatch({ type: EDIT_POST });
     axios.get(`/api/edit/${id}`,
