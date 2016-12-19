@@ -61,9 +61,9 @@ class NavBar extends Component {
                 </span>
 
                 <div className={this.navClassNames()}>
-                    <Link to="/blog" className="nav-item" onClick={this.handleCloseNav}>
-                        Blog
-                    </Link>
+                    {/*<Link to="/blog" className="nav-item" onClick={this.handleCloseNav}>*/}
+                        {/*Blog*/}
+                    {/*</Link>*/}
                     <Link to="/" className="nav-item" onClick={this.handleCloseNav}>
                         Home
                     </Link>
