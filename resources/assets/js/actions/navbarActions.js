@@ -1,17 +1,23 @@
-export function openNav() {
-    return {
+/**
+ * Opens the navbar
+ */
+export const openNav = () =>
+    ({
         type: 'OPEN_NAV',
-    };
-}
+    });
 
-export function closeNav() {
-    return {
+/**
+ * Closes the navbar
+ */
+export const closeNav = () =>
+    ({
         type: 'CLOSE_NAV',
-    };
-}
+    });
 
-export function toggleNav() {
-    return {
+/**
+ * Toggles the navbar
+ */
+export const toggleNav = () =>
+    ({
         type: 'TOGGLE_NAV',
-    };
-}
+    });

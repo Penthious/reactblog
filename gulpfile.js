@@ -1,6 +1,5 @@
 const elixir = require('laravel-elixir');
 
-// require('laravel-elixir-vue-2');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,10 +12,13 @@ const elixir = require('laravel-elixir');
  |
  */
 
-// elixir(mix => {
-//     mix.sass('app.sass')
-//        .webpack('app.js');
-// });
+elixir(mix => {
+    mix.styles([
+        './public/assets/css/bulma/css/bulma.css',
+        './public/assets/css/slick.css',
+    ]);
+});
+
 const node = 'node_modules/';
 const assets = 'public/assets/';
 const js = `${assets}js/`;

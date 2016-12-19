@@ -16,6 +16,8 @@ import Clock from './projects/pomodoro/Clock';
 import Login from './components/Login';
 import Logout from './components/auth/Logout';
 import Blog from './components/blog/Blog';
+import ShowPost from './components/blog/ShowPost';
+import EditPost from './components/blog/EditPost';
 import { userInfo } from './actions/authActions';
 
 const token = localStorage.getItem('token');
@@ -28,16 +30,20 @@ const App = () => (
     <Router history={browserHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={About} />
-            <Route path="projects" component={Projects} />
-            <Route path="calculator" component={Calculator} />
-            <Route path="stopwatch" component={Timer} />
-            <Route path="todo" component={Todo} />
-            <Route path="clock" component={Clock} />
-            <Route path="resume" component={Resume} />
-            <Route path="contact" component={Contact} />
-            <Route path="login" component={Login} />
-            <Route path="logout" component={Logout} />
-            <Route path="blog" component={Blog} />
+            <Route path="/projects" component={Projects}>
+                <Route path="/projects/calculator" component={Calculator} />
+                <Route path="/projects/stopwatch" component={Timer} />
+                <Route path="/projects/todo" component={Todo} />
+                <Route path="/projects/clock" component={Clock} />
+            </Route>
+            <Route path="/resume" component={Resume} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
+            <Route path="/blog" component={Blog}>
+                <Route path="/blog/show/:id" component={ShowPost} />
+            </Route>
+            <Route path="/api/edit/:id" component={EditPost} />
             <Redirect from="*" to="/" />
         </Route>
     </Router>

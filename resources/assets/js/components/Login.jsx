@@ -1,22 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import {browserHistory} from 'react-router';
+import { browserHistory } from 'react-router';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { loginUser, userInfo } from '../actions/authActions';
+import { loginUser } from '../actions/authActions';
 
 
-@connect((store) => {
-    return {
+@connect(store =>
+    ({
         authenticated: store.auth.authenticated,
         token: store.auth.token,
-    };
-})
+    }))
 class Login extends Component {
-    constructor(props) {
-        super(props)
-        console.log(props);
-    }
-
     componentWillMount() {
         if (this.props.authenticated) {
             browserHistory.push('/');
@@ -25,10 +19,11 @@ class Login extends Component {
 
     handleFormSubmit = (values) => {
         this.props.dispatch(loginUser({ email: values.email, password: values.password }));
+        browserHistory.push('/');
     };
 
     render() {
-        const { handleSubmit, invalid, submitting} = this.props;
+        const { handleSubmit, invalid, submitting } = this.props;
         return (
             <div>
                 <form onSubmit={handleSubmit(this.handleFormSubmit)}>
@@ -47,7 +42,13 @@ class Login extends Component {
     }
 }
 
-Login.propTypes = {};
+Login.propTypes = {
+    authenticated: PropTypes.bool,
+    dispatch: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    submitting: PropTypes.bool,
+    invalid: PropTypes.bool,
+};
 Login.defaultProps = {};
 
 Login = reduxForm({

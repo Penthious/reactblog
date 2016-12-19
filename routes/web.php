@@ -21,7 +21,8 @@ $routeGet = [
     'stopwatch',
     'projects',
     'login',
-    'logout'
+    'logout',
+    'blog',
 ];
 $routePost = [
     'sendMail',
@@ -46,7 +47,16 @@ Route::post('logout', [
     'uses' => 'Auth\LoginController@logout',
 ]);
 
+Route::group(['prefix' => 'blog'],function (){
+    Route::get('/', 'PostController@index');
+    Route::get('show/{id}', 'PostController@show');
+});
+
 Route::group(['prefix' => 'api', 'jwt.auth'], function () {
+    Route::post('store', 'PostController@store');
+    Route::get('edit/{id}', 'PostController@edit');
+    Route::post('update/{id}', 'PostController@update');
+    Route::delete('destroy/{id}', 'PostController@destroy');
     Route::get('userinfo', function () {
         return JWTAuth::parseToken()->authenticate();
     });

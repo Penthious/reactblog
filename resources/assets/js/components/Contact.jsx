@@ -5,9 +5,7 @@ import axios from 'axios';
 
 import '../../sass/contact.sass';
 
-@connect((store) => {
-    return {};
-})
+@connect(() => ({}))
 class Contact extends Component {
     constructor(props) {
         super(props);
@@ -22,12 +20,13 @@ class Contact extends Component {
             success: false,
             error: false,
         });
-        axios.post('/sendMail', {
-            name: values.name,
-            email: values.email,
-            reason: values.reason,
-            message: values.message,
-        })
+        axios.post('/sendMail',
+            {
+                name: values.name,
+                email: values.email,
+                reason: values.reason,
+                message: values.message,
+            })
             .then(() => {
                 this.props.dispatch({ type: 'ACCOUNT_SAVE_SUCCESS' });
                 this.setState({
@@ -47,10 +46,10 @@ class Contact extends Component {
             <div>
                 {this.state.success === true
                     ? <article className="message is-primary contact--message">
-                    <div className="message-header">
-                        <p className="is-centered">Your email has been sent :)</p>
-                    </div>
-                </article>
+                        <div className="message-header">
+                            <p className="is-centered">Your email has been sent :)</p>
+                        </div>
+                    </article>
                     : ''
                 }
                 {this.state.error === true ?
@@ -117,7 +116,12 @@ class Contact extends Component {
     }
 }
 
-Contact.propTypes    = {};
+Contact.propTypes = {
+    dispatch: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    submitting: PropTypes.bool,
+    invalid: PropTypes.bool,
+};
 Contact.defaultProps = {};
 
 Contact = reduxForm({

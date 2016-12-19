@@ -3,10 +3,12 @@ import { reducer as formReducer } from 'redux-form';
 
 import navbar from './navbarReducer';
 import auth from './authReducer';
+import blog from './blogReducer';
 
 export default combineReducers({
-    navbar,
     auth,
+    blog,
+    navbar,
     form: formReducer.plugin({
         contact: (state, action) => {
             switch (action.type) {

@@ -1,23 +1,44 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-export function userInfo(data) {
-    return (dispatch) => {
-        axios.get('/api/userinfo', {
-            headers: { authorization: `Bearer${data}` },
-        })
+/**
+ * Logs out the user
+ * @returns {{type: string}}
+ */
+export const logoutUser = () => {
+    localStorage.removeItem('token');
+    return { type: 'LOGOUT' };
+};
+
+/**
+ * Ajax request to fetch current user info
+ * @param token
+ */
+export const userInfo = token =>
+    (dispatch) => {
+        axios.get('/api/userinfo',
+            {
+                headers: { authorization: `Bearer${token}` },
+            })
             .then((response) => {
                 dispatch({
                     type: 'USER_INFO',
                     payload: response.data,
                 });
-                browserHistory.push('/');
+                // browserHistory.push('/');
+            })
+            .catch(() => {
+                dispatch(logoutUser());
             });
     };
-}
 
-export function loginUser({ email, password }) {
-    return function (dispatch) {
+/**
+ * Login the user
+ * @param email
+ * @param password
+ */
+export const loginUser = ({ email, password }) =>
+    (dispatch) => {
         axios.post('/login', { email, password })
             .then((response) => {
                 dispatch({
@@ -29,15 +50,8 @@ export function loginUser({ email, password }) {
                 dispatch(userInfo(response.data.token));
             })
 
-            .catch(() => {
+            .catch((error) => {
                 // dispatch(authError("Empty Required Field"));
-                console.log('test');
+                console.log(error);
             });
     };
-}
-
-export function logoutUser() {
-    localStorage.removeItem('token');
-    return { type: 'LOGOUT' };
-}
-

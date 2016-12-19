@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import '../../sass/resume.sass';
 
 const Resume = () => (
@@ -123,8 +123,5 @@ const Resume = () => (
         </div>
     </div>
 );
-
-Resume.propTypes    = {};
-Resume.defaultProps = {};
 
 export default Resume;

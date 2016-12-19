@@ -4,7 +4,6 @@ const combineLoaders    = require('webpack-combine-loaders');
 
 
 module.exports = {
-    devtool: 'source-map',
     entry: './resources/assets/js/Main.jsx',
     output: {
         filename: './public/js/main.js',

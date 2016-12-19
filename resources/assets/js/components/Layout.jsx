@@ -7,7 +7,6 @@ import '../../sass/app.sass';
 const Layout = props => (
     <div className="site--layout">
         <NavBar />
-
         <main className="section">
             <div className="container site--container">
                 {props.children}
@@ -18,6 +17,9 @@ const Layout = props => (
 );
 
 Layout.propTypes = {
-    children: PropTypes.object,
+    children: React.PropTypes.oneOfType([
+        React.PropTypes.arrayOf(React.PropTypes.node),
+        React.PropTypes.node,
+    ]),
 };
 export default Layout;

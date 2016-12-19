@@ -11,8 +11,10 @@ class Projects extends Component {
     allProjects = () => projectsData;
     privateRepos = () => privateRepoData;
 
-
     render() {
+        if (this.props.children) {
+            return this.props.children;
+        }
         return (
             <div className="container">
 
@@ -46,9 +48,9 @@ class Projects extends Component {
                 <div className="columns project--card">
                     {this.allProjects().map((project, index) => {
                         if (index === 0 || index === 1) {
-
                             return <Project key={`${project.name}${index}`} {...project} />;
                         }
+                        return null;
                     })}
                 </div>
                 <div className="columns project--card">
@@ -56,6 +58,7 @@ class Projects extends Component {
                         if (index === 2 || index === 3) {
                             return <Project key={`${project.name}${index}`} {...project} />;
                         }
+                        return null;
                     })}
                 </div>
             </div>
@@ -63,7 +66,10 @@ class Projects extends Component {
     }
 }
 
-
-Projects.propTypes = {};
-
+Projects.propTypes = {
+    children: React.PropTypes.oneOfType([
+        React.PropTypes.arrayOf(React.PropTypes.node),
+        React.PropTypes.node,
+    ]),
+};
 export default Projects;
