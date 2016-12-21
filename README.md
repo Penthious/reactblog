@@ -6,13 +6,13 @@
 If homestead is istalled and you already cloned this project and updated your Homestead.yaml and /etc/hosts file.
 All you have to do now is ssh into homestead and navigate to your project and run:
 ```
-composer install
+composer install                    # installs laravel dependencys
 
-php artisan migrate --seed
+php artisan migrate --seed          # Sets up the database tables
 
-npm install
+npm install                         # installs sites node dependencys
 
-npm run build
+npm run build                       # runs webpack watch to keep building the main.js file
 ```
 
 ## Features
