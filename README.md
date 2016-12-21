@@ -8,6 +8,8 @@ All you have to do now is ssh into homestead and navigate to your project and ru
 ```
 composer install                    # installs laravel dependencys
 
+php artisan key:generate            # Sets your own unique laravel key
+
 php artisan migrate --seed          # Sets up the database tables
 
 npm install                         # installs sites node dependencys
