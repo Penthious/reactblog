@@ -16,6 +16,7 @@ const privateRepoData = [
         ' end layout.',
         image: '/images/tandc.png',
         tech: ' Laravel, Bulma, Flexbox, jQuery, sass, Disqus',
+        link: 'https://github.com/cjsampson/tandc',
     },
     {
         name: 'Blueine Screening Source',
